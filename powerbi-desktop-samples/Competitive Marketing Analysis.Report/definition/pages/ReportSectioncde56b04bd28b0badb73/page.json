@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "ReportSectioncde56b04bd28b0badb73",
+  "displayName": "Tooltip",
+  "displayOption": "FitToPage",
+  "height": 325,
+  "width": 325,
+  "visibility": "HiddenInViewMode"
+}

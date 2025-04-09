@@ -1,0 +1,118 @@
+table Sentiment
+	isHidden
+	lineageTag: 84f88c7f-e785-4a56-86f4-5d71066ef9f0
+
+	measure 'Sum of Score' = SUM('Sentiment'[Score])
+		lineageTag: a85342d2-018b-412a-a888-168733b2caf1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average of Score' = AVERAGE('Sentiment'[Score])
+		lineageTag: 7e52db4f-264a-4bd4-baea-d7f4e87a79fa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateID
+		dataType: int64
+		isHidden
+		lineageTag: b009a9cb-0f12-40a1-a78d-c1b2375ec159
+		summarizeBy: count
+		sourceColumn: DateID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StateID
+		dataType: int64
+		isHidden
+		lineageTag: 074cdc71-2036-463d-b938-717c76ba055b
+		summarizeBy: count
+		sourceColumn: StateID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ManufacturerID
+		dataType: int64
+		isHidden
+		lineageTag: edcdee38-8665-40c0-9cb8-8efe7c50e889
+		summarizeBy: none
+		sourceColumn: ManufacturerID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Score
+		dataType: double
+		isHidden
+		lineageTag: 43953e0e-b530-4e76-b6ab-f4c8091ab023
+		summarizeBy: sum
+		sourceColumn: Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Manufacturer
+		dataType: string
+		isHidden
+		lineageTag: aac152d4-8667-4e39-953f-07358b7a770a
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: m/d/yyyy
+		lineageTag: 96c669f2-b4b9-4264-81a9-3f3400a023a3
+		dataCategory: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column State
+		dataType: string
+		isHidden
+		lineageTag: 2a7d1dd2-3b72-403d-b94f-7ae0480de261
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column zip
+		dataType: string
+		isHidden
+		lineageTag: 41b5bdcf-4134-41b0-b534-eea6159c6e88
+		summarizeBy: none
+		sourceColumn: zip
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		isHidden
+		lineageTag: 3cb5c6b1-c984-4f97-93be-69d659639ac8
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sentiment = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT s.[DateID]+6 DateID ,s.[StateID], s.[ManufacturerID], s.[Score], s.[Manufacturer], dateadd(month, 6, s.[Date]) Date, s.[State],  g.zip, m.ProductID#(lf)FROM [SalesAndMarketing].[Sentiment] s#(lf),#(lf)(#(lf) select distinct state,#(lf) (select top 1 zip from  [SalesAndMarketing].[Geo] where g.state = state) zip#(lf)  from [SalesAndMarketing].[Geo] g#(lf)) g#(lf),#(lf)(#(lf) select distinct Manufacturer,#(lf) (select top 1 ProductID from  [SalesAndMarketing].Product where g.Manufacturer = Manufacturer) ProductID#(lf)  from [SalesAndMarketing].Product g#(lf)) m#(lf)where s.State = g.State and s.Manufacturer = m.Manufacturer"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"DateID", "DateID"}, {"StateID", "StateID"}, {"ManufacturerID", "ManufacturerID"}, {"Score", "Score"}, {"Manufacturer", "Manufacturer"}, {"Date", "Date"}, {"State", "State"}, {"zip", "zip"}, {"ProductID", "ProductID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"DateID", Int64.Type}, {"StateID", Int64.Type}, {"ManufacturerID", Int64.Type}, {"Score", type number}, {"Manufacturer", type text}, {"Date", type datetime}, {"State", type text}, {"zip", type text}, {"ProductID", Int64.Type}})
+				in
+				    #"Changed Type"
+

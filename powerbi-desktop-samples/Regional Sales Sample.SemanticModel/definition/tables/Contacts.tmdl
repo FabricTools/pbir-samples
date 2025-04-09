@@ -1,0 +1,61 @@
+table Contacts
+	lineageTag: 59b3ba36-d753-49c2-aa4c-d326b45f4e58
+
+	column Contact
+		dataType: string
+		lineageTag: 10d57d42-d065-43d2-a0a7-3d8152532d5a
+		summarizeBy: none
+		sourceColumn: Contact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Job Title'
+		dataType: string
+		lineageTag: 0147b56c-14b2-4fb7-ad9b-0f079507a212
+		summarizeBy: none
+		sourceColumn: Job Title
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ContactSeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 331cccc1-5d5a-47df-ac3e-28cb2686611f
+		summarizeBy: sum
+		sourceColumn: ContactSeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountSeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 75e0447c-0e86-4f7b-bfb3-331f701f91da
+		summarizeBy: none
+		sourceColumn: AccountSeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Contacts-fc28db56-6378-4de8-be05-cd265898d7ea = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://microsoft-my.sharepoint.com/personal/misewell_microsoft_com/Documents/Documents/GitHub/ContosoBI/Contoso%20-%20Sales%20-%20Current%20Release/Contoso%20-%20Dynamics%20365%20Sales%20Source%20Data.xlsx"), null, true),
+				    ContactTbl_Table = Source{[Item="ContactTbl",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(ContactTbl_Table,{{"ContactSeq", Int64.Type}, {"Contact", type text}, {"AccountSeq", Int64.Type}, {"Job Title", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_QueryRelationships = {"columnCount":15,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Contacts/Changed Type.{ContactSeq,0}","Section1/Contacts/Changed Type.{ContactID,1}","Section1/Contacts/Changed Type.{Contact,2}","Section1/Contacts/ContactTbl_Table.{FirstName,3}","Section1/Contacts/ContactTbl_Table.{LastName,4}","Section1/Contacts/Changed Type.{AccountSeq,5}","Section1/Contacts/Changed Type.{Job Title,6}","Section1/Contacts/Changed Type.{Street,7}","Section1/Contacts/Changed Type.{City,8}","Section1/Contacts/Changed Type.{State or Province,9}","Section1/Contacts/Changed Type.{Postal Code,10}","Section1/Contacts/Changed Type.{Country,11}","Section1/Contacts/Changed Type.{Latitude,12}","Section1/Contacts/Changed Type.{Longitude,13}","Section1/Contacts/Changed Type.{Phone,14}"],"ColumnCount":15,"KeyColumnNames":[],"ColumnIdentities":["Section1/Contacts/Changed Type.{ContactSeq,0}","Section1/Contacts/Changed Type.{ContactID,1}","Section1/Contacts/Changed Type.{Contact,2}","Section1/Contacts/ContactTbl_Table.{FirstName,3}","Section1/Contacts/ContactTbl_Table.{LastName,4}","Section1/Contacts/Changed Type.{AccountSeq,5}","Section1/Contacts/Changed Type.{Job Title,6}","Section1/Contacts/Changed Type.{Street,7}","Section1/Contacts/Changed Type.{City,8}","Section1/Contacts/Changed Type.{State or Province,9}","Section1/Contacts/Changed Type.{Postal Code,10}","Section1/Contacts/Changed Type.{Country,11}","Section1/Contacts/Changed Type.{Latitude,12}","Section1/Contacts/Changed Type.{Longitude,13}","Section1/Contacts/Changed Type.{Phone,14}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

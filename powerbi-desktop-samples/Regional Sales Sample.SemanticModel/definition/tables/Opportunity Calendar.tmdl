@@ -1,0 +1,215 @@
+table 'Opportunity Calendar'
+	lineageTag: 50bae5c7-70dc-4542-81d2-8cffdb6f465e
+
+	column Date
+		formatString: Short Date
+		lineageTag: 596a61c0-1c6a-45dc-835f-b9dcb417c739
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DAY
+		isHidden
+		formatString: Short Date
+		lineageTag: 4f1e3f79-69f8-4d5d-97ff-fd84f3d90870
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DAY]
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DaySeq
+		isHidden
+		formatString: 0
+		lineageTag: 1e01ebd8-28d6-4320-b3c6-3ed05af7074b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DaySeq]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		formatString: 0
+		lineageTag: eafd76ed-2181-4b8a-bafb-fe8c9b8ebd22
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YEAR]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MONTH NUMBER'
+		isHidden
+		formatString: 0
+		lineageTag: ad49414f-9c42-4617-b041-d454284428b3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MONTH NUMBER]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		lineageTag: c1061583-ad00-4c81-9fd3-550aca9951ca
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MONTH]
+		sortByColumn: 'MONTH NUMBER'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'YEAR MONTH NUMBER'
+		isHidden
+		formatString: 0
+		lineageTag: c8135c07-5195-4877-a979-ddb01d1154af
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YEAR MONTH NUMBER]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'YEAR MONTH'
+		lineageTag: 1eb88449-338e-490c-b19c-567811150461
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YEAR MONTH]
+		sortByColumn: 'YEAR MONTH NUMBER'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'YEAR WEEK'
+		lineageTag: 6fac8f80-d90b-4039-a915-9840ea96b347
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YEAR WEEK]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column WEEK
+		formatString: General Date
+		lineageTag: 1ee6805e-ab65-4866-8ea4-8723ae1df197
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WEEK]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RELATIVE WEEK'
+		lineageTag: 5ea3ae3e-b9c4-457c-b412-625af7eea29b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [RELATIVE WEEK]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'RELATIVE DAY'
+		formatString: General Date
+		lineageTag: 65897efe-ceef-4365-b785-0873cf27028e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [RELATIVE DAY]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RELATIVE 07 DAY PERIOD'
+		lineageTag: 4e8407ba-30c6-4c43-bd8a-5962c8aa1c5c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [RELATIVE 07 DAY PERIOD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'RELATIVE 30 DAY PERIOD'
+		lineageTag: e7faa457-dda8-4403-99f6-626b49623a3d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [RELATIVE 30 DAY PERIOD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'RELATIVE MONTH'
+		formatString: 0
+		lineageTag: e3da9c05-7873-4a46-8d92-6f49b6e3f3c7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [RELATIVE MONTH]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Opportunity Calendar-e59f2a98-a17b-43c5-9430-3661e3b638f8' = calculated
+		mode: import
+		source = ```
+				
+				VAR StartDate =
+				    DATE ( YEAR ( MIN ( Opportunities[CloseDate] ) ), 1, 1 )
+				VAR EndDate =
+				    DATE ( YEAR (
+				        IF (
+				            ISBLANK ( MAX (  Opportunities[CloseDate] ) ),
+				            TODAY (),
+				            MAX (  Opportunities[CloseDate] )
+				        )
+				    ), 12, 31 )
+				VAR BASECALENDAR =
+				    CALENDAR ( StartDate, EndDate )
+				RETURN
+				    GENERATE (
+				        BASECALENDAR,
+				        VAR DateSequence = DATEDIFF ( StartDate, [DATE], DAY ) + 1
+				        VAR BASEDATE = [DATE]
+				        VAR YEARDATE = YEAR ( BASEDATE )
+				        VAR MONTHNUMBER = MONTH ( BASEDATE )
+				        VAR MONTHNAME = FORMAT ( BASEDATE, "MMMM" )
+				        VAR YEARMONTHNAME = FORMAT ( BASEDATE, "MMM YYYY" )
+				        VAR YEARMONTHNUMBER = YEARDATE * 12 + ( MONTHNUMBER - 1 )
+				        VAR YEARWEEK = YEARDATE & "-W" & RIGHT ( "0" & WEEKNUM ( BASEDATE ), 2 )
+				        VAR DayNumberOfWeek = WEEKDAY ( [Date] )
+				        VAR StartOfWeek = [Date] - ( 1 * DayNumberOfWeek )
+				        VAR StartOfRelativeWeek = [Date] - WEEKDAY ( [Date] ) + 1
+				        VAR StartOfCurrentWeek = TODAY () - WEEKDAY ( TODAY () ) + 1
+				        var RelativeMonth = DATEDIFF(TODAY(),[Date],MONTH)
+				        VAR RelativeWeek = ( StartOfRelativeWeek - StartOfCurrentWeek ) / 7
+				        var RelativeDay = BASEDATE - TODAY()
+				        var Relative7DayPeriod = ROUNDDOWN(([Date] - TODAY())/7,0) + IF([Date]<TODAY(),+1,+2)
+				        var Relative30DayPeriod = ROUNDDOWN(([Date] - TODAY())/30,0) + IF([Date]>TODAY(),1,0)   
+				
+				        RETURN
+				            ROW (
+				                "DAY", BASEDATE,
+				                "DaySeq", DateSequence,
+				                "YEAR", YEARDATE,
+				                "MONTH NUMBER", MONTHNUMBER,
+				                "MONTH", MONTHNAME,
+				                "YEAR MONTH NUMBER", YEARMONTHNUMBER,
+				                "YEAR MONTH", YEARMONTHNAME,
+				                "YEAR WEEK", YEARWEEK,
+				                "WEEK", StartOfWeek,
+				                "RELATIVE MONTH", RelativeMonth,
+				                "RELATIVE WEEK", RelativeWeek,
+				                "RELATIVE DAY", RelativeDay,
+				                "RELATIVE 07 DAY PERIOD", Relative7DayPeriod,
+				                "RELATIVE 30 DAY PERIOD", Relative30DayPeriod
+				                )
+				            )
+				```
+

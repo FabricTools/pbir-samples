@@ -1,0 +1,30 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.130.754.0 (24.06)
+
+annotation PBI_QueryOrder = ["Product","SalesFact","Date","Geo","Sentiment","Manufacturer","Indicators","KPI","Category"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Product
+ref table SalesFact
+ref table Date
+ref table Geo
+ref table Sentiment
+ref table Manufacturer
+ref table DateTableTemplate_65abda87-791b-47b1-be17-c5cc39d52815
+ref table LocalDateTable_a1cd3d03-2df1-466a-bea5-79b9463a9397
+ref table Indicators
+ref table KPI
+ref table Category
+
+ref cultureInfo en-US
+

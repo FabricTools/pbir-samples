@@ -1,0 +1,75 @@
+table 'ClusterMappingTable 2'
+	isHidden
+	isPrivate
+	lineageTag: 46a25990-6d48-4040-9a0e-da60d1a611ce
+
+	column Category
+		dataType: string
+		lineageTag: 17a11305-dec7-413e-862d-215c878abb66
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Category]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column ClusterId
+		dataType: int64
+		formatString: 0
+		lineageTag: 74f79be5-7072-4245-aae1-212e88cb70f8
+		summarizeBy: count
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [ClusterId]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	partition 'ClusterMappingTable 2-9e456a84-98b0-4e52-b4a4-90843dd9458d' = calculated
+		mode: import
+		source = ```
+				VAR __DS0FilterTable = 
+				  FILTER(KEEPFILTERS(VALUES('Store'[Store Type])), 'Store'[Store Type] = "New Store")
+				
+				VAR __DS0FilterTable2 = 
+				  TREATAS({"37919"}, 'Store'[PostalCode])
+				
+				VAR __DS0BodyPreTransform = 
+				  SUMMARIZECOLUMNS(
+				    'Item'[Category],
+				    __DS0FilterTable,
+				    __DS0FilterTable2,
+				    "Total_Sales_Variance__", 'Sales'[Total Sales Variance %],
+				    "Avg___Unit_TY", 'Sales'[Avg $/Unit TY],
+				    "This_Year_Sales", 'Sales'[This Year Sales]
+				  )
+				
+				VAR __DataTransformT0 = 
+				  KMeansClustering(
+				    SELECTCOLUMNS(
+				      __DS0BodyPreTransform,
+				      "Category", 'Item'[Category],
+				      "Total_Sales_Variance__", [Total_Sales_Variance__],
+				      "Avg___Unit_TY", [Avg___Unit_TY],
+				      "This_Year_Sales", [This_Year_Sales]
+				    ),
+				    {("[Category]", "Item"),
+				      ("[Total_Sales_Variance__]", "Attribute"),
+				      ("[Avg___Unit_TY]", "Attribute"),
+				      ("[This_Year_Sales]", "Attribute")},
+				    {("[Category]", BLANK()),
+				      ("ClusterId", "ClusterId")},
+				    -1
+				  )
+				
+				RETURN __DataTransformT0
+				```
+			retainDataTillForceCalculate
+
+	annotation ClusterMappingTable = true
+
+	annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+

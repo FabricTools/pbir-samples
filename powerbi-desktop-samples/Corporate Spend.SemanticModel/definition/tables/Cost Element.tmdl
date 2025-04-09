@@ -1,0 +1,48 @@
+table 'Cost Element'
+	lineageTag: e780de12-1106-4fac-be79-10d263008b86
+
+	column 'Cost element name'
+		dataType: string
+		lineageTag: 315594ed-0daa-47bf-be41-d08ed0fb0005
+		summarizeBy: none
+		sourceColumn: Cost element name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost Element Group'
+		dataType: string
+		lineageTag: 1c2bde5a-1b2d-438b-b550-b77303ce2a1e
+		summarizeBy: none
+		sourceColumn: Cost Element Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost Element Sub Group'
+		dataType: string
+		lineageTag: 7d6417fd-b119-4d00-96a0-31afae897568
+		summarizeBy: none
+		sourceColumn: Cost Element Sub Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cost Element ID'
+		dataType: double
+		isHidden
+		lineageTag: cd9ae72d-6157-4e93-84c0-ab5ef803d48c
+		summarizeBy: none
+		sourceColumn: Cost Element ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cost Element' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="Cost Element",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"Cost element name", "Cost element name"}, {"Cost Element Group", "Cost Element Group"}, {"Cost Element Sub Group", "Cost Element Sub Group"}, {"Cost Element ID", "Cost Element ID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Cost element name", type text}, {"Cost Element Group", type text}, {"Cost Element Sub Group", type text}, {"Cost Element ID", type number}})
+				 in
+				    #"Changed Type"
+

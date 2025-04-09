@@ -1,0 +1,138 @@
+table Accounts
+	lineageTag: 22d72ed3-5ee0-4ff1-98ec-c82153839a11
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: 3cc966b9-42cc-4fdc-af3e-169dbd480556
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'State or Province'
+		dataType: string
+		lineageTag: 9cd3b557-bebd-4d36-8435-56a6f0b45aef
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State or Province
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Country
+		dataType: string
+		lineageTag: faed6422-f3cb-4296-8a3c-2f05b5dbdf5f
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column AccountID
+		dataType: string
+		isHidden
+		lineageTag: 734e247c-6f68-417f-9361-1f660e427019
+		summarizeBy: none
+		sourceColumn: AccountID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column AccountSeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 66c11234-ed17-4d02-8e31-217caf9cf527
+		summarizeBy: none
+		sourceColumn: AccountSeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IndustrySeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 42a531d2-b4f2-4e3d-963e-f6dd4182afaa
+		summarizeBy: none
+		sourceColumn: IndustrySeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountOwnerSeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 035097c0-bdff-4cda-87cd-f5c2f5d5512c
+		summarizeBy: sum
+		sourceColumn: AccountOwnerSeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Number'
+		dataType: string
+		lineageTag: 629b3a4b-d0b0-4de6-9df4-43d950732fad
+		summarizeBy: none
+		sourceColumn: Account Number
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column TerritorySeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c9a57405-b10e-41ac-96ce-cfdfbd830503
+		summarizeBy: none
+		sourceColumn: TerritorySeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Street Hierarchy'
+		lineageTag: 24a41aca-6c8c-4ec3-9ed2-28a29d29958f
+
+		level 'Account Name'
+			lineageTag: 413a12b7-cdcf-47ef-80b7-e70f319862ca
+			column: 'Account Name'
+
+		level 'State or Province'
+			lineageTag: 7c7521aa-caf0-4ade-bf81-f1883a581d46
+			column: 'State or Province'
+
+		level Country
+			lineageTag: 5f328efb-284b-4857-a962-1bba3709bf70
+			column: Country
+
+	partition Accounts-569e2118-8ef4-4f17-9647-c9b4190bc0c8 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://microsoft-my.sharepoint.com/personal/misewell_microsoft_com/Documents/Documents/GitHub/ContosoBI/Contoso%20-%20Sales%20-%20Current%20Release/Contoso%20-%20Dynamics%20365%20Sales%20Source%20Data.xlsx"), null, true),
+				    AccountTbl_Table = Source{[Item="AccountTbl",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(AccountTbl_Table,{{"AccountSeq", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Distribution%", "DistributionAccumulation", "City"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each [AccountSeq] <> null and [AccountSeq] <> ""),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Filtered Rows",{{"AccountSeq", Int64.Type}, {"AccountID", type text}, {"Account Number", type text}, {"Account Name", type text},{"State or Province", type text}, {"Country", type text}, {"TerritorySeq", Int64.Type}, {"AccountOwnerSeq", Int64.Type}, {"IndustrySeq", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_QueryRelationships = {"columnCount":19,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Accounts/Changed Type.{AccountSeq,0}","Section1/Accounts/Changed Type.{Account Name,1}","Section1/Accounts/Changed Type.{AccountID,2}","Section1/Accounts/Changed Type.{Street,3}","Section1/Accounts/Changed Type.{City,4}","Section1/Accounts/Changed Type.{State or Province,5}","Section1/Accounts/Changed Type.{Postal Code,6}","Section1/Accounts/Changed Type.{Country,7}","Section1/Accounts/Changed Type.{Latitude,8}","Section1/Accounts/Changed Type.{Longitude,9}","Section1/Accounts/Changed Type.{Phone,10}","Section1/Accounts/Changed Type.{Number of Employees,11}","Section1/Accounts/Changed Type.{Annual Revenue,12}","Section1/Accounts/Changed Type.{AccountOwnerSeq,13}","Section1/Accounts/Changed Type.{IndustrySeq,14}","Section1/Accounts/Changed Type.{Account Owner,15}","Section1/Accounts/Changed Type.{Industry,16}","Section1/Accounts/Changed Type.{Territory,17}","Section1/Accounts/Changed Type.{Region,18}"],"ColumnCount":19,"KeyColumnNames":[],"ColumnIdentities":["Section1/Accounts/Changed Type.{AccountSeq,0}","Section1/Accounts/Changed Type.{Account Name,1}","Section1/Accounts/Changed Type.{AccountID,2}","Section1/Accounts/Changed Type.{Street,3}","Section1/Accounts/Changed Type.{City,4}","Section1/Accounts/Changed Type.{State or Province,5}","Section1/Accounts/Changed Type.{Postal Code,6}","Section1/Accounts/Changed Type.{Country,7}","Section1/Accounts/Changed Type.{Latitude,8}","Section1/Accounts/Changed Type.{Longitude,9}","Section1/Accounts/Changed Type.{Phone,10}","Section1/Accounts/Changed Type.{Number of Employees,11}","Section1/Accounts/Changed Type.{Annual Revenue,12}","Section1/Accounts/Changed Type.{AccountOwnerSeq,13}","Section1/Accounts/Changed Type.{IndustrySeq,14}","Section1/Accounts/Changed Type.{Account Owner,15}","Section1/Accounts/Changed Type.{Industry,16}","Section1/Accounts/Changed Type.{Territory,17}","Section1/Accounts/Changed Type.{Region,18}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

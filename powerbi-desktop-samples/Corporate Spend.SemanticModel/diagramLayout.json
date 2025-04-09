@@ -1,0 +1,130 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 370.11029192760145,
+            "y": 629.72873062264534
+          },
+          "nodeIndex": "Business Area",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": -5.6843418860808015E-14,
+            "y": 243.73647130388386
+          },
+          "nodeIndex": "Cost Element",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 167.09036127928562,
+            "y": 13.135019325213193
+          },
+          "nodeIndex": "Country Region",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 639.19586472526521,
+            "y": 214.22363840290134
+          },
+          "nodeIndex": "Date",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 76.110291927601452,
+            "y": 518.14291134347093
+          },
+          "nodeIndex": "Department",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 322.96570133965895,
+            "y": 301.91470706068532
+          },
+          "nodeIndex": "Fact",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 451.5650548358899,
+            "y": 0
+          },
+          "nodeIndex": "IT Area",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 664.11029192760145,
+            "y": 494.48093344847484
+          },
+          "nodeIndex": "Scenario",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 969.0996752929309,
+            "y": 290.98108785976024
+          },
+          "nodeIndex": "Range",
+          "size": {
+            "height": 187,
+            "width": 254
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

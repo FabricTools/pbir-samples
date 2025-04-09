@@ -1,0 +1,39 @@
+table 'IT Area'
+	lineageTag: f6a83a88-1c66-48e7-9c60-58f3afc2dc3d
+
+	column 'IT Area'
+		dataType: string
+		lineageTag: 638341bc-5826-4291-b5b2-099fc233fbde
+		summarizeBy: none
+		sourceColumn: IT Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IT Sub Area'
+		dataType: string
+		lineageTag: 77d1b1bd-2a84-4815-8f37-7b473b18b213
+		summarizeBy: none
+		sourceColumn: IT Sub Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IT Sub Area ID'
+		dataType: double
+		lineageTag: 192535ae-4927-48c8-8716-37807bd0f8ba
+		summarizeBy: none
+		sourceColumn: IT Sub Area ID
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'IT Area' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="IT Area",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"IT Area", "IT Area"}, {"IT Sub Area", "IT Sub Area"}, {"IT Sub Area ID", "IT Sub Area ID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"IT Area", type text}, {"IT Sub Area", type text}, {"IT Sub Area ID", type number}})
+				 in
+				    #"Changed Type"
+

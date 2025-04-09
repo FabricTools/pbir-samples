@@ -1,0 +1,35 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.130.754.0 (24.06)
+
+annotation PBI_QueryOrder = ["BU","FP","PayType","SeparationReason","Date","Employee","Ethnicity","Gender","AgeGroup","Separation Reasons"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table BU
+ref table FP
+ref table PayType
+ref table SeparationReason
+ref table Date
+ref table Employee
+ref table Ethnicity
+ref table Gender
+ref table AgeGroup
+ref table DateTableTemplate_92fd358c-bb4c-4d52-9f5b-e9a59dc2315d
+ref table LocalDateTable_6f19fed3-1fc0-4f7a-878d-34aca93d6782
+ref table LocalDateTable_d2ea5b26-668d-4c17-b228-695669b066a6
+ref table LocalDateTable_c9dde99e-7ac1-4e8e-a5f2-c5ffc41d9cac
+ref table LocalDateTable_cc28ef26-f63a-4bc3-b357-93ab34cd6d9b
+ref table LocalDateTable_c04ce649-6e25-466f-9bbc-faabfec0fe29
+ref table 'Separation Reasons'
+
+ref cultureInfo en-US
+

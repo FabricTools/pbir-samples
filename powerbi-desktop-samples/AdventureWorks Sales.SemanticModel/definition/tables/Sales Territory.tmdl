@@ -1,0 +1,68 @@
+table 'Sales Territory'
+	lineageTag: 383b8c81-5790-4a01-89b9-17faa7025b41
+
+	column SalesTerritoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 660d0f99-6ab8-4c4f-b258-d952f57d0f0b
+		summarizeBy: none
+		sourceColumn: SalesTerritoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: de8c8ad9-9a14-4c94-bf07-8cccbcb69b04
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 0081dfda-1643-46e6-bc53-3f7775ff5ca5
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group
+		dataType: string
+		lineageTag: 27c24d2c-bca4-47fe-bf41-c1ef4df3983e
+		summarizeBy: none
+		sourceColumn: Group
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Sales Territories'
+		lineageTag: db78d396-cf8e-4440-a5dc-8e5795a54e56
+
+		level Group
+			lineageTag: 0209374e-5217-4761-9a01-166ae8ec54c9
+			column: Group
+
+		level Country
+			lineageTag: d1f1bb60-b458-4e02-9c33-b75f3a16bdb5
+			column: Country
+
+		level Region
+			lineageTag: e166cce7-ab17-476e-b8c3-b58ade46e964
+			column: Region
+
+	partition 'Sales Territory-a4203ded-5d49-4ccd-bdb0-31895b6aacbd' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\jterh\OneDrive - Microsoft\_Corp Era\Power BI\AW2020 Sample\Sales\AdventureWorks Sales.xlsx"), null, true),
+				    SalesTerritory_Table = Source{[Item="SalesTerritory",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(SalesTerritory_Table,{{"SalesTerritoryKey", Int64.Type}, {"Region", type text}, {"Country", type text}, {"Group", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

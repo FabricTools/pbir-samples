@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "ReportSection01aea66d2f5e71021469",
+  "displayName": "Info Page",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "TotalSales"
+          }
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "pageBinding": {
+    "name": "Pod3",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "Param_Filter",
+        "boundFilter": "Filter",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "TotalSales"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#B3B3B3'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#ededed'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+table Date
+	lineageTag: 862318f7-551a-4379-ac89-8647a25f938c
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isHidden
+		isKey
+		formatString: General Date
+		lineageTag: b5041ac2-a830-4938-a8dd-606ddb11c145
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 9c249f02-e6dc-4107-8564-81d8f98ee1c6
+			defaultHierarchy: LocalDateTable_c659a3fc-ad91-4f80-b458-6b22a6d14a66.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		lineageTag: f8b2d0a9-b11c-4631-9255-1c2ad4dc7a4a
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Period
+		dataType: int64
+		lineageTag: de5281a9-3ef1-4183-a58e-5ad88c16cf13
+		summarizeBy: sum
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Month = Format([Date],"MMM")
+		dataType: string
+		lineageTag: 6e3a150b-8173-440d-af99-657155644df0
+		summarizeBy: none
+		isDataTypeInferred
+		sortByColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="Date",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"Date", "Date"}, {"Year", "Year"}, {"Period", "Period"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Date", type datetime}, {"Year", Int64.Type}, {"Period", Int64.Type}})
+				 in
+				    #"Changed Type"
+
+	annotation __PBI_LegacyCustomDateTable = true
+

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "81457bc44662e94296df",
+  "position": {
+    "x": 646.84898929845428,
+    "y": 173.50772889417362,
+    "z": 20000,
+    "height": 45.65992865636148,
+    "width": 615.64803804994062,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+    "query": {
+      "queryState": {
+        "table": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Owners"
+                    }
+                  },
+                  "Property": "systemuserid"
+                }
+              },
+              "queryRef": "Owners.systemuserid"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "flowInfo": [
+        {
+          "properties": {
+            "FlowId": {
+              "expr": {
+                "Literal": {
+                  "Value": "'/providers/Microsoft.ProcessSimple/environments/839eace6-59ab-4243-97ec-a5b8fcc104e4/flows/528f31bc-f7cd-4f2f-b3f7-e408edaacd1d'"
+                }
+              }
+            },
+            "ManagementUri": {
+              "expr": {
+                "Literal": {
+                  "Value": "'https://preview.api.flow.microsoft.com/providers/Microsoft.ProcessSimple'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "buttonFill": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3B5E96'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "buttonText": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enroll These Owners in Sales Training'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'This button activates a Power Automate.  It is not a working button this sample, but being shown as an example. '"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

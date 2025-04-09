@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "7f7935d9270774362094",
+  "position": {
+    "x": 1250.8143322475571,
+    "y": 397.48099891422368,
+    "z": 3000,
+    "width": 29.185667752443,
+    "height": 94.505971769815417,
+    "tabOrder": -9996000
+  },
+  "visual": {
+    "visualType": "actionButton",
+    "objects": {
+      "icon": [
+        {
+          "properties": {
+            "shapeType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'blank'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    }
+  },
+  "isHidden": true
+}

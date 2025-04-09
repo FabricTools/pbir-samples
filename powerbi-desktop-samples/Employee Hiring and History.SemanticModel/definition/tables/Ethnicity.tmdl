@@ -1,0 +1,30 @@
+table Ethnicity
+	lineageTag: 4fd48a5c-5827-40a6-8ffb-b34cfd53452c
+
+	column 'Ethnic Group'
+		dataType: string
+		isHidden
+		lineageTag: ab87f76e-fba8-42f3-8c09-ce383c8a7238
+		summarizeBy: none
+		sourceColumn: Ethnic Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ethnicity
+		dataType: string
+		lineageTag: 6b45c284-0d80-4a8c-bffa-fc5cf0a622fa
+		summarizeBy: none
+		sourceColumn: Ethnicity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Ethnicity = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUXIvyi8tUHBUitWJVjKC853AfGM43xnMN4HzXcB8UzjfFcw3g/PdwHxzON9dKTYWAA==", BinaryEncoding.Base64), Compression.Deflate))),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"Column1", "Ethnic Group"}, {"Column2", "Ethnicity"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Ethnic Group", type text}, {"Ethnicity", type text}})
+				 in
+				    #"Changed Type"
+

@@ -1,0 +1,297 @@
+table Employee
+	isHidden
+	lineageTag: 63799ae9-1b99-4762-ae04-59d4f66ad037
+
+	measure EmpCount = CALCULATE(COUNT([EmplID]), FILTER(ALL('Date'[PeriodNumber]), 'Date'[PeriodNumber] = MAX('Date'[PeriodNumber])))
+		formatString: #,0
+		lineageTag: 01210a97-c3dc-4030-af85-0df92bea1155
+
+	measure Seps = CALCULATE(COUNT([EmplID]), FILTER(Employee, NOT(ISBLANK(Employee[TermDate]))))
+		formatString: #,0
+		lineageTag: 9cee6ad0-4ed6-4060-9d0a-99e6620b2a36
+
+	measure Actives = CALCULATE([EmpCount], FILTER(Employee, ISBLANK(Employee[TermDate])))
+		formatString: #,0
+		lineageTag: 85d7360e-4032-4f77-9e4f-ebb90f83c025
+
+	measure 'New Hires' = SUM([isNewHire])
+		formatString: #,0
+		lineageTag: 2150a28c-fd38-4cd0-8461-b8529472f84a
+
+	measure 'AVG Tenure Days' = AVERAGE([TenureDays])
+		formatString: #,0
+		lineageTag: 847843f6-d136-4485-a733-e5d6591ae5cf
+
+	measure 'AVG Tenure Months' = ROUND([AVG Tenure Days]/30, 1)-1
+		formatString: 0
+		lineageTag: 6dba930b-1a70-4cbe-b4e6-1068100e9f78
+
+	measure 'AVG Age' = ROUND(AVERAGE([Age]), 0)
+		lineageTag: 04f0331c-57d6-4523-af61-5612ecf2ed20
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sum of BadHires' = SUM([BadHires])
+		formatString: #,0
+		lineageTag: 89ce9e6c-af01-4b71-935e-e32bd86f6b37
+
+	measure 'New Hires SPLY' = CALCULATE([New Hires],SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: d53f7711-4e53-4bb7-ba5a-8fd82e1404c6
+
+	measure 'Actives SPLY' = CALCULATE([Actives],SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: 84bdbb48-7b97-4285-9774-c747379163f6
+
+	measure 'Seps SPLY' = CALCULATE([Seps],SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: 74a51ca4-495d-49ba-a27c-e74cf32c23db
+
+	measure 'EmpCount SPLY' = CALCULATE(COUNT([EmplID]), FILTER(ALL('Date'[PeriodNumber]), 'Date'[PeriodNumber] = MAX('Date'[PeriodNumber])),SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: 5d72d359-a2ce-4e62-8c82-605f5d8879fb
+
+	measure 'Seps YoY Var' = [Seps]-[Seps SPLY]
+		formatString: #,0
+		lineageTag: 4e89664a-40aa-412e-b07b-40b99f6f552d
+
+	measure 'Actives YoY Var' = [Actives]-[Actives SPLY]
+		formatString: #,0
+		lineageTag: ac589e5a-1a95-4e42-94ee-0ed615fa540e
+
+	measure 'New Hires YoY Var' = [New Hires]-[New Hires SPLY]
+		formatString: #,0
+		lineageTag: fd1f1b05-5d56-4bad-81e1-dd49cc74aa84
+
+	measure 'Seps YoY % Change' = DIVIDE([Seps YoY Var], [Seps SPLY])
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		lineageTag: 3a109bb7-2c23-4391-a6ce-20ce978286c3
+
+	measure 'Actives YoY % Change' = DIVIDE([Actives YoY Var], [Actives SPLY])
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		lineageTag: de0d73ca-3cfe-4e93-a63b-1a6643c2ed9a
+
+	measure 'New Hires YoY % Change' = DIVIDE([New Hires YoY Var], [New Hires SPLY])
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		lineageTag: 72d2e96f-621a-43df-8a76-ca8273685080
+
+	measure 'Bad Hires SPLY' = CALCULATE([Sum of BadHires],SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: 0b1de625-75ec-4294-a714-8f57065c755a
+
+	measure 'Bad Hires YoY Var' = [Sum of BadHires]-[Bad Hires SPLY]
+		formatString: #,0
+		lineageTag: e9706dd4-704e-4702-b54f-a998cf479e5f
+
+	measure 'Bad Hires YoY % Change' = DIVIDE([Bad Hires YoY Var], [Bad Hires SPLY])
+		formatString: #,0.0%;-#,0.0%;#,0.0%
+		lineageTag: dfb9718f-7919-4d21-b555-602025a508e0
+
+	measure 'TO %' = DIVIDE([Seps], [Actives])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c528bf60-987a-410f-a8ca-3ce25b243dab
+
+	measure 'TO % Norm' = CALCULATE([TO %], all(Gender[Gender]), ALL(Ethnicity[Ethnicity]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f21102a9-7e2f-41a3-9468-d3348065d7ee
+
+	measure 'TO % Var' = [TO %]-[TO % Norm]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 69bf92bc-0fd7-4503-bee1-c7d7391b0298
+
+	measure Sep%ofActive = DIVIDE([Seps],[Actives])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: fbff1435-b8f2-4999-ba10-0c3daa356a0f
+
+	measure Sep%ofSMLYActives = DIVIDE([Seps SPLY],[Actives SPLY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8abf85c3-a19f-4e2d-9487-42e34b28e913
+
+	measure BadHire%ofActives = DIVIDE([Sum of BadHires],[Actives])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: e4c439c2-f503-4c90-a2b4-3e1138baf3dc
+
+	measure BadHire%ofActiveSPLY = DIVIDE([Bad Hires SPLY],[Actives SPLY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 1fc9db3d-1852-4b1a-8b0f-ae52d85a7f5f
+
+	measure blank = ""
+		lineageTag: dd00c4da-a27d-44ba-9086-f92ba51b78a6
+
+	column date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: b592a58d-3842-4a55-8945-59e53f471cdc
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmplID
+		dataType: int64
+		isHidden
+		lineageTag: 051997eb-138d-40ef-8553-615cfbd581fc
+		summarizeBy: count
+		sourceColumn: EmplID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Gender
+		dataType: string
+		isHidden
+		lineageTag: 5737742d-f701-48dd-8e2a-e21ce261dbd6
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		isHidden
+		lineageTag: 93554c39-0b06-429b-88b2-f50fedf69c07
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EthnicGroup
+		dataType: string
+		isHidden
+		lineageTag: b02fa421-ff80-4cb6-9985-921c0d2a7481
+		summarizeBy: none
+		sourceColumn: EthnicGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column FP
+		dataType: string
+		isHidden
+		lineageTag: 1d6b87b0-336b-44da-a4ac-70cd56accd30
+		summarizeBy: none
+		sourceColumn: FP
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 72be8ca7-8f53-496c-9ba8-a83249e90f06
+		summarizeBy: none
+		sourceColumn: TermDate
+
+		variation Variation
+			isDefault
+			relationship: e020e64e-e74a-4b8f-bed8-e879143ea6d8
+			defaultHierarchy: LocalDateTable_cc28ef26-f63a-4bc3-b357-93ab34cd6d9b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column isNewHire = IF(YEAR([date]) = YEAR([HireDate]) && MONTH([date])=MONTH([HireDate]), 1)
+		dataType: int64
+		isHidden
+		lineageTag: ba9f7d94-e997-4d30-9273-714e4c123732
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BU
+		dataType: string
+		isHidden
+		lineageTag: b4fdff84-3fed-44b4-8d9a-d98666fcd583
+		summarizeBy: none
+		sourceColumn: BU
+
+		annotation SummarizationSetBy = Automatic
+
+	column HireDate
+		dataType: dateTime
+		isHidden
+		lineageTag: 4859e447-cd4c-4683-9373-43c6da347411
+		summarizeBy: none
+		sourceColumn: HireDate
+
+		variation Variation
+			isDefault
+			relationship: 3e454a13-2d74-4769-b44d-91ce492acf1a
+			defaultHierarchy: LocalDateTable_c04ce649-6e25-466f-9bbc-faabfec0fe29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PayTypeID
+		dataType: string
+		isHidden
+		lineageTag: 2f2f5131-def6-4aac-b3a5-7b238793ec49
+		summarizeBy: none
+		sourceColumn: PayTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermReason
+		dataType: string
+		isHidden
+		lineageTag: 5fffba74-245a-4b8d-83c3-b13d6e5a1804
+		summarizeBy: none
+		sourceColumn: TermReason
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgeGroupID = IF([Age]<30, 1, IF([Age]<50, 2, 3))
+		dataType: int64
+		isHidden
+		lineageTag: 7a1ddc46-6870-4a4f-9e17-8eb3f7cf59d1
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TenureDays = IF([date]-[HireDate]<0,[HireDate]-[date],[date]-[HireDate])
+		dataType: double
+		isHidden
+		lineageTag: 0bed3c87-3132-4c86-9ca9-062d49879474
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TenureMonths = CEILING([TenureDays]/30, 1) -1
+		dataType: int64
+		isHidden
+		lineageTag: 43a317e1-28a2-4655-846d-5ae946edbf7b
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BadHires = IF(OR((([HireDate]-[TermDate])*-1)>=61,ISBLANK([TermDate])),0,1)
+		dataType: double
+		lineageTag: f241b622-e9b2-44c2-b073-8124979b22c6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Employee = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT dateadd(year, 1, d.date) Date#(lf)  ,Market BU#(lf)  ,[EmplID]#(lf)  ,iif([Gender]='M', 'C', 'D') Gender --  ,iif([Gender]='M', 'F', 'M') Gender#(lf)  ,[Age] - (2013 - year(d.date)) Age#(lf)  ,[EthnicGroup]#(lf)  ,[FP]#(lf)  ,dateadd(year, 1, [SenDate]) HireDate#(lf)  ,p.PayTypeID#(lf)  ,null [TermDate]#(lf)  ,null [TermReason]#(lf) FROM [IP].[HR].[AllEmps] E , [HR].[Date] d , [HR].[BU] b , hr.PayGroup p --, hr.TermReason t#(lf) where d.day = 1 and e.SenDate <= d.MonthEndDate and isnull(e.termdate, '9999-01-01') >= d.MonthEndDate and d.Date < '2014-01-01'#(lf)  and p.PayGroup = e.PayGroup#(lf)  and b.UNIT = e.Unit and [EmplID] % 2 = 0#(lf)union all#(lf)--seps#(lf)SELECT dateadd(year, 1, d.date) Date#(lf)    ,Market BU#(lf)      ,[EmplID]#(lf)      ,iif([Gender]='M', 'C', 'D') Gender#(lf)      ,[Age] - (2013 - year(d.date)) Age#(lf)      ,[EthnicGroup]#(lf)      ,[FP]#(lf)      ,dateadd(year, 1,[SenDate]) HireDate#(lf)      ,p.PayTypeID#(lf)      ,dateadd(year, 1, [TermDate]) [TermDate]#(lf)      ,t.[SeparationTypeID] [TermReason]#(lf)  FROM [IP].[HR].[AllEmps] E, [HR].[Date] d , [HR].[BU] b, hr.PayGroup p , hr.TermReason t#(lf) where d.day = 1 and e.TermDate <= d.MonthEndDate and e.TermDate >= d.MonthStartDate and d.Date < '2014-01-01'#(lf)  and p.PayGroup = e.PayGroup #(lf)  and t.[Term-Discharge]= e.[Term-Discharge]#(lf)  and b.UNIT = e.Unit and [EmplID] % 2 = 0"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"date", "date"}, {"EmplID", "EmplID"}, {"Gender", "Gender"}, {"Age", "Age"}, {"EthnicGroup", "EthnicGroup"}, {"FP", "FP"}, {"TermDate", "TermDate"}, {"BU", "BU"}, {"HireDate", "HireDate"}, {"PayTypeID", "PayTypeID"}, {"TermReason", "TermReason"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"date", type datetime}, {"EmplID", Int64.Type}, {"Gender", type text}, {"Age", Int64.Type}, {"EthnicGroup", type text}, {"FP", type text}, {"TermDate", type datetime}, {"BU", type text}, {"HireDate", type datetime}, {"PayTypeID", type text}, {"TermReason", type text}})
+				in
+				    #"Changed Type"
+

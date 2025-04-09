@@ -1,0 +1,51 @@
+table Campaigns
+	lineageTag: c357383b-71d5-4f88-bc40-806bea44031e
+
+	column CampaignSeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8de5bb95-ac36-41b8-8fb6-602db8b90018
+		summarizeBy: none
+		sourceColumn: CampaignSeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campaign Type'
+		dataType: string
+		lineageTag: 6a77689f-dfb4-4d00-9f5f-e3232add37e7
+		summarizeBy: none
+		sourceColumn: Campaign Type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Campaign
+		dataType: string
+		lineageTag: 7d211005-c39f-442c-95e2-b8fc5bef9ea5
+		summarizeBy: none
+		sourceColumn: Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Campaigns-3cb88e48-13a8-4187-b349-6b06275a3f32 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://microsoft-my.sharepoint.com/personal/misewell_microsoft_com/Documents/Documents/GitHub/ContosoBI/Contoso%20-%20Sales%20-%20Current%20Release/Contoso%20-%20Dynamics%20365%20Sales%20Source%20Data.xlsx"), null, true),
+				    CampaignsTbl_Table = Source{[Item="CampaignsTbl",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(CampaignsTbl_Table,{{"CampaignSeq", Int64.Type}, {"Type", type text}, {"Name", type text}, {"Factor", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Factor", "Distribution%", "DistributionAccumulation"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"Type", "Campaign Type"}, {"Name", "Campaign"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_QueryRelationships = {"columnCount":4,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Campaigns/Changed Type.{CampaignSeq,0}","Section1/Campaigns/Changed Type.{Type,1}","Section1/Campaigns/Changed Type.{Name,2}","Section1/Campaigns/Changed Type.{Factor,3}"],"ColumnCount":4,"KeyColumnNames":[],"ColumnIdentities":["Section1/Campaigns/Changed Type.{CampaignSeq,0}","Section1/Campaigns/Changed Type.{Type,1}","Section1/Campaigns/Changed Type.{Name,2}","Section1/Campaigns/Changed Type.{Factor,3}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

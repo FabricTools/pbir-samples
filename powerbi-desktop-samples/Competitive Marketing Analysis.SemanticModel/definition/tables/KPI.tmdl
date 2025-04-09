@@ -1,0 +1,43 @@
+table KPI
+	lineageTag: a0941aee-8d5c-4766-9d79-f8b3bd1807e5
+
+	measure KPI01 = IF(SUM('KPI'[KPI])=1,CONCATENATE(LEFT([Total Units YTD Var %2],3),(" % ROI (Return on Investment)")),IF(SUM('KPI'[KPI])=2," ",IF(SUM('KPI'[KPI])=3,CALCULATE([Total Category Volume],'Date'[Running Year]=1))))
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 90d22ebd-e687-4532-b394-e34c89c4abd4
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure KPI02 = IF(SUM('KPI'[KPI])=1,(CALCULATE([Total Category Volume],'Date'[Running Year]=1)),IF(SUM('KPI'[KPI])=2," ",IF(SUM('KPI'[KPI])=3,CONCATENATE(LEFT([Total Units YTD Var %2],3),"%"))))
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 0eddb8ef-cca5-4a04-8f68-f3bcc4985fbc
+
+	column KPI
+		dataType: int64
+		formatString: 0
+		lineageTag: 63a9197e-1137-4392-8c07-90c07bf3068a
+		summarizeBy: sum
+		sourceColumn: KPI
+
+		annotation SummarizationSetBy = User
+
+	column Category
+		dataType: string
+		lineageTag: baeea55e-43dd-41ae-955a-905555d93d6a
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition KPI-ae8e6a56-cfb7-4213-843c-1d76c7b1600c = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSAeJYnWglIzjLGM4ygbNMIaxYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [KPI = _t, Category = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"KPI", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

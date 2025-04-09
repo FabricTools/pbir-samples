@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY21SU04",
+      "reportVersionAtImport": "5.20",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Fidex8576514545124847.json",
+      "reportVersionAtImport": "5.22",
+      "type": "RegisteredResources"
+    }
+  },
+  "layoutOptimization": "None",
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Middle'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A.pbiviz.json",
+          "path": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "ContosofDataverse_1600x1600_-_5729987410217916.png",
+          "path": "ContosofDataverse_1600x1600_-_5729987410217916.png",
+          "type": "Image"
+        },
+        {
+          "name": "Fidex8576514545124847.json",
+          "path": "Fidex8576514545124847.json",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY21SU04",
+          "path": "BaseThemes/CY21SU04.json",
+          "type": "BaseTheme"
+        },
+        {
+          "name": "usa.states.topo",
+          "path": "Shapemaps/usa.states.topo.json",
+          "type": "ShapeMap"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

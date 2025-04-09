@@ -1,0 +1,106 @@
+table Reseller
+	lineageTag: 37fd4992-41f8-453a-b759-d8065ecbc037
+
+	column ResellerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5190da7f-6144-45f1-b66d-7c9500742a82
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reseller ID'
+		dataType: string
+		lineageTag: eea0342d-1370-43cb-9fb9-71ea9ff1c1e5
+		summarizeBy: none
+		sourceColumn: Reseller ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Type'
+		dataType: string
+		lineageTag: 38693ec0-e4f0-4623-b8fd-38130496016b
+		summarizeBy: none
+		sourceColumn: Business Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reseller
+		dataType: string
+		lineageTag: 5f2b587b-4be8-4e4f-8379-8edee00974b1
+		summarizeBy: none
+		sourceColumn: Reseller
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: bb1cc7a6-7739-4e1d-8329-6eca428af836
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State-Province
+		dataType: string
+		lineageTag: 972d98a2-b305-4597-be9e-c264578bdf60
+		summarizeBy: none
+		sourceColumn: State-Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country-Region
+		dataType: string
+		lineageTag: 25238480-8230-46d2-84d6-f1a965279899
+		summarizeBy: none
+		sourceColumn: Country-Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: 28d52f81-214e-4c13-9e89-b993c08b8ee2
+		summarizeBy: none
+		sourceColumn: Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy Geography
+		lineageTag: 81e7318d-2363-4e56-92b6-cd0c41be2453
+
+		level Country-Region
+			lineageTag: 0a19a1ea-1dc5-47df-ab3b-03a0f4bc934e
+			column: Country-Region
+
+		level State-Province
+			lineageTag: ea394ddd-44c3-4e8b-b330-d8a4c15c2548
+			column: State-Province
+
+		level City
+			lineageTag: c29dd445-c7a3-4317-8378-3e1c9971f5da
+			column: City
+
+		level 'Postal Code'
+			lineageTag: c6d9a1c4-eaed-4d1d-94e7-f8d6ca053055
+			column: 'Postal Code'
+
+		level Reseller
+			lineageTag: d12399b5-b4df-4d97-99b7-8f8498bb3818
+			column: Reseller
+
+	partition Reseller-7cb7a03e-1fc4-4995-ba1d-36ad734d60ab = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\jterh\OneDrive - Microsoft\_Corp Era\Power BI\AW2020 Sample\Sales\AdventureWorks Sales.xlsx"), null, true),
+				    Reseller_Table = Source{[Item="Reseller",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Reseller_Table,{{"ResellerKey", Int64.Type}, {"Reseller ID", type text}, {"Business Type", type text}, {"Reseller", type text}, {"City", type text}, {"State-Province", type text}, {"Country-Region", type text}, {"Postal Code", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

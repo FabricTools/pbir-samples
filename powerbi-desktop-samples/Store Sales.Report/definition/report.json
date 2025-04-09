@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "themeCollection": {},
+  "layoutOptimization": "None",
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "id": 20757524,
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "bar06114330545101687.png",
+          "path": "bar06114330545101687.png",
+          "type": "Image",
+          "id": 84239182
+        },
+        {
+          "name": "line-chart769759383509198.png",
+          "path": "line-chart769759383509198.png",
+          "type": "Image",
+          "id": 84239183
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "exportDataMode": "AllowSummarizedAndUnderlying",
+    "useStylableVisualContainerHeader": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": "1.1.5",
+  "author": {
+    "name": "Microsoft",
+    "email": "pbicvsupport@microsoft.com"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+    "name": "powerAutomateVisual",
+    "displayName": "Power Automate for Power BI",
+    "version": "1.1.5",
+    "description": "Power Automate Visual empowers integration of your flows into Power BI reports.",
+    "supportUrl": "http://community.powerbi.com",
+    "gitHubUrl": "https://github.com/Microsoft/powerbi-visuals-powerapps",
+    "visualClassName": "Visual"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

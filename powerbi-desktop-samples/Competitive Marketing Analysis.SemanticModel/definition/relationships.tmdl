@@ -1,0 +1,37 @@
+relationship 45495964-ad08-41a9-bf46-dbb75026faff
+	fromColumn: Product.ManufacturerID
+	toColumn: Manufacturer.ManufacturerID
+
+relationship 1756cf82-0b54-406c-975f-23b89d86efd8
+	fromColumn: SalesFact.ProductID
+	toColumn: Product.ProductID
+
+relationship 07bc428e-2f34-468d-887f-be0998fa0278
+	fromColumn: SalesFact.Date
+	toColumn: Date.Date
+
+relationship 5e9ec1f3-b929-4a0f-bc61-33e331dfcb90
+	fromColumn: SalesFact.Zip
+	toColumn: Geo.Zip
+
+relationship 310a8827-9edf-45a6-8479-1a38cd44dea3
+	fromColumn: Sentiment.zip
+	toColumn: Geo.Zip
+
+relationship 1265aba0-7aae-4aed-9ffc-ce447b5fc90e
+	fromColumn: Sentiment.Date
+	toColumn: Date.Date
+
+relationship 8bf7aa3b-5884-4b49-8507-457027fb349a
+	fromColumn: Sentiment.ManufacturerID
+	toColumn: Manufacturer.ManufacturerID
+
+relationship 4c582681-9ba7-432b-bfd4-adea4053f849
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.Date
+	toColumn: LocalDateTable_a1cd3d03-2df1-466a-bea5-79b9463a9397.Date
+
+relationship 2ad2eb92-a567-4c04-ae70-fef8ee63dec0
+	fromColumn: Product.Segment
+	toColumn: Category.Category
+

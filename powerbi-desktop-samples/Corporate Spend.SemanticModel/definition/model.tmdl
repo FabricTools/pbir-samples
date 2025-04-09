@@ -1,0 +1,30 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.130.754.0 (24.06)
+
+annotation PBI_QueryOrder = ["Business Area","Cost Element","Country Region","Date","Department","Fact","IT Area","Scenario","Range"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Business Area'
+ref table 'Cost Element'
+ref table 'Country Region'
+ref table Date
+ref table Department
+ref table Fact
+ref table 'IT Area'
+ref table Scenario
+ref table Range
+ref table DateTableTemplate_5db4a9d0-37ae-4eb8-b985-081b6a9bccc6
+ref table LocalDateTable_c659a3fc-ad91-4f80-b458-6b22a6d14a66
+
+ref cultureInfo en-US
+

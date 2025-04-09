@@ -1,0 +1,21 @@
+table Range
+	lineageTag: 02ababc9-b48e-4805-b86e-418c020448eb
+
+	column 'www.obvience.com'
+		dataType: string
+		lineageTag: 00483fd8-d70f-4710-9c7b-304bad644c7c
+		summarizeBy: none
+		sourceColumn: www.obvience.com
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Range = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("hY4xTgNBDEWv8pUKCnIIJIoUiEhINFGK2Rln12DGI9uTaG/DWTgZuysKOirb+rbfO512L8OVqWYCO1LF4fVtKWVra5AI5ehJcDRtZDHj7nC8X6LchxRquGjuTgVa8czZ1PUSeOzOldx/X/C4AvbfX9AF9rTCbmofjizqJDNuHNOf81AUupJow0AeaJZycCbfzGLSPk4BoVTIfOK2SBje+2d78EgWXMdtsVATndfpHzO4Sg/W6vvd+fwD", BinaryEncoding.Base64), Compression.Deflate))),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"Column1", "www.obvience.com"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"www.obvience.com", type text}})
+				 in
+				    #"Changed Type"
+

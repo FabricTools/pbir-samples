@@ -1,0 +1,110 @@
+table Product
+	lineageTag: f28bbeee-dfd8-4fe9-a91a-3ea95825b405
+
+	measure 'Count of Product' = COUNTA('Product'[Product])
+		lineageTag: 68a71298-6a7d-40bd-91b7-4f58a7605edd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Manufacturer
+		dataType: string
+		lineageTag: eab50e52-bca5-4ae1-806d-24469b713c94
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 220f68ce-644b-43e3-8e65-a6e00dbd93f0
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: 609f15e4-37a1-4bbb-bada-9e63c50482fd
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: 56974197-2928-48ec-a3ba-10ba41cc2ce2
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		isHidden
+		lineageTag: 15d1dd38-08f8-4e56-943a-e636c117830c
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column isVanArsdel = IF([Manufacturer]="VanArsdel", "Yes", "No")
+		dataType: string
+		lineageTag: 49fa80ad-8522-4bf1-b928-52965bb3622f
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCompeteHide
+		dataType: string
+		isHidden
+		lineageTag: a77befaa-653d-4c02-843c-61f26eed60e5
+		summarizeBy: none
+		sourceColumn: IsCompeteHide
+
+		annotation SummarizationSetBy = Automatic
+
+	column ManufacturerID
+		dataType: int64
+		isHidden
+		lineageTag: 20e06b1c-149a-4032-a2f3-f28d7c96365d
+		summarizeBy: none
+		sourceColumn: ManufacturerID
+
+	column IsCompete = IF([IsCompeteHide]="N", "No", "Yes")
+		dataType: string
+		lineageTag: 861bff67-cbf8-42e1-baf3-af7ec10ab3ed
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy ProductRollup
+		lineageTag: 75daf2d0-244c-444d-afde-bd9cd63b3f2d
+
+		level Category
+			lineageTag: 6f20be0a-14c7-4cfa-8a63-390378ef23b6
+			column: Category
+
+		level Segment
+			lineageTag: 79390af1-6a98-4f20-8e20-a68a07d10038
+			column: Segment
+
+		level Product
+			lineageTag: 0196e633-e8b7-4ae0-94a2-04e3b23f0051
+			column: Product
+
+	partition Product = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT #(lf) p.ProductID,#(lf) p.Product,#(lf) p.Category,#(lf) Segment,#(lf) m.[ManufacturerID],#(lf) IIF(p.Manufacturer='Maximus', 'VanArsdel', p.Manufacturer) Manufacturer, #(lf) p.IsCompete#(lf)FROM [SalesAndMarketing].[Product] p, #(lf) (#(lf)  select distinct [ManufacturerID], #(lf)Manufacturer#(lf)  from [IP].[SalesAndMarketing].[Sentiment]#(lf) ) m#(lf)where m.Manufacturer = p.Manufacturer"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"Manufacturer", "Manufacturer"}, {"Category", "Category"}, {"Segment", "Segment"}, {"Product", "Product"}, {"ProductID", "ProductID"}, {"IsCompete", "IsCompeteHide"}, {"ManufacturerID", "ManufacturerID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Manufacturer", type text}, {"Category", type text}, {"Segment", type text}, {"Product", type text}, {"ProductID", Int64.Type}, {"IsCompeteHide", type text}, {"ManufacturerID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

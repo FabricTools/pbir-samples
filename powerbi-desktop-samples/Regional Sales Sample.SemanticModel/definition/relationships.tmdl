@@ -1,0 +1,32 @@
+relationship ab2e21ab-c232-41ff-83dc-8e3b0d908f5e
+	fromColumn: Opportunities.AccountSeq
+	toColumn: Accounts.AccountSeq
+
+relationship 76006d0f-909a-4fb2-b452-80f483d3e919
+	fromColumn: Contacts.AccountSeq
+	toColumn: Accounts.AccountSeq
+
+relationship f9c0c9e0-69b6-4e0b-9ad1-505c46d592a0
+	fromColumn: Accounts.IndustrySeq
+	toColumn: Industries.IndustrySeq
+
+relationship 55523217-ba80-4483-a167-760f05c7b1bf
+	fromColumn: Opportunities.ProductSeq
+	toColumn: Products.ProductSeq
+
+relationship c5b245c6-f533-4dbe-be32-ca0932182f37
+	fromColumn: Opportunities.SystemUserSeq
+	toColumn: Owners.SystemUserSeq
+
+relationship eb4def86-5ce3-4711-8802-9f00f3d8b5b6
+	fromColumn: Opportunities.CampaignSeq
+	toColumn: Campaigns.CampaignSeq
+
+relationship 0c422e57-d97e-4de8-8cc2-28589ef3ea9d
+	fromColumn: Accounts.TerritorySeq
+	toColumn: Territories.TerritorySeq
+
+relationship 9b5e36b8-8168-42a4-9ad3-49d06a64feb2
+	fromColumn: Opportunities.CloseDate
+	toColumn: 'Opportunity Calendar'.Date
+

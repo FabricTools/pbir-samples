@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY20SU09",
+      "reportVersionAtImport": "5.16",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Solar",
+      "reportVersionAtImport": "5.16",
+      "type": "SharedResources"
+    }
+  },
+  "layoutOptimization": "PhonePortrait",
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "id": 20757517,
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "BGIT19002349093123616.png",
+          "path": "BGIT19002349093123616.png",
+          "type": "Image",
+          "id": 84239173
+        },
+        {
+          "name": "BGIT23943451555338522.png",
+          "path": "BGIT23943451555338522.png",
+          "type": "Image",
+          "id": 84239174
+        }
+      ]
+    },
+    {
+      "id": 20757518,
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY20SU09",
+          "path": "BaseThemes/CY20SU09.json",
+          "type": "BaseTheme",
+          "id": 84239175
+        },
+        {
+          "name": "Solar",
+          "path": "BuiltInThemes/Solar.json",
+          "type": "CustomTheme",
+          "id": 84239176
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "exportDataMode": "AllowSummarizedAndUnderlying",
+    "useStylableVisualContainerHeader": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false
+  }
+}

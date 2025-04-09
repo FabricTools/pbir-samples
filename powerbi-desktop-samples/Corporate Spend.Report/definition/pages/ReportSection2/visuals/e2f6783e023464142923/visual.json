@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "e2f6783e023464142923",
+  "position": {
+    "x": 663.73626373626371,
+    "y": 29.890109890109891,
+    "z": 7000,
+    "width": 145.05494505494505,
+    "height": 36.923076923076927,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Select Sales Region",
+                    "textStyle": {
+                      "fontFamily": "Segoe (Bold)",
+                      "fontStyle": "italic"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+table Indicators
+	lineageTag: 32b69866-4003-42e7-959b-398a2deb075f
+
+	column Sort
+		dataType: int64
+		formatString: 0
+		lineageTag: 78b6a035-1d9c-47f4-a2ca-305c8bca3942
+		summarizeBy: sum
+		sourceColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: b8a918e9-d9ee-4974-8966-c5896f891782
+		summarizeBy: none
+		sourceColumn: Status
+		sortByColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Image
+		dataType: string
+		lineageTag: 22f31c55-bec7-4408-b6a5-5f007f2361f3
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Image
+		sortByColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Indicators-ba55c21c-1dfb-45f5-9bcf-4b9bcec1cd52 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUfLJLweSGSUlBcVW+vqZuYnpqcUZicnZesn5ufqJQIF0SyNjfXNDM0P90OzUKicPvYK8dKVYnWglI6A+39SUzNJcIgwwtTS31PfLzTQO9IcbYAzU55GZnkGEdmMTS0v99FIztyAjiPZYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Sort = _t, Status = _t, Image = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Sort", Int64.Type}, {"Status", type text}, {"Image", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

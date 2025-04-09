@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY20SU09",
+      "reportVersionAtImport": "5.16",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "NewExecutive",
+      "reportVersionAtImport": "5.16",
+      "type": "SharedResources"
+    }
+  },
+  "layoutOptimization": "PhonePortrait",
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "id": 20798738,
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "BG1705515081932516.png",
+          "path": "BG1705515081932516.png",
+          "type": "Image",
+          "id": 84525501
+        },
+        {
+          "name": "BG28255511790078229.png",
+          "path": "BG28255511790078229.png",
+          "type": "Image",
+          "id": 84525502
+        },
+        {
+          "name": "BG35394154307973591.png",
+          "path": "BG35394154307973591.png",
+          "type": "Image",
+          "id": 84525503
+        }
+      ]
+    },
+    {
+      "id": 20798739,
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY20SU09",
+          "path": "BaseThemes/CY20SU09.json",
+          "type": "BaseTheme",
+          "id": 84525504
+        },
+        {
+          "name": "NewExecutive",
+          "path": "BuiltInThemes/NewExecutive.json",
+          "type": "CustomTheme",
+          "id": 84525505
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "exportDataMode": "AllowSummarizedAndUnderlying",
+    "hideVisualContainerHeader": true,
+    "useStylableVisualContainerHeader": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false
+  }
+}

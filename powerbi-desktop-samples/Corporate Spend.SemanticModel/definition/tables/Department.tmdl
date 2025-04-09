@@ -1,0 +1,31 @@
+table Department
+	lineageTag: 972ec73c-0e31-4404-839b-f2b7b158b60e
+
+	column VP
+		dataType: string
+		lineageTag: 484c2aaa-f64c-4951-84d6-af311eef20ab
+		summarizeBy: none
+		sourceColumn: VP
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: int64
+		lineageTag: f9e3889e-fbf5-43f3-92c2-2fd1851abc13
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Department = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="Department",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"VP", "VP"}, {"Department", "Department"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"VP", type text}, {"Department", Int64.Type}})
+				 in
+				    #"Changed Type"
+

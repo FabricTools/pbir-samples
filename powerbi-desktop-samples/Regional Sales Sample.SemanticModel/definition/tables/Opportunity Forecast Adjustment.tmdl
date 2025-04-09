@@ -1,0 +1,41 @@
+table 'Opportunity Forecast Adjustment'
+	isHidden
+	lineageTag: 5c6989c1-9cb2-49a3-92a2-02c2b7f5474e
+
+	measure 'Forecast Adjustment Value' = SELECTEDVALUE('Opportunity Forecast Adjustment'[Forecast Adjustment], 0)
+		isHidden
+		lineageTag: 30a1a858-afcc-4343-802b-5b2229eccc0e
+
+	measure 'Fcst adj slicer alt text' = CONCATENATE("Use the slicer to adjust the forecast, current value is ", 'Opportunity Forecast Adjustment'[Forecast Adjustment Value])
+		lineageTag: 7150d622-ec0d-4e6a-a1c9-f510cac30c7f
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Forecast Adjustment'
+		isHidden
+		formatString: 0
+		lineageTag: b6bedc5c-f2c8-47f7-9a70-4016efb9b8fb
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	column Blank = 1
+		isHidden
+		formatString: 0
+		lineageTag: c7777006-44ba-495c-81dc-a0fe2ba64fd1
+		summarizeBy: sum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Opportunity Forecast Adjustment-9797fe06-d1a1-4be5-b759-4144a437eb58' = calculated
+		mode: import
+		source = GENERATESERIES(-80, 20, 10)
+

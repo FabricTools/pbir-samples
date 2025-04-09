@@ -1,0 +1,44 @@
+table 'Country Region'
+	lineageTag: f5c46910-df35-443d-be37-937c605e1239
+
+	column 'Sales Region'
+		dataType: string
+		lineageTag: 276691df-2ad9-45ab-9f40-f91a988b5231
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Sales Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country/Region
+		dataType: string
+		lineageTag: ea7461fc-61ef-4085-a435-29cae14acebd
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country/Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country/Region ID'
+		dataType: double
+		isHidden
+		lineageTag: 8f5e42a2-90b1-4b0e-a032-900bc0f41b15
+		summarizeBy: none
+		sourceColumn: Country/Region ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Country = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="Country",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"Region", "Sales Region"}, {"Country", "Country/Region"}, {"Country ID", "Country/Region ID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Sales Region", type text}, {"Country/Region", type text}, {"Country/Region ID", type number}})
+				 in
+				    #"Changed Type"
+

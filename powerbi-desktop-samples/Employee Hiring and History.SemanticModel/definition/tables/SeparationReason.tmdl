@@ -1,0 +1,34 @@
+table SeparationReason
+	lineageTag: 5de7782d-aec5-479c-ab3c-4d7827e6fce3
+
+	column SeparationTypeID
+		dataType: string
+		isHidden
+		lineageTag: a356f7f1-fb4c-4481-8758-f347246bdcf6
+		summarizeBy: none
+		sourceColumn: SeparationTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeparationReason
+		dataType: string
+		lineageTag: d8f39dbc-5fa7-46ae-bdc9-2c855ac027b5
+		summarizeBy: none
+		sourceColumn: SeparationReason
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TermReason = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT distinct SeparationTypeID, [Vol-Invol] SeparationReason#(lf)  FROM [IP].[HR].[TermReason]"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"SeparationTypeID", "SeparationTypeID"}, {"SeparationReason", "SeparationReason"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"SeparationTypeID", type text}, {"SeparationReason", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

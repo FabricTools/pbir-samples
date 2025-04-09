@@ -1,0 +1,40 @@
+table 'Separation Reasons'
+	lineageTag: 158fab44-388b-4227-b7f2-e53fb1eb5387
+
+	column SeparationTypeID
+		dataType: string
+		lineageTag: 46c742c6-ae5a-49ef-b096-900d2a74cb51
+		summarizeBy: none
+		sourceColumn: SeparationTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeparationReason
+		dataType: string
+		lineageTag: ec4c8ff9-abcb-460e-95fb-2fb550d73bfe
+		summarizeBy: none
+		sourceColumn: SeparationReason
+		sortByColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort
+		dataType: int64
+		formatString: 0
+		lineageTag: c3505bb6-3476-4395-98ef-587d37481c7c
+		summarizeBy: sum
+		sourceColumn: Sort
+
+		annotation SummarizationSetBy = User
+
+	partition 'Separation Reasons-1728e7e8-4af8-41be-9503-66466298c01a' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WClXSUfLMK8vPKc0rSSyqBPIMlWJ1opXCgKwwJFEjpdhYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [SeparationTypeID = _t, SeparationReason = _t, Sort = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"SeparationTypeID", type text}, {"SeparationReason", type text}, {"Sort", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,190 @@
+table Date
+	lineageTag: 3a24e063-5bce-4e66-9928-076a97926492
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: General Date
+		lineageTag: 7aade6dd-7aa6-49f8-ab73-7970af8286f0
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 4c582681-9ba7-432b-bfd4-adea4053f849
+			defaultHierarchy: LocalDateTable_a1cd3d03-2df1-466a-bea5-79b9463a9397.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNo
+		dataType: int64
+		lineageTag: 8d3b1a63-3167-453b-9765-f19a6a546162
+		summarizeBy: sum
+		sourceColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MonthName
+		dataType: string
+		lineageTag: 51ee4805-f016-4421-895b-7f3f9c582faa
+		summarizeBy: none
+		sourceColumn: MonthName
+		sortByColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthID
+		dataType: int64
+		isHidden
+		lineageTag: 7471407b-b9d0-4913-acf3-310fc766549b
+		summarizeBy: count
+		sourceColumn: MonthID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Month
+		dataType: string
+		lineageTag: 180a44b3-a84c-4d18-bda3-1737d84f89ee
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: MonthID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: ac675c3d-7f9e-4c63-bcea-0ba567412db4
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		lineageTag: 700e0420-83de-4f7f-b48c-b4495f363cef
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RunningMonths = ((YEAR(DATE(2014, 6, 30))-[Year])*12 + MONTH(DATE(2014, 12, 31)) - [MonthNo] +1)
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 05c3a34a-2441-4007-8430-86f828ec48c6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Running Year' = IF(CEILING([RunningMonths]/12, 1)>0, CEILING([RunningMonths]/12, 1), BLANK())
+		dataType: int64
+		lineageTag: e25698eb-6018-4049-9d41-1d22b4d140a1
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Running Months' = IF([Running Year]=1, "Running 12 Months", IF([Running Year]=2, "Running 13-24 Months", IF([Running Year]=3, "Running 25-36 Months", Blank())))
+		dataType: string
+		lineageTag: 83522d6d-62fa-483d-adb2-75b2443b92f9
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rolling Period' = IF([RunningMonths]<37&&[RunningMonths]>0,  "P-"&(RIGHT("0"&([RunningMonths]-([Running Year]-1)*12-1), 2)))
+		dataType: string
+		lineageTag: 6e8094e2-3750-46dc-be80-1b673c5d64e6
+		summarizeBy: none
+		isDataTypeInferred
+		sortByColumn: 'Rolling Period Sort'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rolling Period Sort' = IF([RunningMonths]>0 && [RunningMonths]<37,13- [RunningMonths] +12*(CEILING([RunningMonths]/12, 1)-1))
+		dataType: int64
+		lineageTag: 38114bef-95c4-4c02-8ea8-3f4bb2f71557
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MonthIndex = CALCULATE(DISTINCTCOUNT([Month]), FILTER(ALL('Date'), [Date]<=EARLIER([Date])))
+		dataType: int64
+		lineageTag: 466842a6-1876-46ee-80b7-06a4d54c83cc
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Months = LEFT('Date'[MonthName],3)
+		dataType: string
+		lineageTag: 90386875-fb88-47cc-8e36-a38a60bd9486
+		summarizeBy: none
+		isDataTypeInferred
+		sortByColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy YQMD
+		lineageTag: ef366d12-e3ed-4601-bd26-a051ca1d53a4
+
+		level Year
+			lineageTag: 78063ea1-d596-41e5-bd56-939ce6faeacd
+			column: Year
+
+		level Quarter
+			lineageTag: ef632794-f9a2-426a-883b-a61201b974b5
+			column: Quarter
+
+		level Month
+			lineageTag: a73a5aeb-c2a8-484e-864f-598bdbdb6743
+			column: Month
+
+		level Date
+			lineageTag: a625a33c-3f6d-4ccd-a898-cbe5b2dd90e0
+			column: Date
+
+	hierarchy 'Year Hierarchy'
+		lineageTag: 6fe4e2fb-c37b-49d1-9e38-ffd9d2f00309
+
+		level Year
+			lineageTag: d99e6bc5-e86a-47ce-af5b-07e97730bb3d
+			column: Year
+
+		level Months
+			lineageTag: 7a876dae-db9b-4265-8416-044d8f53867e
+			column: Months
+
+		level Date
+			lineageTag: dda03246-74ad-4027-a97c-4eca3c2810d8
+			column: Date
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT [SalesAndMarketing].[Date].*   FROM [SalesAndMarketing].[Date]"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"Date", "Date"}, {"MonthNo", "MonthNo"}, {"MonthName", "MonthName"}, {"MonthID", "MonthID"}, {"Month", "Month"}, {"Quarter", "Quarter"}, {"Year", "Year"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Date", type datetime}, {"MonthNo", Int64.Type}, {"MonthName", type text}, {"MonthID", Int64.Type}, {"Month", type text}, {"Quarter", type text}, {"Year", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation __PBI_LegacyCustomDateTable = true
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,235 @@
+table SalesFact
+	isHidden
+	lineageTag: 8ee8f468-9491-410d-a68f-7eca29929b2d
+
+	measure 'Total Units' = SUM([Units])
+		formatString: #,0
+		lineageTag: 7c8525dd-932e-43e9-ab06-085b7c03e772
+
+	measure 'Sales $' = SUM([Revenue])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 01ff50fc-913f-4f53-9aa6-defa767118f9
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Sentiment = AVERAGE(Sentiment[Score])
+		formatString: 0
+		lineageTag: 0df4a467-9a78-41e8-9e2a-fca284a1f189
+
+	measure 'Total Units YTD' = TOTALYTD([TOTAL UNITS], 'Date'[Date])
+		formatString: #,0
+		lineageTag: 315cbfba-ff3a-48d2-9a9a-156d89aa022a
+
+	measure 'Total VanArsdel Units YTD' = CALCULATE([Total Units YTD], FILTER(ALL(Product[isVanArsdel]), Product[isVanArsdel]="Yes"))
+		formatString: #,0
+		lineageTag: f4045778-eadb-41ce-865b-7610c81b0f17
+
+	measure 'Total OTHER Units YTD' = CALCULATE([Total Units YTD], FILTER(ALL(Product[isVanArsdel]), Product[isVanArsdel]="No"))
+		formatString: #,0
+		lineageTag: 98b1153a-06f1-4bb1-8d56-c77ce9f24197
+
+	measure 'Total VanArsdel Units' = CALCULATE([Total Units], FILTER(ALL(Product[isVanArsdel]), Product[isVanArsdel]="Yes"))
+		formatString: #,0
+		lineageTag: e837eec4-418d-43d4-a75f-5b19c7284551
+
+	measure 'Total OTHER Units' = CALCULATE([Total Units], FILTER(ALL(Product[isVanArsdel]), Product[isVanArsdel]="No"))
+		formatString: #,0
+		lineageTag: 4ca5b798-f6ae-4183-94b5-18e36e930911
+
+	measure '% Units Market Share' = IF([Total VanArsdel Units]=0, 0, DIVIDE([Total VanArsdel Units], [Total Units], 0))
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b6b9f5d5-8725-4d46-b31e-3a96f4b35efd
+
+	measure 'Total Category Volume' = CALCULATE([Total Units])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: aef445e0-1796-4201-b474-6859f30ed948
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Compete Volume' = CALCULATE([Total Units], FILTER('Product', Product[isVanArsdel]="No"))
+		formatString: #,0
+		lineageTag: 5d0aa48b-cc6b-468c-ac99-ae6744b9c5e9
+
+	measure '% Category Compete Share' = INT(DIVIDE([Total Compete Volume], [Total Category Volume])*100)
+		formatString: 0%;-0%;0%
+		lineageTag: de0d28be-3665-4089-b0f8-06d871efc47e
+
+	measure 'TOTAL UNITS SPLY' = CALCULATE([TOTAL UNITS],SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: ead6e09a-d305-444d-b2aa-623da116d4e8
+
+	measure 'Total Units YTD SPLY' = CALCULATE([Total Units YTD], SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: ee129e06-80f6-4a75-94a2-5ca088bb6f44
+
+	measure 'Total VanArsdel Units YTD SPLY' = CALCULATE([Total VanArsdel Units YTD], SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: 485cd64e-ab94-4383-8eaf-0a9e78424e73
+
+	measure 'Total OTHER Units YTD SPLY' = CALCULATE([Total OTHER Units YTD], SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: #,0
+		lineageTag: ecc1122c-9183-4c63-b497-1917a28d7cb7
+
+	measure '% Units Market Share YTD' = DIVIDE([Total VanArsdel Units YTD], [Total Units YTD])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: eb0411b3-0b2f-4868-adbd-46e4d91a1951
+
+	measure '% Market Share SPLY YTD' = CALCULATE([% Units Market Share YTD], SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f92a860c-c68f-4218-a7ac-1a37f57bc0de
+
+	measure '% Unit Market Share YOY Change' = [% Units Market Share]-[% Units Market Share SPLY]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f21a89b6-a41e-41d7-9f4b-2f54a86211a5
+
+	measure '% Units Market Share SPLY' = CALCULATE([% Units Market Share], SAMEPERIODLASTYEAR('Date'[Date]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2eae66d4-0558-4b11-87cb-208f93bdb2e9
+
+	measure 'Total Units R12Ms' = CALCULATE(SUM([Units]), FILTER(ALL('Date'), 'Date'[MonthIndex]<=MAX('Date'[MonthIndex])&& 'Date'[MonthIndex]> MAX('Date'[MonthIndex])-12))
+		formatString: #,0
+		lineageTag: 132df219-07e2-454c-865f-e240e4c9c3c0
+
+	measure 'Total VanArsdel Units R12M' = CALCULATE([Total Units R12Ms], FILTER(ALL(Product[isVanArsdel]), Product[isVanArsdel]="Yes"))
+		formatString: #,0
+		lineageTag: 6f1ad575-087e-4d08-868e-a17ab0c5252f
+
+	measure 'Total OTHER Units R12M' = CALCULATE([Total Units R12Ms], FILTER(ALL(Product[isVanArsdel]), Product[isVanArsdel]="No"))
+		formatString: #,0
+		lineageTag: c9d079eb-3d45-4e98-a86b-7b53b4cbbd2a
+
+	measure '% Units Market Share R12M' = IF([Total VanArsdel Units R12M]=0, 0, DIVIDE([Total VanArsdel Units R12M], [Total Units R12Ms], 0))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f890ec04-022b-4356-8099-99721356715d
+
+	measure 'Sentiment Gap' = IF(ISBLANK(CALCULATE([Sentiment], Manufacturer[MfgisVanArsdel]="No"))||ISBLANK(CALCULATE([Sentiment], Manufacturer[MfgisVanArsdel]="Yes")), BLANK(), CALCULATE([Sentiment], Manufacturer[MfgisVanArsdel]="No") - CALCULATE([Sentiment], Manufacturer[MfgisVanArsdel]="Yes"))
+		formatString: 0
+		lineageTag: 17d31d14-9ae0-4bd8-afa0-9e6d5409e05f
+
+	measure 'Total Units YTD Var' = [Total Units YTD]-[Total Units YTD SPLY]
+		formatString: #,0
+		lineageTag: 28b41b31-c761-4054-91df-c12aa3af64cf
+
+	measure 'Total Units YTD Var %' = DIVIDE([Total Units YTD Var],[TOTAL UNITS SPLY])
+		formatString: 0%;-0%;0%
+		lineageTag: af67820f-b74b-4c5f-abb3-76880ec4325a
+
+	measure 'Sum of Units' = SUM('SalesFact'[Units])
+		lineageTag: 37eb8602-3247-41aa-b781-80a476ad882e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sum of Revenue' = SUM('SalesFact'[Revenue])
+		lineageTag: dbd7bdf8-ac5b-4b7e-9fcd-ec03ebbfd8da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure @Indicator01 = IF('SalesFact'[% Category Compete Share]<0.55,1,IF('SalesFact'[% Category Compete Share]>0.6,3,2))
+		formatString: 0
+		lineageTag: 16e379e5-368e-4702-a702-dd5b1c29acb5
+
+	measure @Indicator02 = IF('SalesFact'[% Unit Market Share YOY Change]<0,1,IF('SalesFact'[% Unit Market Share YOY Change]>.2,3,2))
+		formatString: 0
+		lineageTag: 92673264-0da1-4f5f-a625-3389129bd9c1
+
+	measure #Space01 = ```
+			"" 
+			```
+		lineageTag: d23eb90a-77b4-4b68-a278-2d0ff2558062
+
+	measure #Space02 = ```
+			"" 
+			```
+		lineageTag: 977efc56-1899-412f-993b-ac0dbbfe649e
+
+	measure @Indicator03 = IF('SalesFact'[Total Units YTD Var %]<0,1,IF('SalesFact'[Total Units YTD Var %]>0.1,3,2))
+		formatString: 0
+		lineageTag: 43104470-563d-4727-83f2-399e69a33f2f
+
+	measure @Indicator04 = IF('SalesFact'[Sentiment]<65,1,IF('SalesFact'[Sentiment]>67,3,2))
+		formatString: 0
+		lineageTag: f6c7a35f-617a-42e1-9efc-b5c818a6e80b
+
+	measure @Indicator05 = IF('SalesFact'[Sentiment Gap]<15,1,IF('SalesFact'[Sentiment Gap]>25,3,2))
+		formatString: 0
+		lineageTag: b6e82268-31c6-4062-b857-8d2888d52c51
+
+	measure @Indicator04A = IF('SalesFact'[@Indicator04]=1,"Low Sentiment Rate",IF('SalesFact'[@Indicator04]=3,"High Sentiment Rate","Medium Sentiment Rate"))
+		lineageTag: 076840b0-f366-4055-962b-c11f5869f43b
+
+	measure @Indicator05A = IF('SalesFact'[@Indicator05]=1,"Low Sentiment Gap",IF('SalesFact'[@Indicator05]=3,"High Sentiment Gap","Medium Sentiment Gap"))
+		lineageTag: 17afa306-2b17-4594-abf4-c26e5960e1ec
+
+	measure 'Total Units YTD Var %2' = INT(DIVIDE([Total Units YTD Var],[TOTAL UNITS SPLY])*100)
+		lineageTag: c8628a07-274d-46e6-9c59-fddddb95d298
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductID
+		dataType: int64
+		isHidden
+		lineageTag: 3cec1401-9ddd-4ebd-b03f-ff2ec2e25f1e
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 341ae319-6880-4eaf-9c5f-8f11d78c2c8a
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zip
+		dataType: string
+		isHidden
+		lineageTag: 0db92edc-0fd9-46ee-8b82-d7915787e440
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: Zip
+
+		annotation SummarizationSetBy = Automatic
+
+	column Units
+		dataType: int64
+		isHidden
+		lineageTag: 4e21c6a1-fd5c-451e-b215-ccddbbe94e92
+		summarizeBy: sum
+		sourceColumn: Units
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Revenue
+		dataType: decimal
+		isHidden
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: b3bb9dfb-47ff-4d27-aaa3-ba9b350c919d
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	partition SalesFact = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT [ProductID], dateadd(month, 6, [DATE]) [Date], [Zip], [Units], [Revenue]  FROM [SalesAndMarketing].[SalesFact]"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"ProductID", "ProductID"}, {"Date", "Date"}, {"Zip", "Zip"}, {"Units", "Units"}, {"Revenue", "Revenue"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"ProductID", Int64.Type}, {"Date", type datetime}, {"Zip", type text}, {"Units", Int64.Type}, {"Revenue", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "Bookmark9f03fa233101e90d9b14"
+    },
+    {
+      "name": "Bookmark675cb89075a639f32135"
+    },
+    {
+      "name": "Bookmarkfca4d8f0f12aeb906395"
+    },
+    {
+      "name": "Bookmarka7fdcf95c66b9ff0588f"
+    },
+    {
+      "name": "Bookmark680a4720d00d747dc9bd"
+    },
+    {
+      "name": "Bookmarkf447917e6ced097185a9"
+    },
+    {
+      "name": "Bookmarkaf84e44562c130e87655"
+    },
+    {
+      "name": "Bookmark1ed32ed40b7d229ab32b"
+    },
+    {
+      "name": "Bookmarkbb8cab1e08aeb7daaed1"
+    },
+    {
+      "name": "Bookmark947d5fbaa4ba225d100b"
+    },
+    {
+      "name": "Bookmark1a26220ed274028cd1d3"
+    },
+    {
+      "name": "Bookmarkafd423e3602da1687910"
+    },
+    {
+      "name": "Bookmark5f82fa36d043c0e0db6c"
+    },
+    {
+      "name": "Bookmark4d1daa7bb3d428ae13d6"
+    },
+    {
+      "name": "Bookmarkbfd8f70034480c8dee92"
+    },
+    {
+      "name": "Bookmark6deeef404198db2b73a7"
+    },
+    {
+      "name": "Bookmark3d9d72a2bb9d04a23607"
+    },
+    {
+      "name": "Bookmarkf808c0c62c0d1855a4e0"
+    }
+  ]
+}

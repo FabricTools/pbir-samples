@@ -1,0 +1,74 @@
+table Geo
+	lineageTag: 430cf3c0-8a03-4046-a965-a03fd5c202a5
+
+	column Zip
+		dataType: string
+		isHidden
+		lineageTag: 2e86daf5-03be-498f-9985-89846fff5272
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: Zip
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: dbdc7f23-d2d4-49b9-99b5-e59bd1839220
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 2f20cc3e-ecc0-49f5-9908-1b56db4c1063
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 3c1d4eea-c065-4982-ba0f-5722e879a4ba
+		dataCategory: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column District
+		dataType: string
+		lineageTag: 2a5db725-990e-4193-9e50-f537daa31d72
+		dataCategory: District
+		summarizeBy: none
+		sourceColumn: District
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy GeoRollup
+		lineageTag: 11229a21-574b-4952-9ef8-a9e0e11e15df
+
+		level State
+			lineageTag: e24b99fb-16ed-4aaf-a749-830e9942a12d
+			column: State
+
+		level City
+			lineageTag: 68956622-ee35-4cfc-aa27-809a0e02c76c
+			column: City
+
+		level Zip
+			lineageTag: 5928cf8b-b619-4833-a35f-af4e0c7252e1
+			column: Zip
+
+	partition Geo = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "IP", [Query="SELECT [SalesAndMarketing].[Geo].*   FROM [SalesAndMarketing].[Geo]"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"Zip", "Zip"}, {"City", "City"}, {"State", "State"}, {"Region", "Region"}, {"District", "District"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Zip", type text}, {"City", type text}, {"State", type text}, {"Region", type text}, {"District", type text}})
+				in
+				    #"Changed Type"
+

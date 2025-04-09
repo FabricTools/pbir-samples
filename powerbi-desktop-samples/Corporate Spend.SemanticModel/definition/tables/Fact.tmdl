@@ -1,0 +1,201 @@
+table Fact
+	lineageTag: 0d7c81d2-5b89-4a77-981d-d352c6981b6d
+
+	measure Amount = TOTALYTD(SUM([Value]), 'Date'[Date])*.3
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 7f557542-cc38-46ec-b9cb-0be2dcdb9983
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Actual = CALCULATE([Amount], Scenario[ScenarioDescription]="Actual")
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 19e8393c-8c13-4477-b42a-d72778269933
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure LE1 = CALCULATE([Amount], Scenario[ScenarioDescription]="Latest Estimate 1")
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: aa7e7c78-b64b-4090-be4e-be8625265010
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure LE2 = CALCULATE([Amount], Scenario[ScenarioDescription]="Latest Estimate 2")
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ff3feaee-2a0d-47f1-94e2-85f98426ad17
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure LE3 = CALCULATE([Amount], Scenario[ScenarioDescription]="Latest Estimate 3")
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: ea92843d-0ccb-424c-b494-486ee5a31616
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Plan = CALCULATE([Amount], Scenario[ScenarioDescription]="Plan")
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 9c98b4d7-1a23-4652-8943-e426fc46bee0
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Var LE1' = [Actual]-[LE1]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 77f56a52-abea-46a1-b1fd-ac4b1edabf0f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Var LE2' = [Actual]-[LE2]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 3e08a45a-a2dd-40f2-b0cc-2519bd7bfe97
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Var LE3' = [Actual]-[LE3]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: a0b3065d-cd50-4e00-84ca-be7e18a37e6f
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Var Plan' = [Actual]-[Plan]
+		lineageTag: 250ac8af-9da5-488d-a94e-fd4de4f48f5c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var LE1 %' = DIVIDE([Var LE1],[LE1], BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cfce41e8-563d-4ca9-84e3-9c9704ce97c9
+
+	measure 'Var LE2 %' = DIVIDE([Var LE2],[LE2], BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 85ff3109-1565-4ac4-82ab-5a4479354905
+
+	measure 'Var LE3 %' = DIVIDE([Var LE3],[LE3], BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ce6160dc-805b-495c-b207-fa5a1f470c75
+
+	measure 'Var Plan %' = DIVIDE([Var Plan],[Plan], BLANK())
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 49a8a760-2193-4b12-9511-a8f7ec2bf5db
+
+	measure Actual/Plan = [Actual]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: c1dad914-8a2f-4ee6-be9e-3eded0cda840
+
+		kpi
+			targetExpression = 'Fact'[Plan]
+			targetFormatString: \$#,0;(\$#,0);\$#,0
+			statusGraphic: Traffic Light - Single
+			statusExpression = ```
+				var x='Fact'[Actual/Plan]/'Fact'[_Actual/Plan Goal] return
+				if(ISBLANK(x),BLANK(),
+				        If(x<1,1,
+					    If(x<1.1,0,-1)
+				    )
+				)
+				
+				```
+
+			annotation GoalType = Measure
+
+			annotation KpiStatusType = LinearReversed
+
+			annotation KpiThresholdType = Percentage
+
+			annotation KpiThresholdOrdering = Ascending
+
+			annotation KpiThresholdCount = 2
+
+			annotation KpiThreshold_0 = 100
+
+			annotation KpiThreshold_1 = 110
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 34a63622-82f2-4972-995d-545388835da0
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: double
+		lineageTag: 71e11e69-a844-4c50-b80b-001db73178e9
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Department
+		dataType: double
+		lineageTag: 4de25641-a3af-4e73-88de-0b3ff9eeb95d
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cost Element ID'
+		dataType: string
+		lineageTag: 546e437e-8294-4390-9dff-2acce68c9195
+		summarizeBy: none
+		sourceColumn: Cost Element ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country/Region ID'
+		dataType: double
+		lineageTag: 454d8b15-195b-4b06-bac6-7919fb950e9e
+		summarizeBy: none
+		sourceColumn: Country/Region ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Business Area ID'
+		dataType: double
+		lineageTag: 291194a1-f134-467a-8a1b-041df96a29fa
+		summarizeBy: none
+		sourceColumn: Business Area ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'IT Sub Area ID'
+		dataType: double
+		lineageTag: 92f4a1ed-e08d-47ec-a637-02a82bb33484
+		summarizeBy: none
+		sourceColumn: IT Sub Area ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Scenario ID'
+		dataType: double
+		lineageTag: 6b4a4458-c250-4016-9c59-0aef15142370
+		summarizeBy: none
+		sourceColumn: Scenario ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Fact = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="Fact",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"Date", "Date"}, {"Value", "Value"}, {"Department", "Department"}, {"Cost Element ID", "Cost Element ID"}, {"Country ID", "Country/Region ID"}, {"Business Area ID", "Business Area ID"}, {"IT Sub Area ID", "IT Sub Area ID"}, {"Scenario ID", "Scenario ID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Date", type datetime}, {"Value", type number}, {"Department", type number}, {"Cost Element ID", type text}, {"Country/Region ID", type number}, {"Business Area ID", type number}, {"IT Sub Area ID", type number}, {"Scenario ID", type number}})
+				 in
+				    #"Changed Type"
+

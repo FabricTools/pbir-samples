@@ -1,0 +1,82 @@
+table District
+	lineageTag: 636cd3a4-af99-4a62-bfc4-4a3d2eb162e1
+
+	column DistrictID
+		dataType: int64
+		lineageTag: 263cda92-64e8-413c-8011-0ef587916c5c
+		summarizeBy: none
+		sourceColumn: DistrictID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column District
+		dataType: string
+		lineageTag: 6a2f1ba9-d9c3-48a5-b4a3-b637a16b74da
+		summarizeBy: none
+		sourceColumn: District
+
+		annotation SummarizationSetBy = Automatic
+
+	column DM
+		dataType: string
+		isKey
+		keepUniqueRows
+		lineageTag: b261ab33-337b-44e9-b579-ccbdb6346590
+		isDefaultLabel
+		summarizeBy: none
+		sourceColumn: DM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DM_Pic_fl
+		dataType: string
+		lineageTag: 833bfcd9-d3f7-4163-bb0d-37a42462e6a3
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: DM_Pic_fl
+
+		annotation SummarizationSetBy = Automatic
+
+	column DM_Pic
+		dataType: string
+		lineageTag: b4059d51-0265-43f8-9565-564ef719a552
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: DM_Pic
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessUnitID
+		dataType: int64
+		lineageTag: ccaf01cb-9434-497f-9e3c-c4edbfb61493
+		summarizeBy: none
+		sourceColumn: BusinessUnitID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DMImage
+		dataType: binary
+		lineageTag: 845de3fa-2909-4e3c-a236-a6b995b8597c
+		dataCategory: Image
+		isDefaultImage
+		summarizeBy: none
+		sourceColumn: DMImage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition District = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "RetailBIDW", [Query="SELECT [dbo].[District_Dimension].*   FROM [dbo].[District_Dimension]"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"DistrictID", "DistrictID"}, {"DistrictName", "District"}, {"DM", "DM"}, {"DM_Pic_fl", "DM_Pic_fl"}, {"DM_Pic", "DM_Pic"}, {"BusinessUnitID", "BusinessUnitID"}, {"DMImage", "DMImage"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"DistrictID", Int64.Type}, {"District", type text}, {"DM", type text}, {"DM_Pic_fl", type text}, {"DM_Pic", type text}, {"BusinessUnitID", Int64.Type}, {"DMImage", type binary}})
+				in
+				    #"Changed Type"
+

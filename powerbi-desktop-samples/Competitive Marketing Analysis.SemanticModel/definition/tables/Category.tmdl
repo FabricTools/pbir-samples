@@ -1,0 +1,41 @@
+table Category
+	lineageTag: affc0b05-1330-44ef-ab09-623697bb5447
+
+	column Category
+		dataType: string
+		lineageTag: b15f5b68-1a34-465e-85cb-d918737dce46
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 66b7924d-2869-4e74-8882-07578836fecf
+		summarizeBy: none
+		sourceColumn: Channel
+		sortByColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort
+		dataType: string
+		lineageTag: e4dace26-a725-4daa-948a-29f96a04e3f3
+		summarizeBy: none
+		sourceColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Category-34abe436-ef01-4934-b972-58045158c388 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("HYo7CoAwEAWvIlvb+LmBWIqgZUgR9CELcRfiKh7fmG7em3GOxtcSTlBNq2nClaEnXzsaVB4IQ7YideMQqwk7hzzbkky6IwVjlXzNEln+tCluwXHHkH5xW4Rl6Mj7Dw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Category = _t, Channel = _t, Sort = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Category", type text}, {"Channel", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

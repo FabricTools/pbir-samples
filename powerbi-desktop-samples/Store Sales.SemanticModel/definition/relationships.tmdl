@@ -1,0 +1,26 @@
+relationship 3eef198b-ca6c-4ee3-a0bd-9e35b5c725b8
+	fromColumn: Store.DistrictID
+	toColumn: District.DistrictID
+
+relationship 4e8a6ba0-ddf4-46af-996a-c4b2b4dbe2bf
+	fromColumn: Sales.LocationID
+	toColumn: Store.LocationID
+
+relationship e16ca2b4-d139-4ef8-9a00-5b7616ecc5ac
+	fromColumn: Sales.ItemID
+	toColumn: Item.ItemID
+
+relationship d3e1e755-e88f-4569-bd13-f1041030ae98
+	fromColumn: Sales.ReportingPeriodID
+	toColumn: Time.ReportingPeriodID
+
+relationship 74e52eb9-ac73-4b07-bb52-1b4cca072b32
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Store.OpenDate
+	toColumn: LocalDateTable_0eafa36c-5fc2-4b6f-84df-278a77695bc4.Date
+
+relationship ffdea654-6956-479d-9b81-f720c4647966
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Time.Month
+	toColumn: LocalDateTable_2403841f-d1ed-4123-bf26-4ba8066f16d8.Date
+

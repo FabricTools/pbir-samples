@@ -1,0 +1,42 @@
+table Industries
+	lineageTag: 46e20580-f584-47f3-9fb6-650aaf55c07d
+
+	column Industry
+		dataType: string
+		lineageTag: 8b10b876-f44a-4959-846f-ddd0db70c358
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column IndustrySeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2b094873-0bc1-4789-8a16-fe25ba521900
+		summarizeBy: none
+		sourceColumn: IndustrySeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Industries-ad0b018f-e5af-41ce-a3f4-c734e885246e = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://microsoft-my.sharepoint.com/personal/misewell_microsoft_com/Documents/Documents/GitHub/ContosoBI/Contoso%20-%20Sales%20-%20Current%20Release/Contoso%20-%20Dynamics%20365%20Sales%20Source%20Data.xlsx"), null, true),
+				    IndustryTbl_Table = Source{[Item="IndustryTbl",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(IndustryTbl_Table,{{"IndustrySeq", Int64.Type}, {"Industry", type text}, {"Factor", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Factor"})
+				in
+				    #"Removed Columns"
+
+	changedProperty = IsHidden
+
+	annotation PBI_QueryRelationships = {"columnCount":2,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Industries/Changed Type.{IndustrySeq,0}","Section1/Industries/Changed Type.{Industry,1}"],"ColumnCount":2,"KeyColumnNames":[],"ColumnIdentities":["Section1/Industries/Changed Type.{IndustrySeq,0}","Section1/Industries/Changed Type.{Industry,1}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,122 @@
+table Product
+	lineageTag: f6ccdb91-4c18-4fd2-bb41-3b7425ba1677
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2e5c908d-6acd-4d13-bc98-7b642b2faf63
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		lineageTag: a7f87b25-2ac2-45eb-9fe3-8273fac2658b
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: b2620d65-beb8-426c-8914-dbe1fea5c47d
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Standard Cost'
+		dataType: double
+		lineageTag: eb6ce746-ffa3-4b04-9749-ce09f8b789d6
+		summarizeBy: sum
+		sourceColumn: Standard Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Color
+		dataType: string
+		lineageTag: e63bb37c-fd3a-4f22-a4ad-23fb22263100
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'List Price'
+		dataType: double
+		lineageTag: a13cd159-b3f4-4f27-b597-2988600da101
+		summarizeBy: sum
+		sourceColumn: List Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Model
+		dataType: string
+		lineageTag: e690bc37-359b-4209-bf9b-677446d26177
+		summarizeBy: none
+		sourceColumn: Model
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: c6a45283-5dbb-491c-9481-6bd772244a7c
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 2535c3fe-473b-46ba-9d46-72b09b5bf0ab
+		summarizeBy: none
+		sourceColumn: Category
+		sortByColumn: Sorting
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sorting = RELATED('Table'[Sorting])
+		formatString: 0
+		lineageTag: 3654ba27-15de-4ca8-a71f-6a8a37d18c3f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy Products
+		lineageTag: c6fdb5c0-f0bd-416e-aa26-167ee668f317
+
+		level Category
+			lineageTag: c508a987-3d42-4a56-9636-ebb6245d8d56
+			column: Category
+
+		level Subcategory
+			lineageTag: e902be12-e6e1-4d6c-83ef-de5a88dc3324
+			column: Subcategory
+
+		level Model
+			lineageTag: 345e8153-8629-44a2-9acb-82c84bc94a8b
+			column: Model
+
+		level Product
+			lineageTag: 9435b542-3860-45a2-b06e-7183eec10714
+			column: Product
+
+	partition Product-d33e3d12-242f-473c-8a01-fdc35a2ea693 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\jterh\OneDrive - Microsoft\_Corp Era\Power BI\AW2020 Sample\Sales\AdventureWorks Sales.xlsx"), null, true),
+				    Product_Table = Source{[Item="Product",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Product_Table,{{"ProductKey", Int64.Type}, {"SKU", type text}, {"Product", type text}, {"Standard Cost", type number}, {"Color", type text}, {"List Price", type number}, {"Model", type text}, {"Subcategory", type text}, {"Category", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

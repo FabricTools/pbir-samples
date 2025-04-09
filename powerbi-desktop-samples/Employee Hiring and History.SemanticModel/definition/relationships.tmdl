@@ -1,0 +1,63 @@
+relationship 7ddd41c5-a1f5-477b-9712-84fdc7313c7d
+	fromColumn: Employee.date
+	toColumn: Date.Date
+
+relationship 497871a2-f5e1-40ff-90d7-6f980ca1119a
+	fromColumn: Employee.FP
+	toColumn: FP.FP
+
+relationship 20c07ef2-2c50-4fd4-ad56-8b0e0e36ddc4
+	fromColumn: Employee.EthnicGroup
+	toColumn: Ethnicity.'Ethnic Group'
+
+relationship 539493ca-f3e3-4c1f-b14e-54cba661f036
+	fromColumn: Employee.Gender
+	toColumn: Gender.ID
+
+relationship 7c262a8a-d56f-4c97-95db-c0f56177e4cd
+	fromColumn: Employee.PayTypeID
+	toColumn: PayType.PayTypeID
+
+relationship edfe54b9-43d8-4c14-a29d-f17ddb0dd421
+	fromColumn: Employee.BU
+	toColumn: BU.BU
+
+relationship 35cbfa94-d30d-4da9-8fb6-e7d469edb9bb
+	fromColumn: Employee.AgeGroupID
+	toColumn: AgeGroup.AgeGroupID
+
+relationship 1c53ee81-f20a-40a6-a5bd-97e57652fc88
+	fromColumn: Employee.TermReason
+	toColumn: SeparationReason.SeparationTypeID
+
+relationship 0f809af4-d31b-4977-a214-8f13fa42f41d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.Date
+	toColumn: LocalDateTable_6f19fed3-1fc0-4f7a-878d-34aca93d6782.Date
+
+relationship f496f9ad-5665-4785-a30e-b1bbcf7be215
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.MonthStartDate
+	toColumn: LocalDateTable_d2ea5b26-668d-4c17-b228-695669b066a6.Date
+
+relationship b2a9d346-0212-432d-a1a9-57680b4a73ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.MonthEndDate
+	toColumn: LocalDateTable_c9dde99e-7ac1-4e8e-a5f2-c5ffc41d9cac.Date
+
+relationship e020e64e-e74a-4b8f-bed8-e879143ea6d8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employee.TermDate
+	toColumn: LocalDateTable_cc28ef26-f63a-4bc3-b357-93ab34cd6d9b.Date
+
+relationship 3e454a13-2d74-4769-b44d-91ce492acf1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employee.HireDate
+	toColumn: LocalDateTable_c04ce649-6e25-466f-9bbc-faabfec0fe29.Date
+
+relationship b62d0246-0585-495b-8ae5-c30f124a3bc7
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SeparationReason.SeparationTypeID
+	toColumn: 'Separation Reasons'.SeparationTypeID
+

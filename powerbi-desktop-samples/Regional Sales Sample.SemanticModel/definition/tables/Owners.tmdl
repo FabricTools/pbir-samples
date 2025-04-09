@@ -1,0 +1,85 @@
+table Owners
+	lineageTag: 70f990fe-b5ba-4e53-b914-9a6dc8e15c2d
+
+	measure 'Rev Goal' = ```
+			
+			VAR RevenueInPipeline =
+			    CALCULATE (
+			        SUMX ( Opportunities, Opportunities[Value] ),
+			        FILTER (
+			            Opportunities,
+			            Opportunities[Status] = "Open"
+			            && VALUE(LEFT(Opportunities[Sales Stage],1)) >=2
+			        )
+			    )
+			VAR BaseGoal =  
+			MROUND(([Revenue Won]+ (RevenueInPipeline*.60)),1000000)    
+			RETURN
+			IF(BaseGoal > 0, BaseGoal, MROUND(([Revenue Won]+ (RevenueInPipeline*.60)),100000))
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 059ac849-789a-4698-801d-a415d2de84c5
+
+		changedProperty = FormatString
+
+	column Owner
+		dataType: string
+		lineageTag: e5d3bb04-f671-4f7a-8c1f-eb98ebf219b2
+		summarizeBy: none
+		sourceColumn: Owner
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Manager
+		dataType: string
+		lineageTag: 38ded122-e7d0-40cd-8632-8086592f0019
+		summarizeBy: none
+		sourceColumn: Manager
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column SystemUserSeq
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 78f9ac7f-d017-4e2a-a320-28ae9765282e
+		summarizeBy: none
+		sourceColumn: SystemUserSeq
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column systemuserid
+		dataType: string
+		isHidden
+		lineageTag: d569c740-d782-460b-8b23-96a4a274fceb
+		summarizeBy: none
+		sourceColumn: systemuserid
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Owners-6403f03d-aca3-423f-9155-a1097b964223 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://microsoft-my.sharepoint.com/personal/misewell_microsoft_com/Documents/Documents/GitHub/ContosoBI/Contoso%20-%20Sales%20-%20Current%20Release/Contoso%20-%20Dynamics%20365%20Sales%20Source%20Data.xlsx"), null, true),
+				    OwnerTbl_Table = Source{[Item="OwnerTbl",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(OwnerTbl_Table,{{"Owner", type text}, {"Factor", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Factor", "ManagerSeq", "Manager Factor"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Removed Columns",{{"SystemUserSeq", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_QueryRelationships = {"columnCount":3,"keyColumnNames":[],"queryRelationships":[],"columnIdentities":["Section1/Owners/Changed Type1.{SystemUserSeq,0}","Section1/Owners/Changed Type.{Owner,1}","Section1/Owners/OwnerTbl_Table.{Manager,2}"],"ColumnCount":3,"KeyColumnNames":[],"ColumnIdentities":["Section1/Owners/Changed Type1.{SystemUserSeq,0}","Section1/Owners/Changed Type.{Owner,1}","Section1/Owners/OwnerTbl_Table.{Manager,2}"],"RelationshipInfo":[]}
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,101 @@
+table Item
+	lineageTag: d844056b-47d9-4457-97d3-84fe5d073025
+
+	column ItemID
+		dataType: int64
+		isHidden
+		lineageTag: c04a55b0-1890-4a8d-be3e-0c52eb5b5ff1
+		summarizeBy: none
+		sourceColumn: ItemID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Segment
+		dataType: string
+		lineageTag: 22bb56b0-83a0-4742-8c1c-e7e10aef8f0b
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: acb98098-0073-4a6b-89e5-56f8dafe3021
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column Buyer
+		dataType: string
+		lineageTag: f43b2d40-1b64-4bc2-976e-bd7693377a72
+		summarizeBy: none
+		sourceColumn: Buyer
+
+		annotation SummarizationSetBy = Automatic
+
+	column FamilyNane
+		dataType: string
+		lineageTag: c352317e-a257-40b3-947b-aa7cf8edfb76
+		summarizeBy: none
+		sourceColumn: FamilyNane
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clusters for Category
+	column 'Category (clusters) 2' = ```
+			VAR __ClusterValue = 
+			  LOOKUPVALUE(
+			    'ClusterMappingTable 2'[ClusterId],
+			    'ClusterMappingTable 2'[Category],
+			    'Item'[Category]
+			  )
+			
+			RETURN
+			  SWITCH(
+			    __ClusterValue,
+			    BLANK(),
+			    BLANK(),
+			    CONCATENATE("Cluster", __ClusterValue)
+			  )
+			```
+		dataType: string
+		lineageTag: e8b75fd8-a167-49da-97c0-724c569db3e2
+		summarizeBy: none
+		isDataTypeInferred
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Item"
+				          }
+				        },
+				        "Property": "Category"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"i","Entity":"Item"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"i"}},"Property":"Category"}}],"PartitionTable":{"Definition":{"TableDefinition":{"Version":2,"From":[{"Name":"i","Entity":"Item"},{"Name":"s","Entity":"Sales"},{"Name":"s1","Entity":"Store"}],"Where":[{"Condition":{"Comparison":{"Left":{"Column":{"Expression":{"SourceRef":{"Source":"s1"}},"Property":"Store Type"}},"Right":{"Literal":{"Value":"'New Store'"}},"ComparisonKind":0}}},{"Condition":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"s1"}},"Property":"PostalCode"}}],"Values":[[{"Literal":{"Value":"'37919'"}}]]}}}],"OrderBy":[],"Select":[{"Column":{"Expression":{"TransformTableRef":{"Source":"output0"}},"Property":"Item.Category"},"Name":"Item.Category"},{"Column":{"Expression":{"TransformTableRef":{"Source":"output0"}},"Property":"clusterId"},"Name":"clusterId"}],"GroupBy":[],"Transform":[{"Name":"KMeansClustering","Algorithm":"KMeansClustering","Input":{"Parameters":[{"Literal":{"Value":"-1L"},"Name":"NumberOfClusters"}],"Table":{"Name":"input0","Columns":[{"Role":"Item","Expression":{"Column":{"Expression":{"SourceRef":{"Source":"i"}},"Property":"Category"},"Name":"Item.Category"}},{"Role":"Attribute","Expression":{"Measure":{"Expression":{"SourceRef":{"Source":"s"}},"Property":"Total Sales Variance %"},"Name":"Sales.Total Sales Variance %"}},{"Role":"Attribute","Expression":{"Measure":{"Expression":{"SourceRef":{"Source":"s"}},"Property":"Avg $/Unit TY"},"Name":"Sales.Avg $/Unit TY"}},{"Role":"Attribute","Expression":{"Measure":{"Expression":{"SourceRef":{"Source":"s"}},"Property":"This Year Sales"},"Name":"Sales.This Year Sales"}}]}},"Output":{"Table":{"Name":"output0","Columns":[{"Expression":{"Column":{"Expression":{"TransformTableRef":{"Source":"input0"}},"Property":"Item.Category"},"Name":"Item.Category"}},{"Role":"Series","Expression":{"TransformOutputRoleRef":{"Role":"ClusterId"},"Name":"clusterId"}}]}}}]},"ItemIdColumns":["Item.Category"],"PartitionIdColumn":"clusterId","Partitions":[{"PartitionIds":[{"Literal":{"Value":"null"}}]}],"DefaultPartitionPrefix":"Cluster"},"Result":{"TableName":"ClusterMappingTable 2","PartitionIdColumn":"ClusterId","ItemIdMappings":[[{"PartitionTableColumn":{"Column":{"Expression":{"SourceRef":{"Entity":"ClusterMappingTable 2"}},"Property":"Category"}},"SourceTableColumn":{"Column":{"Expression":{"SourceRef":{"Entity":"Item"}},"Property":"Category"}}}]]}}}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Item = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "RetailBIDW", [Query="SELECT [ItemID]#(lf)     -- ,[SupplierID]#(lf)      --,[Name]#(lf)      --,[Description]#(lf)      --,[BrandName]#(lf)      ,[ResponsibleBuyerLastName] +', ' + [ResponsibleBuyerFirstName] Buyer#(lf)      ,left([SegmentName], 4) [SegmentName]#(lf)     -- ,[SegmentID]#(lf)      ,left([FamilyName], 3) FamilyNane#(lf)    --  ,[FamilyID]#(lf)      ,[ClassName]#(lf)     -- ,[ClassID]#(lf)   --   ,[ItemCost]#(lf)     -- ,[OriginalItemCost]#(lf)  FROM [RetailBIDW].[dbo].[Item_Dimension]"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"ItemID", "ItemID"}, {"SegmentName", "Segment"}, {"ClassName", "Category"}, {"Buyer", "Buyer"}, {"FamilyNane", "FamilyNane"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"ItemID", Int64.Type}, {"Segment", type text}, {"Category", type text}, {"Buyer", type text}, {"FamilyNane", type text}})
+				in
+				    #"Changed Type"
+

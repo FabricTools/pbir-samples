@@ -1,0 +1,960 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "store": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store": {}
+			        }
+			      ]
+			    },
+			    "store.location_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "LocationID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "location ID": {}
+			        }
+			      ]
+			    },
+			    "store.business_unit_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "BusinessUnitID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "business unit ID": {}
+			        }
+			      ]
+			    },
+			    "store.inventory_location_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "InventoryLocationID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inventory location ID": {}
+			        }
+			      ]
+			    },
+			    "store.site_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "SiteID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "site ID": {}
+			        }
+			      ]
+			    },
+			    "store.area_size_unitof_measure_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "AreaSizeUnitofMeasureCode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "area size unitof measure code": {}
+			        }
+			      ]
+			    },
+			    "store.address_line_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "AddressLine1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "address line 1": {}
+			        }
+			      ]
+			    },
+			    "store.address_line_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "AddressLine2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "address line 2": {}
+			        }
+			      ]
+			    },
+			    "store.address_line_3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "AddressLine3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "address line 3": {}
+			        }
+			      ]
+			    },
+			    "store.address_line_4": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "AddressLine4"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "address line 4": {}
+			        }
+			      ]
+			    },
+			    "store.city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "City Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "city name": {}
+			        },
+			        {
+			          "city": {}
+			        }
+			      ]
+			    },
+			    "store.territory": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Territory"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "territory": {}
+			        },
+			        {
+			          "state": {}
+			        }
+			      ]
+			    },
+			    "store.postal_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "PostalCode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "postal code": {}
+			        },
+			        {
+			          "zip": {}
+			        }
+			      ]
+			    },
+			    "store.postal_code_extension": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "PostalCodeExtension"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "postal code extension": {}
+			        }
+			      ]
+			    },
+			    "store.ITU_country_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "ITUCountryCode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ITU country code": {}
+			        }
+			      ]
+			    },
+			    "store.latitude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Latitude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitude": {}
+			        }
+			      ]
+			    },
+			    "store.longitude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Longitude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "longitude": {}
+			        }
+			      ]
+			    },
+			    "store.open_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "OpenDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "open date": {}
+			        }
+			      ]
+			    },
+			    "store.closing_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "ClosingDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "closing date": {}
+			        }
+			      ]
+			    },
+			    "store.selling_area_size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "SellingAreaSize"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selling area size": {}
+			        }
+			      ]
+			    },
+			    "store.size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Size"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "size": {}
+			        }
+			      ]
+			    },
+			    "store.area_unit_of_measure_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "AreaUnitOfMeasureName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "area unit of measure name": {}
+			        }
+			      ]
+			    },
+			    "store.last_remodel_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "LastRemodelDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last remodel date": {}
+			        }
+			      ]
+			    },
+			    "store.email_address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "EmailAddress"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email address": {}
+			        }
+			      ]
+			    },
+			    "store.complete_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "CompleteNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "complete number": {}
+			        }
+			      ]
+			    },
+			    "store.market_region_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "MarketRegionName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "market region name": {}
+			        }
+			      ]
+			    },
+			    "store.market_region_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "MarketRegionID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "market region ID": {}
+			        }
+			      ]
+			    },
+			    "store.market_area_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "MarketAreaName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "market area name": {}
+			        }
+			      ]
+			    },
+			    "store.market_area_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "MarketAreaID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "market area ID": {}
+			        }
+			      ]
+			    },
+			    "store.district_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "DistrictName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "district name": {}
+			        },
+			        {
+			          "district": {}
+			        }
+			      ]
+			    },
+			    "store.district_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "DistrictID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "district ID": {}
+			        }
+			      ]
+			    },
+			    "store.store_group_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "StoreGroupName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store group name": {}
+			        }
+			      ]
+			    },
+			    "store.store_group_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "StoreGroupID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store group ID": {}
+			        }
+			      ]
+			    },
+			    "store.business_unit_type_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "BusinessUnitTypeCode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "business unit type code": {}
+			        }
+			      ]
+			    },
+			    "store.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {}
+			        }
+			      ]
+			    },
+			    "store.function_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "FunctionCode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "function code": {}
+			        }
+			      ]
+			    },
+			    "store.security_class_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "SecurityClassCode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "security class code": {}
+			        }
+			      ]
+			    },
+			    "store.store_number_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "StoreNumberName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store number name": {}
+			        }
+			      ]
+			    },
+			    "store.store_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "StoreNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store number": {}
+			        }
+			      ]
+			    },
+			    "store.address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Address"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "address": {}
+			        }
+			      ]
+			    },
+			    "store.row_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "RowNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "row number": {}
+			        }
+			      ]
+			    },
+			    "store.calculated_column_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "City"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "city": {}
+			        },
+			        {
+			          "calculated column 1": {}
+			        }
+			      ]
+			    },
+			    "store.chain": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Chain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chain": {}
+			        }
+			      ]
+			    },
+			    "asdf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "time": {}
+			        }
+			      ]
+			    },
+			    "asdf.reporting_period_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "ReportingPeriodID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reporting period ID": {}
+			        }
+			      ]
+			    },
+			    "asdf.calendar_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "calendar year": {}
+			        },
+			        {
+			          "year": {}
+			        }
+			      ]
+			    },
+			    "asdf.row_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "RowNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "row number": {}
+			        }
+			      ]
+			    },
+			    "asdf.period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "Period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period": {}
+			        }
+			      ]
+			    },
+			    "asdf.fiscal_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "FiscalYear"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fiscal year": {}
+			        },
+			        {
+			          "year": {}
+			        }
+			      ]
+			    },
+			    "asdf.fiscal_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "FiscalMonth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fiscal month": {}
+			        },
+			        {
+			          "month": {}
+			        }
+			      ]
+			    },
+			    "store.DM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "DM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DM": {}
+			        }
+			      ]
+			    },
+			    "store.DM_pic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "DM_Pic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DM pic": {}
+			        }
+			      ]
+			    },
+			    "asdf.business_day_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Time",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "business day date": {}
+			        }
+			      ]
+			    },
+			    "store.calculated_column_11": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Open Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "open year": {}
+			        },
+			        {
+			          "calculated column 1": {}
+			        }
+			      ]
+			    },
+			    "store.count_of_open_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Count of OpenDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "count of open date": {}
+			        }
+			      ]
+			    },
+			    "store.average_of_selling_area_size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Average Selling Area Size"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average selling area size": {}
+			        },
+			        {
+			          "average of selling area size": {}
+			        }
+			      ]
+			    },
+			    "store.calculated_column_12": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Store Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "store type": {}
+			        },
+			        {
+			          "calculated column 1": {}
+			        }
+			      ]
+			    },
+			    "store.new_store": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "New Stores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new store": {}
+			        }
+			      ]
+			    },
+			    "store.new_stores_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "New Stores Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new stores target": {}
+			        }
+			      ]
+			    },
+			    "store.count_of_store_number_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Total Stores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total store": {}
+			        },
+			        {
+			          "count of store number name": {}
+			        }
+			      ]
+			    },
+			    "store.calculated_column_13": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Open Month No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "open month no": {}
+			        },
+			        {
+			          "open month": {}
+			        },
+			        {
+			          "calculated column 1": {}
+			        }
+			      ]
+			    },
+			    "store.calculated_column_14": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Open Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "open month": {}
+			        },
+			        {
+			          "calculated column 1": {}
+			        }
+			      ]
+			    },
+			    "store.count_of_open_date_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Store",
+			          "ConceptualProperty": "Open Store Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "open store count": {}
+			        },
+			        {
+			          "count of open date 2": {}
+			        }
+			      ]
+			    },
+			    "sales.totalsalesty": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sales",
+			          "ConceptualProperty": "TotalSalesTY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "This Year Sales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

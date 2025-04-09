@@ -1,0 +1,224 @@
+table Store
+	lineageTag: 0862204f-8f7e-49e5-b8ef-9ec0e9d8569d
+
+	measure 'Average Selling Area Size' = AVERAGE([SellingAreaSize])
+		formatString: #,0
+		lineageTag: d4d8be7f-1baa-48a1-bf61-f2647049ffa3
+
+	measure 'New Stores' = CALCULATE(COUNTA([Store Type]), FILTER(ALL(Store), [Store Type]="New Store"))
+		lineageTag: ac544d84-fd6b-475b-973a-69c387496cca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'New Stores Target' = 14
+		lineageTag: 4087871e-363a-469e-b45d-707dd02bfa89
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Stores' = COUNTA([StoreNumberName])
+		formatString: 0
+		lineageTag: 2e7df479-c5cd-410e-905a-b89480f7f9f8
+
+	measure 'Open Store Count' = COUNTA([OpenDate])
+		formatString: 0
+		lineageTag: 30cee895-9cf3-4f03-82c9-b0295fc9ff14
+
+	measure 'Count of OpenDate' = COUNTA('Store'[OpenDate])
+		lineageTag: c5c2edee-1f9b-42c2-a823-052a180088a6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LocationID
+		dataType: int64
+		isHidden
+		isKey
+		lineageTag: d88dc5fb-f521-480c-83ce-7afc24fb5124
+		summarizeBy: none
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'City Name'
+		dataType: string
+		isHidden
+		lineageTag: 78d437bf-c366-4939-a6ba-f647a6fc185f
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Territory
+		dataType: string
+		lineageTag: d65e7eb7-1bad-4eba-8b5c-9d2a8099beee
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: Territory
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: 64a19c9f-97ec-4c28-9491-d7e9c0908460
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column OpenDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c7615f0e-a376-4b14-959a-fae6f7f78072
+		summarizeBy: none
+		sourceColumn: OpenDate
+
+		variation Variation
+			isDefault
+			relationship: 74e52eb9-ac73-4b07-bb52-1b4cca072b32
+			defaultHierarchy: LocalDateTable_0eafa36c-5fc2-4b6f-84df-278a77695bc4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SellingAreaSize
+		dataType: int64
+		lineageTag: 25dfc9ea-95a3-49c6-a17d-ab892084ed28
+		summarizeBy: sum
+		sourceColumn: SellingAreaSize
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DistrictName
+		dataType: string
+		isHidden
+		lineageTag: 01221944-8dcd-4885-928a-998edf602727
+		summarizeBy: none
+		sourceColumn: DistrictName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 47196cfa-ca7a-4529-a65f-0b22c05b1f8d
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreNumberName
+		dataType: string
+		lineageTag: 9b6ad4d6-64d5-46b0-bd6b-f5acca41eafb
+		tableDetailPosition: 0
+		isDefaultLabel
+		summarizeBy: none
+		sourceColumn: StoreNumberName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreNumber
+		dataType: int64
+		lineageTag: 47dc55a3-0215-435d-9920-c16ada4eb4ab
+		summarizeBy: sum
+		sourceColumn: StoreNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column City = [City Name] & ", "&[Territory]
+		dataType: string
+		lineageTag: 9916b52e-c253-4676-ad00-2ce73b864c3b
+		dataCategory: City
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column Chain
+		dataType: string
+		lineageTag: 37259bfb-911c-4568-85ef-91a69d351cf5
+		summarizeBy: none
+		sourceColumn: Chain
+
+		annotation SummarizationSetBy = Automatic
+
+	column DM
+		dataType: string
+		lineageTag: 03782db7-df58-4363-94d2-38a6eabad75e
+		summarizeBy: none
+		sourceColumn: DM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DM_Pic
+		dataType: string
+		lineageTag: 2f3622ba-7ee7-45fd-8d23-2319527679c2
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: DM_Pic
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistrictID
+		dataType: int64
+		lineageTag: 9f76763d-0f5b-42ab-875c-90aac4331d9d
+		summarizeBy: none
+		sourceColumn: DistrictID
+
+	column 'Open Year' = YEAR([OpenDate])
+		dataType: int64
+		lineageTag: b9328ca3-4eff-4bbe-b55b-1665de13ea35
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Store Type' = IF([Open Year]=2014, "New Store", "Same Store")
+		dataType: string
+		lineageTag: 307f2a8b-8a05-4ccb-846f-5c417b528f57
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column 'Open Month No' = MONTH([OpenDate])
+		dataType: int64
+		lineageTag: 448890ad-ad5e-46aa-ac6b-3c5f11017dad
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Open Month' = FORMAT([OpenDate], "MMM")
+		dataType: string
+		lineageTag: ec6705ae-e510-4e4f-adc3-385e3b2667c0
+		summarizeBy: none
+		isDataTypeInferred
+		sortByColumn: 'Open Month No'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Store = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(".", "RetailBIDW", [Query="select * from ip.retail.StoreDim"]),
+				    #"Renamed Columns" = Table.RenameColumns(Source, {{"LocationID", "LocationID"}, {"City", "City Name"}, {"Territory", "Territory"}, {"PostalCode", "PostalCode"}, {"OpenDate", "OpenDate"}, {"SellingAreaSize", "SellingAreaSize"}, {"DistrictName", "DistrictName"}, {"Name", "Name"}, {"StoreNumberName", "StoreNumberName"}, {"StoreNumber", "StoreNumber"}, {"Chain", "Chain"}, {"DM", "DM"}, {"DM_Pic", "DM_Pic"}, {"DistrictID", "DistrictID"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"LocationID", Int64.Type}, {"City Name", type text}, {"Territory", type text}, {"PostalCode", type text}, {"OpenDate", type datetime}, {"SellingAreaSize", Int64.Type}, {"DistrictName", type text}, {"Name", type text}, {"StoreNumberName", type text}, {"StoreNumber", Int64.Type}, {"Chain", type text}, {"DM", type text}, {"DM_Pic", type text}, {"DistrictID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
+

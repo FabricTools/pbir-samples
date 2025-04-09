@@ -1,0 +1,43 @@
+table Scenario
+	lineageTag: 411387df-c057-4c2e-8c18-b4800f11ddab
+
+	column Scenario
+		dataType: string
+		lineageTag: 4f4b059b-435b-48a1-af48-d1fbfc9e9924
+		summarizeBy: none
+		sourceColumn: Scenario
+		sortByColumn: 'Scenario ID'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Scenario ID'
+		dataType: double
+		isHidden
+		lineageTag: e29c8068-f3a4-4638-a0de-cd10dce1ff42
+		summarizeBy: none
+		sourceColumn: Scenario ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ScenarioDescription
+		dataType: string
+		lineageTag: 6d1b63b9-4365-4e9b-a2bb-f397e6095043
+		summarizeBy: none
+		sourceColumn: ScenarioDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Scenario = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mad\Dropbox\Work\Obvience\IP\IT\Data\Clean\Data.xlsx"), null, true),
+				    Sheet = Source{[Item="Scenario",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet),
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers", {{"Scenario", "Scenario"}, {"Scenario ID", "Scenario ID"}, {"ScenarioDescription", "ScenarioDescription"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns", {{"Scenario", type text}, {"Scenario ID", type number}, {"ScenarioDescription", type text}})
+				 in
+				    #"Changed Type"
+
