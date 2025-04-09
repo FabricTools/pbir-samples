@@ -1,0 +1,4 @@
+[submodule "external/powerbi-desktop-samples"]
+	path = external/powerbi-desktop-samples
+	url = https://github.com/microsoft/powerbi-desktop-samples.git
+	branch = main
