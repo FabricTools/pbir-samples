@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "e62be78fd1927715954c",
   "position": {
     "x": 521.59037238873748,
     "y": 68.5386012715713,
     "z": 31000,
-    "width": 232.33424159854675,
-    "height": 77.831970935513169
+    "height": 77.831970935513169,
+    "width": 232.33424159854675
   },
   "visual": {
     "visualType": "card",
@@ -277,7 +277,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b9ffcf31-fa8d-4cd7-b0ff-7f0ce0ce652e",
+        "name": "774becaf98cd2f362300",
         "field": {
           "Column": {
             "Expression": {
@@ -288,6 +288,7 @@
             "Property": "KPI"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -349,6 +350,7 @@
             "Property": "Segment"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -388,6 +390,9 @@
             }
           ]
         },
+        "howCreated": "User",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true,
         "objects": {
           "general": [
             {
@@ -402,10 +407,7 @@
               }
             }
           ]
-        },
-        "howCreated": "User",
-        "isHiddenInViewMode": true,
-        "isLockedInViewMode": true
+        }
       },
       {
         "name": "Filter1",
@@ -419,6 +421,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

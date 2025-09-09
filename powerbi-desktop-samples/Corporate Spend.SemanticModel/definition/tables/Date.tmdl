@@ -39,10 +39,8 @@ table Date
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Month = Format([Date],"MMM")
-		dataType: string
 		lineageTag: 6e3a150b-8173-440d-af99-657155644df0
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: Period
 
 		annotation SummarizationSetBy = Automatic

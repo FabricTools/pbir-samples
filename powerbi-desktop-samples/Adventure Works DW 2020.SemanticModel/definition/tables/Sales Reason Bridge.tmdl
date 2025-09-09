@@ -1,0 +1,43 @@
+table 'Sales Reason Bridge'
+	isHidden
+	lineageTag: 9ac875c9-1406-48a2-a213-b222b3fc63fd
+
+	column SalesOrderLineKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5006f0c5-ef12-4db1-9a5a-c65f539e5829
+		summarizeBy: none
+		sourceColumn: SalesOrderLineKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesReasonKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b5361d4b-f561-47fa-90db-5336ed2e7101
+		summarizeBy: none
+		sourceColumn: SalesReasonKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Reason Bridge' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(SqlServerInstance, SqlServerDatabase),
+				    dbo_vSalesReasonBridge = Source{[Schema="dbo",Item="vSalesReasonBridge"]}[Data]
+				in
+				    dbo_vSalesReasonBridge
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

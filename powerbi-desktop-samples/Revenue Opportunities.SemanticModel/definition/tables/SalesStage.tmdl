@@ -1,0 +1,41 @@
+table SalesStage
+	lineageTag: f0731966-37fb-43dc-aed1-cd8ae74e5e4a
+
+	column Probability
+		dataType: double
+		lineageTag: c83186f8-2cfd-4d84-b76a-79491137185b
+		summarizeBy: none
+		sourceColumn: Probability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sales Stage'
+		dataType: string
+		lineageTag: d15e883e-932d-4d99-95ff-c1b9788332f2
+		summarizeBy: none
+		sourceColumn: Sales Stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Stage ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: dfbe4efa-f189-471a-934f-f4010bfdd8a2
+		summarizeBy: none
+		sourceColumn: Sales Stage ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SalesStage-78040bf8-5620-4cd9-9f27-63ac800012a9 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMjRQVdJR8klNTAFShkqxOtFKRmChwNLEnMy0SiDLCCxqAhYNzs8pLcnMzwMyjcHCZmDhgKL8gvzixBwg0wQsbAEWdsvMAxpSlQpkmirFxgIA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Probability = _t, #"Sales Stage" = _t, #"Sales Stage ID" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Probability", Percentage.Type}, {"Sales Stage", type text}, {"Sales Stage ID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

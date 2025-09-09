@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "998e81dde494d8e8be0d",
   "position": {
     "x": 647.88977519941989,
@@ -640,7 +640,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5ebcac6fe3dc7b728c0c",
+        "name": "2c08e21fd18e6a777db2",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -661,7 +661,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "e36b9691487d0d3361b8",
+        "name": "31b245150663b9f88ee7",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -682,7 +682,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "afd3ab0dae4eca358e02",
+        "name": "ecf44f29e276882f5256",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -703,7 +703,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "d95d4949846ab32380e3",
+        "name": "0b7b3487ab251c03b227",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -724,7 +724,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "937131af67d00b03c997",
+        "name": "a4571d6a3d232183f96b",
         "field": {
           "Column": {
             "Expression": {

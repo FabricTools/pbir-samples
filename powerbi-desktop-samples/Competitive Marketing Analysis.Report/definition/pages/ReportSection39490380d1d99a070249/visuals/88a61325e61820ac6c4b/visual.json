@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "88a61325e61820ac6c4b",
   "position": {
     "x": 25.177165354330707,
     "y": 64.2017716535433,
     "z": 1000,
-    "width": 1248.7874015748032,
-    "height": 642.01771653543312
+    "height": 642.01771653543312,
+    "width": 1248.7874015748032
   },
   "visual": {
     "visualType": "pivotTable",
@@ -908,7 +908,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0b6fa135-05f8-47ca-a845-94388bb1f2eb",
+        "name": "174dea0c0b2f601c2848",
         "field": {
           "Measure": {
             "Expression": {
@@ -919,6 +919,7 @@
             "Property": "Total Units YTD Var %"
           }
         },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
@@ -957,7 +958,6 @@
             }
           ]
         },
-        "type": "Advanced",
         "isHiddenInViewMode": true
       }
     ]

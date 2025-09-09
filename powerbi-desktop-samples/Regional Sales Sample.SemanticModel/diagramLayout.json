@@ -133,8 +133,7 @@
       "zoomValue": 73.740347133795083,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false,
-      "tablesLocked": false
+      "hideKeyFieldsWhenCollapsed": false
     },
     {
       "ordinal": 1,
@@ -147,8 +146,7 @@
       "zoomValue": 81.235745386688791,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false,
-      "tablesLocked": false
+      "hideKeyFieldsWhenCollapsed": false
     }
   ],
   "selectedDiagram": "All tables",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSection",
   "displayName": "Bad Hires",
   "displayOption": "FitToPage",
@@ -19,6 +19,7 @@
             "Property": "Year"
           }
         },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
@@ -53,7 +54,6 @@
             }
           ]
         },
-        "type": "Advanced",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -69,6 +69,7 @@
             "Property": "Month"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -122,6 +123,7 @@
             "Property": "AgeGroup"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -137,6 +139,7 @@
             "Property": "Region"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -151,6 +154,7 @@
             "Property": "Ethnicity"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -166,6 +170,7 @@
             "Property": "FPDesc"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -181,6 +186,7 @@
             "Property": "Gender"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -196,6 +202,7 @@
             "Property": "SeparationReason"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -211,6 +218,7 @@
             "Property": "VP"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       }

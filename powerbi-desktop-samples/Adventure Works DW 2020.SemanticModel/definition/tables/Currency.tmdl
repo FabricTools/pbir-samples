@@ -1,0 +1,54 @@
+table Currency
+	lineageTag: 7acb6371-354b-478a-93f2-74ad196772ac
+
+	column CurrencyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 24f255fe-9907-4d67-9242-5b0b4f947077
+		summarizeBy: none
+		sourceColumn: CurrencyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Code
+		dataType: string
+		lineageTag: d362f04e-6239-42f6-a325-5897aaad1990
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: 46185749-5812-424f-82a2-dc33c5ad958e
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Format String'
+		dataType: string
+		lineageTag: a24de0f2-51ce-4aa6-a082-4a72a78f7f05
+		summarizeBy: none
+		sourceColumn: Format String
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Currency = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(SqlServerInstance, SqlServerDatabase),
+				    dbo_DimCurrency = Source{[Schema="dbo",Item="DimCurrency"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_DimCurrency,{"DimOrganization", "FactCurrencyRate", "FactInternetSales", "FactResellerSales"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"CurrencyName", "Currency"}, {"CurrencyAlternateKey", "Code"}, {"FormatString", "Format String"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

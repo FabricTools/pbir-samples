@@ -1,0 +1,22 @@
+expression SqlServerInstance = "jterhsql.database.windows.net" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: c89b5611-ac42-4399-8ce0-d7bf74a70e8f
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression SqlServerDatabase = "AdventureWorksDW2020-DAX-Docs" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 8e6e2616-9973-4d5b-8337-7bccb5219ce7
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+/// Used to format month names in the Date query.
+expression Culture = "en-US" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 393f5acf-04dc-4fdf-b192-eb076d4449c7
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSection32e53fe7c4f4cd87dd85",
   "displayName": "Plan Variance Analysis",
   "displayOption": "FitToPage",
@@ -20,6 +20,7 @@
             "Property": "IT Area"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -35,6 +36,7 @@
             "Property": "IT Sub Area"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -50,6 +52,7 @@
             "Property": "Business Area"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -66,6 +69,7 @@
             "Property": "Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

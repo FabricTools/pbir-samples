@@ -1,0 +1,179 @@
+table 'Fact B'
+	isHidden
+	lineageTag: 3060065d-b0f2-4c1c-b321-c322e51937e0
+
+	column EstimatedCloseDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 92033035-0195-4460-be87-ab5ea8cde21a
+		summarizeBy: none
+		sourceColumn: EstimatedCloseDate
+
+		variation Variation
+			isDefault
+			relationship: 2579f52c-554f-4c13-9358-126ec4638b92
+			defaultHierarchy: LocalDateTable_c32bf3a5-df11-4d77-ad29-82d5ac852ceb.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Opportunity ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 98271881-5bc6-41e2-8738-751c5dded6fa
+		summarizeBy: count
+		sourceColumn: Opportunity ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Stage ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c1134867-576d-4623-9630-ebe0814b0385
+		summarizeBy: count
+		sourceColumn: Sales Stage ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0eac7d86-0f42-4efa-96e8-7ef77d77f172
+		summarizeBy: count
+		sourceColumn: Account ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Partner ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 23d2b764-cd41-4777-9e3b-b03213819755
+		summarizeBy: count
+		sourceColumn: Partner ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 10865f83-6754-440b-90eb-abeda5c44c37
+		summarizeBy: count
+		sourceColumn: Product ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductRevenue
+		dataType: decimal
+		isHidden
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 497a6bfa-5004-4829-83e7-3137d2329e3c
+		summarizeBy: sum
+		sourceColumn: ProductRevenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column FactoredProductRevenue
+		dataType: decimal
+		isHidden
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ebd9b54d-dc40-4e67-bb38-abf319a4d481
+		summarizeBy: sum
+		sourceColumn: FactoredProductRevenue
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column 'Create Date'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1bd23f0e-c2cc-4e19-b102-88c1ff9cf18e
+		summarizeBy: sum
+		sourceColumn: Create Date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Opportunity Days'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e266e16c-5156-416c-af71-eeb575182466
+		summarizeBy: sum
+		sourceColumn: Opportunity Days
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1c063b90-1c93-49c2-b7ec-09313a860e74
+		summarizeBy: sum
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month_Number
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f7c0b5ac-eb20-4316-8566-71014f5bfcc1
+		summarizeBy: sum
+		sourceColumn: Month_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		isHidden
+		lineageTag: 77cafccf-533a-4279-9287-d86c7b466637
+		summarizeBy: none
+		sourceColumn: Month
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact B-44f47ae8-d179-4e84-847e-2717c5de1932' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("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", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [EstimatedCloseDate = _t, #"Opportunity ID" = _t, #"Sales Stage ID" = _t, #"Account ID" = _t, #"Partner ID" = _t, #"Product ID" = _t, ProductRevenue = _t, FactoredProductRevenue = _t, #"Create Date" = _t, #"Opportunity Days" = _t, Year = _t, Month_Number = _t, Month = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"EstimatedCloseDate", type datetime}, {"Opportunity ID", Int64.Type}, {"Sales Stage ID", Int64.Type}, {"Account ID", Int64.Type}, {"Partner ID", Int64.Type}, {"Product ID", Int64.Type}, {"ProductRevenue", Currency.Type}, {"FactoredProductRevenue", Currency.Type}, {"Create Date", Int64.Type}, {"Opportunity Days", Int64.Type}, {"Year", Int64.Type}, {"Month_Number", Int64.Type}, {"Month", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

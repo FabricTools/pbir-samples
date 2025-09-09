@@ -1,7 +1,22 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark2f6f395ae3e64d361f93",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "TSV Ribbon ON",
+  "name": "Bookmark2f6f395ae3e64d361f93",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "VisualContainer1",
+      "5b6375d715cf67182763",
+      "3c7e6c9a40203dc0a802",
+      "752f1277e552ec06ec72",
+      "8a542ef24b03c88b5b68",
+      "d9b9605f9f651a223907",
+      "80313843c4902b4d037e",
+      "b5df6a6e7e8ac9c44f29"
+    ],
+    "suppressActiveSection": true,
+    "suppressData": true
+  },
   "explorationState": {
     "version": "1.3",
     "activeSection": "ReportSection8ef90f03d68d67c9d9ee",
@@ -137,6 +152,40 @@
         },
         "visualContainers": {
           "VisualContainer1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "25f1d4885eeb3d5ed028",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Time"
+                        }
+                      },
+                      "Property": "FiscalMonth"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3871a548ff6d33cb23b9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Total Sales Variance %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "waterfallChart",
               "objects": {},
@@ -175,6 +224,55 @@
             }
           },
           "80313843c4902b4d037e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "36b634ab4fb8507ec380",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Time"
+                        }
+                      },
+                      "Property": "FiscalMonth"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9f9754198791f519cd0a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Last Year Sales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "87d77ca8c573a8c14e6f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "This Year Sales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "clusteredColumnChart",
               "objects": {},
@@ -213,6 +311,115 @@
             }
           },
           "7bcd06954e309e882c00": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2cdd95867897cd0078ba",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Store"
+                        }
+                      },
+                      "Property": "Chain"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c8402d1f7193a3c1adc7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Store"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cee90051ee5611561b83",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Item"
+                        }
+                      },
+                      "Property": "Buyer"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2cca31983d076f07fca4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "This Year Sales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aeeff20a7ccfcf743015",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Last Year Sales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "00c7825bcf7f73d52972",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Total Sales Var %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c1db3b75bf1b89e6bc98",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Total Sales Var"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "pivotTable",
               "objects": {},
@@ -277,6 +484,40 @@
             }
           },
           "97ef12cb83896036aad7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d2acb9f9e10ed715afef",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "Last Year Sales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c0b9b86d1126dbad0648",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "This Year Sales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "gauge",
               "objects": {},
@@ -331,6 +572,25 @@
             }
           },
           "e2a11e48e84b4d7d7c3a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "91986fbf323390a51fcf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales"
+                        }
+                      },
+                      "Property": "TotalSalesTY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "card",
               "objects": {},
@@ -419,20 +679,5 @@
         ]
       }
     }
-  },
-  "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "VisualContainer1",
-      "5b6375d715cf67182763",
-      "3c7e6c9a40203dc0a802",
-      "752f1277e552ec06ec72",
-      "8a542ef24b03c88b5b68",
-      "d9b9605f9f651a223907",
-      "80313843c4902b4d037e",
-      "b5df6a6e7e8ac9c44f29"
-    ],
-    "suppressActiveSection": true,
-    "suppressData": true
   }
 }

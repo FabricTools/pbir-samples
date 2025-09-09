@@ -21,10 +21,8 @@ table Manufacturer
 		annotation SummarizationSetBy = Automatic
 
 	column MfgisVanArsdel = IF([Manufacturer]="VanArsdel", "Yes", "No")
-		dataType: string
 		lineageTag: 69a09735-9f2c-434d-92c8-7e8c6321fa92
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 

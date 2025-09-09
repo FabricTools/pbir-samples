@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "b75483a790029dd4a1c6",
   "position": {
     "x": 691.61290322580646,
     "y": 305.80645161290323,
     "z": 5000,
-    "width": 556.12903225806451,
-    "height": 397.41935483870969
+    "height": 397.41935483870969,
+    "width": 556.12903225806451
   },
   "visual": {
     "visualType": "scatterChart",
@@ -285,7 +285,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "830173cf-d1d5-466a-a2c8-d5663441f4e6",
+        "name": "b502ecee8dd2b85e4c18",
         "field": {
           "Column": {
             "Expression": {
@@ -296,6 +296,7 @@
             "Property": "Store Type"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

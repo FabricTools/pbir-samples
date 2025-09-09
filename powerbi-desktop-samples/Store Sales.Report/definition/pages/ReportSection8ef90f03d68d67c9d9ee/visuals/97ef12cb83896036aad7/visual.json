@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "97ef12cb83896036aad7",
   "position": {
     "x": 30,
     "y": 68,
     "z": 10000,
-    "width": 275,
-    "height": 235
+    "height": 235,
+    "width": 275
   },
   "visual": {
     "visualType": "gauge",

@@ -1,0 +1,62 @@
+table 'Currency Rate'
+	lineageTag: 7fc38d3f-e3f8-4bb3-90f7-8a5f796c3b3c
+
+	column CurrencyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bcc025a3-d5b3-4a6e-ae9b-b6f56c0846b1
+		summarizeBy: none
+		sourceColumn: CurrencyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 765a98e1-26e5-4812-b2c6-333095bb9992
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Average Rate'
+		dataType: double
+		lineageTag: f9b0c617-3b0b-43b0-bc55-334621e99b39
+		summarizeBy: sum
+		sourceColumn: Average Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'End Of Day Rate'
+		dataType: double
+		lineageTag: 052aef59-6c9d-4599-8ddb-b45cf3cd49b2
+		summarizeBy: sum
+		sourceColumn: End Of Day Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Currency Rate' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(SqlServerInstance, SqlServerDatabase),
+				    dbo_FactCurrencyRate = Source{[Schema="dbo",Item="FactCurrencyRate"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_FactCurrencyRate,{"DimCurrency", "DimDate"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"AverageRate", "Average Rate"}, {"EndOfDayRate", "End Of Day Rate"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

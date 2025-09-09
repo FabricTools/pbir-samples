@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Adventure Works DW 2020"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7881889f-4187-4411-9cbd-6f5e7bb2c0b0"
+  }
+}

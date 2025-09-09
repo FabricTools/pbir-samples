@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "42f96cb70b3703e50377",
   "position": {
     "x": 319.13152804642164,
     "y": 68.031914893617014,
     "z": 44000,
-    "width": 456.43230174081236,
-    "height": 311.70986460348161
+    "height": 311.70986460348161,
+    "width": 456.43230174081236
   },
   "visual": {
     "visualType": "map",
@@ -278,6 +278,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -320,7 +321,7 @@
         "howCreated": "User"
       },
       {
-        "name": "eccfcfb9-ba2d-4b08-89db-2b1f8d829dd0",
+        "name": "b06dc221f5038d018cee",
         "field": {
           "Column": {
             "Expression": {
@@ -331,6 +332,7 @@
             "Property": "State"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

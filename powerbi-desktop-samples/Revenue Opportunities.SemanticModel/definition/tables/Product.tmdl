@@ -1,0 +1,31 @@
+table Product
+	lineageTag: b18f3965-1021-4344-b308-488d3992b39a
+
+	column 'Product Code'
+		dataType: string
+		lineageTag: b48032ae-5548-436d-ada3-82c4033779d5
+		summarizeBy: none
+		sourceColumn: Product Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 04649fa4-7e7a-419c-b6bb-726336829b0f
+		summarizeBy: none
+		sourceColumn: Product ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product-f3a6479b-157b-4f55-8019-ed88961e6c5f = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("NdBJD8IgEIbh/8LZg+B+dF/ivl2aHqYNaUgKai3Gny/MV49PmQlvSRIxzjJ6i5aQIm0lYkJv422gYk7JPslRcIc907mxPo532fPSFI+gHmtBNe/2WcsqMI4OmCvKDDxkrwtnokasjf9oWLb5w5ZyzxdLhO2owDHC9saC6DpY45jIOtL/bomykydXm2i0nXX+KGO4RNyFahbSrlRiGW03m1WxRKHsrqs4q9A1fnk+Q9ZEl1hVneb9KqtddLf5i2/zfiqEpT8=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Product Code" = _t, #"Product ID" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Product Code", type text}, {"Product ID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

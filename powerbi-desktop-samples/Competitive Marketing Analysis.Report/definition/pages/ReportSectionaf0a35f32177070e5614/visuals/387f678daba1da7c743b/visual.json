@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "387f678daba1da7c743b",
   "position": {
     "x": 30.212598425196852,
     "y": 308.42027559055117,
     "z": 39000,
-    "width": 274.43110236220474,
-    "height": 71.754921259842519
+    "height": 71.754921259842519,
+    "width": 274.43110236220474
   },
   "visual": {
     "visualType": "card",
@@ -228,7 +228,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ea3646fe-2ed5-421c-9a15-64a68ead3cfe",
+        "name": "39f0b2e4ac7199796730",
         "field": {
           "Column": {
             "Expression": {
@@ -239,6 +239,7 @@
             "Property": "KPI"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -300,6 +301,7 @@
             "Property": "Segment"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -314,6 +316,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -367,6 +370,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

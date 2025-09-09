@@ -1,7 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmarkfca4d8f0f12aeb906395",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "Growth Opportunities",
+  "name": "Bookmarkfca4d8f0f12aeb906395",
+  "options": {
+    "targetVisualNames": []
+  },
   "explorationState": {
     "version": "1.0",
     "activeSection": "ReportSection1574f848f7fd5de20226",
@@ -130,7 +133,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter44f197e5-1807-44aa-ba64-8242e68adbcf",
+                  "name": "7d00b43d3de357e5f4a2",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -179,7 +182,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter0db5d942-68f2-4108-afcd-abc06b8a04fd",
+                  "name": "c34dbf2d8703f9c00d3e",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -254,6 +257,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "be9b3c24ce06e43977dc",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "211610454d4f659bcc13",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3db1edad3edd2e3f2820",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units R12Ms"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -395,6 +443,36 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "341b296de9f23140ac83",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Segment"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9154f57aa6eb47ce38cf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -435,8 +513,5 @@
         }
       }
     }
-  },
-  "options": {
-    "targetVisualNames": []
   }
 }

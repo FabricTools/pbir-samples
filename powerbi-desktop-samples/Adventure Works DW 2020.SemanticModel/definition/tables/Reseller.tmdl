@@ -1,0 +1,116 @@
+table Reseller
+	lineageTag: c0ecb6bb-6f56-418b-8685-0fb488680d2a
+
+	column ResellerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d427f6fb-d484-4346-a348-dfbdf01e1d57
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Type'
+		dataType: string
+		lineageTag: 75e828d9-22fd-4911-9ab4-e84dc55428de
+		summarizeBy: none
+		sourceColumn: Business Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reseller
+		dataType: string
+		lineageTag: ef3bf2db-6efd-40bb-b0fe-2db7935b0219
+		isDefaultLabel
+		summarizeBy: none
+		sourceColumn: Reseller
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: fe547c08-d02f-4ea2-838a-fd35694657d1
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State-Province
+		dataType: string
+		lineageTag: 7db8d17d-88d6-43f9-be3d-c1cabdfcba49
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: State-Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country-Region
+		dataType: string
+		lineageTag: a6e4f749-c519-49f4-92a3-01c48b06d210
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Country-Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: 21e508d1-955f-423c-9da3-42dd3548c8e1
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reseller ID'
+		dataType: string
+		lineageTag: cf91e062-80ea-47c7-a71c-d7d3661d547c
+		summarizeBy: none
+		sourceColumn: Reseller ID
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy Geography
+		lineageTag: 359785bc-c48f-40b2-a25c-88a5949ab4b4
+
+		level Country-Region
+			lineageTag: 944e056d-b164-4df5-8fff-56d5a2e880d9
+			column: Country-Region
+
+		level State-Province
+			lineageTag: 4d15ff79-c70c-4d5e-94a1-d7f4e92bd691
+			column: State-Province
+
+		level City
+			lineageTag: 14ab2956-c05d-464b-a401-01db2001271f
+			column: City
+
+		level 'Postal Code'
+			lineageTag: 7a5a20ea-885a-4eae-88cf-3ddf3559aab5
+			column: 'Postal Code'
+
+		level Reseller
+			lineageTag: 6920c6c0-acb5-4dd4-b032-945c1073d11a
+			column: Reseller
+
+	partition Reseller-e44d0a71-e144-4c32-b1af-2f758a686c3c = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(SqlServerInstance, SqlServerDatabase),
+				    dbo_DimReseller = Source{[Schema="dbo",Item="DimReseller"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(dbo_DimReseller,{"ResellerKey", "ResellerAlternateKey", "BusinessType", "ResellerName", "DimGeography"}),
+				    #"Expanded DimGeography" = Table.ExpandRecordColumn(#"Removed Other Columns", "DimGeography", {"City", "StateProvinceName", "EnglishCountryRegionName", "PostalCode"}, {"City", "StateProvinceName", "EnglishCountryRegionName", "PostalCode"}),
+				    #"Add NA Row" = Table.InsertRows(#"Expanded DimGeography", 0, {[ResellerKey = -1, ResellerAlternateKey = "[Not Applicable]", BusinessType = "[Not Applicable]", ResellerName = "[Not Applicable]", City = "[Not Applicable]", StateProvinceName ="[Not Applicable]", EnglishCountryRegionName ="[Not Applicable]", PostalCode ="[Not Applicable]"]}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Add NA Row",{{"ResellerAlternateKey", "Reseller ID"}, {"BusinessType", "Business Type"}, {"ResellerName", "Reseller"}, {"StateProvinceName", "State-Province"}, {"EnglishCountryRegionName", "Country-Region"}, {"PostalCode", "Postal Code"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

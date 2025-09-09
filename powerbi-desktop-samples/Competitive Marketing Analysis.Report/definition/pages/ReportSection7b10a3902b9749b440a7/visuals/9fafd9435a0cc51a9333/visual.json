@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "9fafd9435a0cc51a9333",
   "position": {
     "x": 654.6062992125984,
     "y": 188.82874015748033,
     "z": 28000,
-    "width": 592.92224409448818,
-    "height": 517.39074803149606
+    "height": 517.39074803149606,
+    "width": 592.92224409448818
   },
   "visual": {
     "visualType": "map",
@@ -1258,7 +1258,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2815dd22-9abc-410f-aaf7-2be0cb054c6e",
+        "name": "0a7c87b6222693d9321b",
         "field": {
           "Column": {
             "Expression": {
@@ -1269,6 +1269,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
@@ -1303,11 +1304,10 @@
             }
           ]
         },
-        "type": "Advanced",
         "howCreated": "User"
       },
       {
-        "name": "5c276bf9-e665-4527-92be-bb4b24d30e1a",
+        "name": "e5e92a0cf5edf62a911a",
         "field": {
           "Column": {
             "Expression": {
@@ -1318,6 +1318,7 @@
             "Property": "Product"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -1333,6 +1334,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -1410,7 +1412,7 @@
         }
       },
       {
-        "name": "87524961-86b2-4e6f-87c7-90f9b8d7fa92",
+        "name": "47cd1d6e861b784b5558",
         "field": {
           "Column": {
             "Expression": {
@@ -1421,6 +1423,7 @@
             "Property": "State"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

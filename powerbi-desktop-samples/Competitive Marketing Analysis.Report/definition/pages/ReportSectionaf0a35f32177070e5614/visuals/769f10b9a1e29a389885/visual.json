@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "769f10b9a1e29a389885",
   "position": {
     "x": 791.64410058027079,
     "y": 68.031914893617014,
     "z": 45000,
-    "width": 456.43230174081236,
-    "height": 638.26305609284327
+    "height": 638.26305609284327,
+    "width": 456.43230174081236
   },
   "visual": {
     "visualType": "barChart",
@@ -426,6 +426,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -479,6 +480,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

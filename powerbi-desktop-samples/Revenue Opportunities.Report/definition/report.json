@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY20SU09",
+      "reportVersionAtImport": {
+        "visual": "1.8.52",
+        "report": "2.0.52",
+        "page": "1.3.52"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Classroom10888586425032654.json",
+      "reportVersionAtImport": {
+        "visual": "1.8.52",
+        "report": "2.0.52",
+        "page": "1.3.52"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "BG28539666518484907.png",
+          "path": "BG28539666518484907.png",
+          "type": "Image"
+        },
+        {
+          "name": "BG7168755289625433.png",
+          "path": "BG7168755289625433.png",
+          "type": "Image"
+        },
+        {
+          "name": "Classroom10888586425032654.json",
+          "path": "Classroom10888586425032654.json",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY20SU09",
+          "path": "BaseThemes/CY20SU09.json",
+          "type": "BaseTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "allowInlineExploration": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

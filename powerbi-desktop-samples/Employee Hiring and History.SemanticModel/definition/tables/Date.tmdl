@@ -127,11 +127,9 @@ table Date
 		annotation SummarizationSetBy = Automatic
 
 	column MonthIncrementNumber = ([Year]-MIN([Year]))*12 +[MonthNumber]
-		dataType: int64
 		isHidden
 		lineageTag: c01f1989-027f-4f34-9698-4efdcc269f00
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 

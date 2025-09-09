@@ -1,0 +1,186 @@
+table Fact
+	lineageTag: f92a72fd-3168-4ba3-be9d-5fe62ca23d1e
+
+	measure 'Avg Opportunity Days' = AVERAGE([Opportunity Days])
+		lineageTag: 9bfae785-435c-4e03-88be-8d4d3a8df8df
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Revenue' = AVERAGE([ProductRevenue])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 5ca57a64-b692-4631-bbf4-2b8094913054
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Factored Revenue' = SUM([FactoredProductRevenue])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: fe06ee4a-608e-4dce-88e7-0167877c91d7
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Opportunity Count' = COUNTA([Opportunity ID])
+		formatString: 0
+		lineageTag: d1fc1df6-dcf2-4676-870b-cf30b11e4c7a
+
+	measure Revenue = SUM([ProductRevenue])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 376639e5-fb0e-42f5-a83c-d60247748851
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Tot Opportunity Days' = sum([Opportunity Days])
+		formatString: 0
+		lineageTag: ec13dffd-ce47-4213-adb3-1c18c1b5b118
+
+	column EstimatedCloseDate
+		dataType: dateTime
+		formatString: m/d/yyyy
+		lineageTag: 09775b4d-acf2-46d1-89d6-a8e4e95c2916
+		summarizeBy: none
+		sourceColumn: EstimatedCloseDate
+
+		variation Variation
+			isDefault
+			relationship: 937ae6cc-bd19-4ead-b604-812a3de03590
+			defaultHierarchy: LocalDateTable_f924a660-aa7d-462e-82a7-7d743c9506a2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Opportunity ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d4d8cefe-c96c-4b7e-9232-a8fb1712760e
+		summarizeBy: none
+		sourceColumn: Opportunity ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Stage ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: fad21172-70dc-41bb-b1f0-c45c3a8fab68
+		summarizeBy: none
+		sourceColumn: Sales Stage ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: dc4de788-ce81-4bb6-80a3-3076bcbd7243
+		summarizeBy: none
+		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Partner ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5de6cdf7-58d9-4712-88c1-98510defd8f1
+		summarizeBy: none
+		sourceColumn: Partner ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 505dabb5-867e-423e-ac0f-aefdbd889ead
+		summarizeBy: none
+		sourceColumn: Product ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductRevenue
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d4295103-d472-47ba-bf56-766b509f6b8e
+		summarizeBy: sum
+		sourceColumn: ProductRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column FactoredProductRevenue
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6bddc1f9-b487-41fb-b72f-3f5942098695
+		summarizeBy: sum
+		sourceColumn: FactoredProductRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column 'Create Date'
+		dataType: int64
+		formatString: 0
+		lineageTag: 62167b85-36b8-40ed-97e1-f563d75cde33
+		summarizeBy: sum
+		sourceColumn: Create Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Opportunity Days'
+		dataType: int64
+		formatString: 0
+		lineageTag: aef1beed-8956-441f-8935-34723005f2ad
+		summarizeBy: sum
+		sourceColumn: Opportunity Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 082a8e6e-4c7d-4d6f-b5f4-6836bb24f390
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month_Number
+		dataType: int64
+		formatString: 0
+		lineageTag: 73d72dbf-0c16-418c-85ca-ebcb6c0c3c11
+		summarizeBy: sum
+		sourceColumn: Month_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: cd0e8ed5-e6ed-4973-8242-13245da49645
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: Month_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date = 'Fact'[EstimatedCloseDate].[Date]
+		formatString: m/d/yyyy
+		lineageTag: c2f7698c-4ea8-4055-bf1b-926b2e1b346b
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 341a33cb-e805-4319-829c-b108e7b8af05
+			defaultHierarchy: LocalDateTable_bc09b291-d8af-4cf9-8bcf-958f7918b4df.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition Fact-1d7ae771-a557-467f-9a2c-7f700b17c050 = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"Fact A", #"Fact B"})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

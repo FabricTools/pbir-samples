@@ -1,7 +1,42 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark6deeef404198db2b73a7",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "Social Media ON",
+  "name": "Bookmark6deeef404198db2b73a7",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "7ddfd8f3cec639520ac4",
+      "c077933a86ad5323a2dc",
+      "0740588e78ab0771438b",
+      "74c11a3b160e7c335680",
+      "b143d383831d36470049",
+      "9a03f0208a3ea0366c10",
+      "2bc557826ac620ce4639",
+      "769f10b9a1e29a389885",
+      "42f96cb70b3703e50377",
+      "b912d093940d97507ca6",
+      "b0e14884d5502e0038b1",
+      "387f678daba1da7c743b",
+      "2981d08ed8a0d96e9d52",
+      "745641610271ba1783b2",
+      "c78f9626d517e12ce57e",
+      "341bbe841c530182663e",
+      "63c060122930163c4bea",
+      "8c95cb70709022447714",
+      "193cc3df5d4a2cd04355",
+      "2055a9552d55309a00a3",
+      "7b58a02931b19d40a910",
+      "b31e4b4e78b68d076d17",
+      "ade959d509b218470721",
+      "VisualContainer6",
+      "e8fa5953ab7d8a9cb999",
+      "60a0d2e43199c5c1c2ac",
+      "83efef8e63ee06c9615e",
+      "dcfe8fa029be4d09d19d"
+    ],
+    "suppressActiveSection": true,
+    "suppressData": true
+  },
   "explorationState": {
     "version": "1.3",
     "activeSection": "ReportSectionaf0a35f32177070e5614",
@@ -232,7 +267,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter2d728492-a05a-4b32-b8ff-16ad2ec77c3e",
+                  "name": "043ec9f03532f7e2c940",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -303,6 +338,114 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "7509d32dccc39e537d1b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "isVanArsdel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1b736f30041acc0d326f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d9bbb7368000b0017edd",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cf930e99e86359a4de5b",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "29a553bb5cf2d105a551",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -364,7 +507,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter767a0b82-d699-4429-8086-2081b0b5ba46",
+                  "name": "a75b9bd964d2ce668ee9",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -416,6 +559,140 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "a4a486b450488fcaba92",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share R12M"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5ea05ea3adaa5ea0ea33",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "779344782425f6bc60d4",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ee8877f3ffeaec9b896d",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Quarter"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "212c2f3dda81a19f97af",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6e5573e2412130607598",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -465,7 +742,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter7cbc2046-9e7b-48e6-a765-cb21498f181d",
+                  "name": "46dd6128a1ff4b66d667",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -566,6 +843,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "7a5d2b8f0236454c3c55",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Months"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2940e29e0099bf48d6b8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8ef7a1c1ba6621776db4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -784,7 +1106,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter4e9ae529-842a-44b5-9323-40edda1838f3",
+                  "name": "e14bfe82739267c24c10",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -836,6 +1158,36 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "ee24edca889961961fb8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3ee70d4679cec3e725a1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share R12M"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -878,7 +1230,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterdc71c48d-8124-414f-b9c4-3170edcf8d99",
+                  "name": "101e83af51dd05950e71",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -1060,6 +1412,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "999a1d739584c3acb569",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1090,7 +1457,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter7732a98d-26dd-4fd7-b890-314705a30ccd",
+                  "name": "85c28e612c7b187326cf",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -1272,6 +1639,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "9e9b2258c6feef33abc0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1356,7 +1738,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter67f94dd3-0ebe-4303-a892-861e733c636c",
+                  "name": "931c8a98f9a0edd40dc2",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -1409,6 +1791,36 @@
                         }
                       },
                       "Property": "State"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7fbe75babff25c68819a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2f7fa2d40895d00eb7aa",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
                     }
                   },
                   "howCreated": 0
@@ -1547,6 +1959,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "813a9921106c26eb03a8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e16f1ecffe34876ff316",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4313b2a47eeb425207e4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Manufacturer"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1687,7 +2144,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter0d28aacd-6a34-4271-901b-c8ca0517e698",
+                  "name": "9dc44eb25f5da0c4e97d",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -1788,6 +2245,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "363e1e34a17c00d2d3c8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Months"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "68c3791515577e2220b9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f45755bf9596ebf89fab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1814,7 +2316,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filtercba9cb5c-e127-4dec-81a0-e6e86f3736bb",
+                  "name": "b46f7555bda186d4edd7",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -1996,6 +2498,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "dbf0729fc2d7ecd1c7c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -2077,7 +2594,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filterd38001ff-d61f-4e14-8e58-09786f842e77",
+                  "name": "8d2b324345178a6bc16d",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -2130,6 +2647,36 @@
                         }
                       },
                       "Property": "State"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "240273dee43cc239b709",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "07d9a823c513bae678af",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
                     }
                   },
                   "howCreated": 0
@@ -2265,6 +2812,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "2e4be40d65398a09ec75",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "633f923855a8abf56264",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "25b4cf2016f045099b61",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Manufacturer"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -2306,7 +2898,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter089729a3-fe0c-4464-a75f-1f4a5151aabc",
+                  "name": "bebfee6d18a1f02edbed",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -2488,6 +3080,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "e49391138b724d3abab6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -2533,7 +3140,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter22ea36af-a2ff-4381-a8b2-cae636574ff4",
+                  "name": "9c7b7e3bb6340f5801fb",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -2715,6 +3322,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "21b6ab6aa044c8d433d3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -2851,6 +3473,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "fc5ff6a0c6e1619412f8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bd0f38fd51b4b9bbdc20",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fb1e00aaa4c04bf5c40c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Manufacturer"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -2949,7 +3616,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter5ae9f89c-514b-4da2-afa2-46471f306877",
+                  "name": "cdb2625f25635835c38b",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -3005,6 +3672,36 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "5edb40395a7b1a524b1d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3569f01448b124613a9f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -3034,7 +3731,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter67f1c942-1301-4f08-ab2a-9bf48768ff2e",
+                  "name": "580d78a461b6b1d998a9",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -3216,6 +3913,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "fdf834126cbab650316a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -3246,7 +3958,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterc0b5ed47-efbd-423b-b076-c6dd48a524ed",
+                  "name": "a48c25368d521d644c48",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -3347,6 +4059,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "251067c5ddeb4ad3d8a1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Months"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "66a4ec24ee05cf2f878f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "080b23957c404f7a247c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -3394,7 +4151,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter105a94cb-d25b-48e1-a520-39a2828c1968",
+                  "name": "5171d01fee68b06cf87a",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -3495,6 +4252,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "cd003261e15963187ca3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Months"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "468d2c74489bf38e186e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e75ba5f53b6fc7217f5d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -3524,7 +4326,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter41abcf72-8587-477f-bd30-c46a09b41350",
+                  "name": "d7e9491644acf784cce3",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -3706,6 +4508,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "ab930418939022d7443c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -3790,7 +4607,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filterfa1f018c-2c14-497f-8dd1-5c4d78211e5d",
+                  "name": "4c4d0a5f4837bf33a31b",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -3843,6 +4660,36 @@
                         }
                       },
                       "Property": "State"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e543482db408708a858d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2f96b481f42fb38d314a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
                     }
                   },
                   "howCreated": 0
@@ -3981,6 +4828,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "ddfbb5bee614421d7fcc",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c64861319674b209b6b9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8e83e969cd8b5fb0e4e2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Manufacturer"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -4025,7 +4917,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter28e67288-484d-4c6f-85d2-7641960d4268",
+                  "name": "880678d93b5175232088",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -4207,6 +5099,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "37c90112b755377b2dba",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -4253,40 +5160,5 @@
         ]
       }
     }
-  },
-  "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "7ddfd8f3cec639520ac4",
-      "c077933a86ad5323a2dc",
-      "0740588e78ab0771438b",
-      "74c11a3b160e7c335680",
-      "b143d383831d36470049",
-      "9a03f0208a3ea0366c10",
-      "2bc557826ac620ce4639",
-      "769f10b9a1e29a389885",
-      "42f96cb70b3703e50377",
-      "b912d093940d97507ca6",
-      "b0e14884d5502e0038b1",
-      "387f678daba1da7c743b",
-      "2981d08ed8a0d96e9d52",
-      "745641610271ba1783b2",
-      "c78f9626d517e12ce57e",
-      "341bbe841c530182663e",
-      "63c060122930163c4bea",
-      "8c95cb70709022447714",
-      "193cc3df5d4a2cd04355",
-      "2055a9552d55309a00a3",
-      "7b58a02931b19d40a910",
-      "b31e4b4e78b68d076d17",
-      "ade959d509b218470721",
-      "VisualContainer6",
-      "e8fa5953ab7d8a9cb999",
-      "60a0d2e43199c5c1c2ac",
-      "83efef8e63ee06c9615e",
-      "dcfe8fa029be4d09d19d"
-    ],
-    "suppressActiveSection": true,
-    "suppressData": true
   }
 }

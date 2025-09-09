@@ -63,10 +63,8 @@ table Item
 			    CONCATENATE("Cluster", __ClusterValue)
 			  )
 			```
-		dataType: string
 		lineageTag: e8b75fd8-a167-49da-97c0-724c569db3e2
 		summarizeBy: none
-		isDataTypeInferred
 
 		extendedProperty GroupingMetadata =
 				{

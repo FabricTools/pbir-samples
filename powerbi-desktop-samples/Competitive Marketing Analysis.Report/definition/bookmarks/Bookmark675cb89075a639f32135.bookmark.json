@@ -1,7 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark675cb89075a639f32135",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "Sentiment",
+  "name": "Bookmark675cb89075a639f32135",
+  "options": {
+    "targetVisualNames": []
+  },
   "explorationState": {
     "version": "1.0",
     "activeSection": "ReportSectionbbdbb50c0d042e6c52eb",
@@ -12,7 +15,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter48175291-7fe6-47ea-9b8a-cd78c061529a",
+                  "name": "987935bd65be17ea9d90",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -85,7 +88,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter28354b11-6079-4a59-b00d-82a3c767e635",
+                  "name": "48e1d745c6d797849f51",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -132,6 +135,36 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "9b4556dc8bfe30050cd3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "183492f92d5f4154197f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Sentiment"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -158,7 +191,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filtere2de2e1f-d9d7-4630-aa0c-1b5124049916",
+                  "name": "eee1ab64bb51761324e7",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -207,7 +240,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filterb6bfe0d6-14c0-400f-a3cb-5a46ff5b50fe",
+                  "name": "2426f5328eca5d5dd0cb",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -254,6 +287,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "9378fe043194ccabe536",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Sentiment"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -266,7 +314,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter18c8d200-0648-499e-8850-24318fd4a992",
+                  "name": "07ed772a61bf059f2097",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -315,7 +363,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filterf207c8bb-9e5f-43fe-b564-05f9547ea506",
+                  "name": "fe32503bb38b88355726",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -362,6 +410,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "7e07c642a83ee12a47ba",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Sentiment Gap"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -383,7 +446,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterc627a972-47ca-48b3-8812-3eed0a3774ba",
+                  "name": "f5fb7a2bc6ec9c2773bf",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -456,7 +519,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter9015bc13-77e3-4770-9c0c-d16849a5d23e",
+                  "name": "3cc8cb744150fb785060",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -503,6 +566,36 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "7feb3a78a03c9e7e11e0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3cb84c328e98a9ecaf16",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Sentiment"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -528,8 +621,5 @@
         }
       }
     }
-  },
-  "options": {
-    "targetVisualNames": []
   }
 }

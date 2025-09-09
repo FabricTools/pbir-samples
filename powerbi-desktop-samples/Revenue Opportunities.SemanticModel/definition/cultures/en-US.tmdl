@@ -1,0 +1,7490 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "account": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Account"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "account": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "justification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reason": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "excuse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "account.account": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Account",
+			          "ConceptualProperty": "Account"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "account": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "account name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "justification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reason": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "excuse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "account.region": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Account",
+			          "ConceptualProperty": "Region"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "region": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "continent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "account.segment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Account",
+			          "ConceptualProperty": "Segment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "segment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "slice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "account.account_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Account",
+			          "ConceptualProperty": "Account ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "account ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "account identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "account.state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Account",
+			          "ConceptualProperty": "State"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {},
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "fact a": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "statistic a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "element a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "information a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "statement a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "detail a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "circumstance a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "point a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "occurrence a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "happening a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "deed a": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.estimated_close_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "EstimatedCloseDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstimatedCloseDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "close date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "estimated close period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "close period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.estimated_close_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.estimated_close_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "estimated close yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "estimated close moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.estimated_close_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "estimated close qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "close date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "close qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "estimated close moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.estimated_close_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "estimated close mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "estimated close moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.estimated_close_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "close period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.opportunity_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Opportunity ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "opportunity ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.sales_stage_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Sales Stage ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "sales stage ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "stage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "stage ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sale stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.account_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Account ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "account ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "account identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.partner_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Partner ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "partner ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "partner identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.product_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Product ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "product ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.product_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "ProductRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "product revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ProductRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "product income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.factored_product_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "FactoredProductRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "factored product revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FactoredProductRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "factored product income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "factored product profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored product turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored product yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored artifact revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "factored item revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "factored merchandise revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "factored produce revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.create_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Create Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "create date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "create moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "create period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.opportunity_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Opportunity Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "opportunity day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_a.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Month_Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Month_Number": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "fact_a.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact A",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "fact b": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "b": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.estimated_close_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "EstimatedCloseDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstimatedCloseDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "close date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "estimated close period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "close period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.estimated_close_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.estimated_close_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "estimated close yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "estimated close moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.estimated_close_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "estimated close qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "close date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "close qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "estimated close moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.estimated_close_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "estimated close mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "estimated close moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.estimated_close_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "estimated close day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "close period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.opportunity_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Opportunity ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "opportunity ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.sales_stage_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Sales Stage ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "sales stage ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "stage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "stage ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sale stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.account_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Account ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "account ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "account identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.partner_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Partner ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "partner ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "partner identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.product_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Product ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "product ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.product_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "ProductRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "product revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ProductRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "product income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.factored_product_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "FactoredProductRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "factored product revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FactoredProductRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "factored product income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "factored product profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored product turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored product yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored artifact revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "factored item revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "factored merchandise revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "factored produce revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.create_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Create Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "create date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "create moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "create period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.opportunity_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Opportunity Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "opportunity day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_b.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Month_Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Month_Number": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "fact_b.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact B",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "opportunity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Opportunity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opportunity": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "chance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "occasion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "opening": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "prospect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "opportunity.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Opportunity",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "opportunity.opportunity_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Opportunity",
+			          "ConceptualProperty": "Opportunity ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opportunity ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "opportunity.rank": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Opportunity",
+			          "ConceptualProperty": "Rank"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rank": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "flourishing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sheer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "absolute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "opportunity.size_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Opportunity",
+			          "ConceptualProperty": "SizeID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "size ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SizeID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "size": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "size identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "size identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "size identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "size credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "dimension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "opportunity.opportunity_size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Opportunity",
+			          "ConceptualProperty": "Opportunity Size"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opportunity size": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "size": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "opportunity extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "opportunity magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "opportunity scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "opportunity volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "opportunity dimension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "opportunity mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "partner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Partner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "partner": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "wife": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "spouse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "companion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "husband": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "colleague": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "cohort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "collaborator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "coworker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "partner.partner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Partner",
+			          "ConceptualProperty": "Partner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "partner": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "partner name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "wife": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "spouse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "companion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "husband": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "colleague": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "cohort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "collaborator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "coworker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "partner.partner_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Partner",
+			          "ConceptualProperty": "Partner ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "partner ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "partner identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "partner.partner_driven": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Partner",
+			          "ConceptualProperty": "Partner Driven"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "partner driven": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "wife driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lover driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "spouse driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "companion driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "husband driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "mate driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "colleague driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cohort driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "collaborator driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "coworker driven": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "product": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "artifact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "merchandise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "produce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "product.product_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product",
+			          "ConceptualProperty": "Product Code"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product code": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact code": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item code": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise code": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce code": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "product.product_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Product",
+			          "ConceptualProperty": "Product ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "sales_stage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SalesStage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales stage": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "SalesStage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "stage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sale phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale step": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale leg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "sales_stage.probability": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SalesStage",
+			          "ConceptualProperty": "Probability"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "probability": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "likelihood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "possibility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "chance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "prospect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "sales_stage.sales_stage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SalesStage",
+			          "ConceptualProperty": "Sales Stage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales stage": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "sales stage name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "stage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sale phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale step": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale leg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "sales_stage.sales_stage_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "SalesStage",
+			          "ConceptualProperty": "Sales Stage ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales stage ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "stage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "stage ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sale stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "fact": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "statement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "happening": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "deed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "fact.estimated_close_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "EstimatedCloseDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estimated close date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EstimatedCloseDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "close date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "estimated close period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "close period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.estimated_close_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estimated close date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.estimated_close_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estimated close year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "estimated close yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "estimated close moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.estimated_close_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estimated close quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "estimated close qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "close date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "close qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "estimated close moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.estimated_close_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estimated close month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "estimated close mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "estimated close moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.estimated_close_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "VariationSource": "EstimatedCloseDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estimated close day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estimated close date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "close day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "close date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "estimated close moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "close moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "estimated close period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "close period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.opportunity_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Opportunity ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "opportunity ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "opportunity credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact.sales_stage_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Sales Stage ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "sales stage ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale stage ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "stage": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "stage ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "sale stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "stage identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "stage identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sale stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "stage credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "juncture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "fact.account_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Account ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "account ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "account identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact.partner_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Partner ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "partner ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "partner identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "partner credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact.product_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Product ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Hidden": true,
+			      "Terms": [
+			        {
+			          "product ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact.product_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "ProductRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ProductRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "product income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "artifact revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact.factored_product_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "FactoredProductRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "factored product revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FactoredProductRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "factored product income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "factored product profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored product turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored product yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "factored artifact revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "factored item revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "factored merchandise revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "factored produce revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact.create_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Create Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "create date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "create moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "create period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact.opportunity_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Opportunity Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opportunity day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Month_Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Month_Number": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "fact.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "fact.avg_opportunity_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Avg Opportunity Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg opportunity days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average opportunity day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "avg opportunity existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "avg opportunity being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg opportunity living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg opportunity eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "avg opportunity generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "avg opportunity epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "avg opportunity period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "avg opportunity age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "fact.avg_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Avg Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "avg profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "avg turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "avg yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "average revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact.factored_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Factored Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "factored revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "factored income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "factored profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "factored turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "factored yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fact.opportunity_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Opportunity Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opportunity count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "chance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "occasion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "opening": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "prospect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Opportunities": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact.revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "opportunity profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "opportunity turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "opportunity yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Opportunity Revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact.tot_opportunity_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact",
+			          "ConceptualProperty": "Tot Opportunity Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot opportunity days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "opportunity days": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tot opportunity existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "opportunity existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "tot opportunity being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "tot opportunity living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "opportunity being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "opportunity living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tot opportunity eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "tot opportunity generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "tot opportunity epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "opportunity eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "account_is_named_account": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.account": {
+			          "Target": {
+			            "Entity": "account.account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Name": {
+			              "Role": "account.account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Object": {
+			              "Role": "account.account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "account_is_named_account_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.account_ID": {
+			          "Target": {
+			            "Entity": "account.account_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Name": {
+			              "Role": "account.account_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Object": {
+			              "Role": "account.account_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "opportunity_is_named_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Opportunity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        },
+			        "opportunity.name": {
+			          "Target": {
+			            "Entity": "opportunity.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Name": {
+			              "Role": "opportunity.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "opportunity.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "opportunity_is_named_opportunity_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Opportunity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        },
+			        "opportunity.opportunity_ID": {
+			          "Target": {
+			            "Entity": "opportunity.opportunity_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Name": {
+			              "Role": "opportunity.opportunity_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "opportunity.opportunity_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "partner_is_named_partner": {
+			      "Binding": {
+			        "ConceptualEntity": "Partner"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partner": {
+			          "Target": {
+			            "Entity": "partner"
+			          }
+			        },
+			        "partner.partner": {
+			          "Target": {
+			            "Entity": "partner.partner"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Name": {
+			              "Role": "partner.partner"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Object": {
+			              "Role": "partner.partner"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "partner_is_named_partner_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Partner"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partner": {
+			          "Target": {
+			            "Entity": "partner"
+			          }
+			        },
+			        "partner.partner_ID": {
+			          "Target": {
+			            "Entity": "partner.partner_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Name": {
+			              "Role": "partner.partner_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Object": {
+			              "Role": "partner.partner_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "product_is_named_product_code": {
+			      "Binding": {
+			        "ConceptualEntity": "Product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product": {
+			          "Target": {
+			            "Entity": "product"
+			          }
+			        },
+			        "product.product_code": {
+			          "Target": {
+			            "Entity": "product.product_code"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "product"
+			            },
+			            "Name": {
+			              "Role": "product.product_code"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product"
+			            },
+			            "Object": {
+			              "Role": "product.product_code"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "product_is_named_product_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "product": {
+			          "Target": {
+			            "Entity": "product"
+			          }
+			        },
+			        "product.product_ID": {
+			          "Target": {
+			            "Entity": "product.product_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "product"
+			            },
+			            "Name": {
+			              "Role": "product.product_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product"
+			            },
+			            "Object": {
+			              "Role": "product.product_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "sales_stage_is_named_sales_stage": {
+			      "Binding": {
+			        "ConceptualEntity": "SalesStage"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_stage": {
+			          "Target": {
+			            "Entity": "sales_stage"
+			          }
+			        },
+			        "sales_stage.sales_stage": {
+			          "Target": {
+			            "Entity": "sales_stage.sales_stage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "sales_stage"
+			            },
+			            "Name": {
+			              "Role": "sales_stage.sales_stage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_stage"
+			            },
+			            "Object": {
+			              "Role": "sales_stage.sales_stage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "sales_stage_is_named_sales_stage_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "SalesStage"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_stage": {
+			          "Target": {
+			            "Entity": "sales_stage"
+			          }
+			        },
+			        "sales_stage.sales_stage_ID": {
+			          "Target": {
+			            "Entity": "sales_stage.sales_stage_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "sales_stage"
+			            },
+			            "Name": {
+			              "Role": "sales_stage.sales_stage_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_stage"
+			            },
+			            "Object": {
+			              "Role": "sales_stage.sales_stage_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.product_revenue": {
+			          "Target": {
+			            "Entity": "fact.product_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {}
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {}
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "fact.product_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.product_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_is_expensive1": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.factored_product_revenue": {
+			          "Target": {
+			            "Entity": "fact.factored_product_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {}
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {}
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "fact.factored_product_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.factored_product_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "account_is_segment": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.segment": {
+			          "Target": {
+			            "Entity": "account.segment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Adjective": {
+			              "Role": "account.segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Object": {
+			              "Role": "account.segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_is_estimated_on_estimated_close_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.estimated_close_date": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "fact.estimated_close_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "estimate": {}
+			              },
+			              {
+			                "close": {}
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9
+			        }
+			      ]
+			    },
+			    "account_in_region": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.region": {
+			          "Target": {
+			            "Entity": "account.region"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "account.region"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {}
+			              }
+			            ],
+			            "Object": {
+			              "Role": "account.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "account_in_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.state": {
+			          "Target": {
+			            "Entity": "account.state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "account.state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {}
+			              }
+			            ],
+			            "Object": {
+			              "Role": "account.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "account_has_region": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.region": {
+			          "Target": {
+			            "Entity": "account.region"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Object": {
+			              "Role": "account.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "account_has_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Account"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        },
+			        "account.state": {
+			          "Target": {
+			            "Entity": "account.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Object": {
+			              "Role": "account.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "opportunity_has_rank": {
+			      "Binding": {
+			        "ConceptualEntity": "Opportunity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        },
+			        "opportunity.rank": {
+			          "Target": {
+			            "Entity": "opportunity.rank"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "opportunity.rank"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "opportunity_has_size_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Opportunity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        },
+			        "opportunity.size_ID": {
+			          "Target": {
+			            "Entity": "opportunity.size_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "opportunity.size_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "opportunity_has_opportunity_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Opportunity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        },
+			        "opportunity.opportunity_size": {
+			          "Target": {
+			            "Entity": "opportunity.opportunity_size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "opportunity.opportunity_size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "opportunity_has_opportunity_Size2": {
+			      "Binding": {
+			        "ConceptualEntity": "Opportunity"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        },
+			        "opportunity.opportunity_Size2": {
+			          "Target": {
+			            "Entity": "opportunity.opportunity_Size2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "opportunity.opportunity_Size2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "partner_has_partner_driven": {
+			      "Binding": {
+			        "ConceptualEntity": "Partner"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partner": {
+			          "Target": {
+			            "Entity": "partner"
+			          }
+			        },
+			        "partner.partner_driven": {
+			          "Target": {
+			            "Entity": "partner.partner_driven"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Object": {
+			              "Role": "partner.partner_driven"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "partner_has_partner_Driven2": {
+			      "Binding": {
+			        "ConceptualEntity": "Partner"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "partner": {
+			          "Target": {
+			            "Entity": "partner"
+			          }
+			        },
+			        "partner.partner_Driven2": {
+			          "Target": {
+			            "Entity": "partner.partner_Driven2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Object": {
+			              "Role": "partner.partner_Driven2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "sales_stage_has_probability": {
+			      "Binding": {
+			        "ConceptualEntity": "SalesStage"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_stage": {
+			          "Target": {
+			            "Entity": "sales_stage"
+			          }
+			        },
+			        "sales_stage.probability": {
+			          "Target": {
+			            "Entity": "sales_stage.probability"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_stage"
+			            },
+			            "Object": {
+			              "Role": "sales_stage.probability"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_estimated_close_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.estimated_close_date": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.estimated_close_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_create_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.create_date": {
+			          "Target": {
+			            "Entity": "fact.create_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.create_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_opportunity_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.opportunity_day": {
+			          "Target": {
+			            "Entity": "fact.opportunity_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.opportunity_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.year": {
+			          "Target": {
+			            "Entity": "fact.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_month_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.month_number": {
+			          "Target": {
+			            "Entity": "fact.month_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.month_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.month": {
+			          "Target": {
+			            "Entity": "fact.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_month_2": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.month_2": {
+			          "Target": {
+			            "Entity": "fact.month_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.month_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_year_2": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.year_2": {
+			          "Target": {
+			            "Entity": "fact.year_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.year_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_avg_opportunity_days": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.avg_opportunity_days": {
+			          "Target": {
+			            "Entity": "fact.avg_opportunity_days"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.avg_opportunity_days"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_avg_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.avg_revenue": {
+			          "Target": {
+			            "Entity": "fact.avg_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.avg_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_factored_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.factored_revenue": {
+			          "Target": {
+			            "Entity": "fact.factored_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.factored_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_opportunity_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.opportunity_count": {
+			          "Target": {
+			            "Entity": "fact.opportunity_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.opportunity_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.revenue": {
+			          "Target": {
+			            "Entity": "fact.revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_tot_opportunity_days": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "fact.tot_opportunity_days": {
+			          "Target": {
+			            "Entity": "fact.tot_opportunity_days"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "fact.tot_opportunity_days"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_account": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "account": {
+			          "Target": {
+			            "Entity": "account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "account"
+			            },
+			            "Object": {
+			              "Role": "fact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_opportunity": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "opportunity": {
+			          "Target": {
+			            "Entity": "opportunity"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "opportunity"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "opportunity"
+			            },
+			            "Object": {
+			              "Role": "fact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_sales_stage": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "sales_stage": {
+			          "Target": {
+			            "Entity": "sales_stage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "sales_stage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_stage"
+			            },
+			            "Object": {
+			              "Role": "fact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_partner": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "partner": {
+			          "Target": {
+			            "Entity": "partner"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "partner"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "partner"
+			            },
+			            "Object": {
+			              "Role": "fact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_has_product": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact": {
+			          "Target": {
+			            "Entity": "fact"
+			          }
+			        },
+			        "product": {
+			          "Target": {
+			            "Entity": "product"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact"
+			            },
+			            "Object": {
+			              "Role": "product"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "product"
+			            },
+			            "Object": {
+			              "Role": "fact"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_estimated_close_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact.estimated_close_date": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date"
+			          }
+			        },
+			        "fact.estimated_close_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact.estimated_close_date"
+			            },
+			            "Object": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_estimated_close_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact.estimated_close_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy"
+			          }
+			        },
+			        "fact.estimated_close_date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_estimated_close_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact.estimated_close_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy"
+			          }
+			        },
+			        "fact.estimated_close_date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_estimated_close_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact.estimated_close_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy"
+			          }
+			        },
+			        "fact.estimated_close_date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "fact_estimated_close_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact.estimated_close_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy"
+			          }
+			        },
+			        "fact.estimated_close_date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "fact.estimated_close_date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact.estimated_close_date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

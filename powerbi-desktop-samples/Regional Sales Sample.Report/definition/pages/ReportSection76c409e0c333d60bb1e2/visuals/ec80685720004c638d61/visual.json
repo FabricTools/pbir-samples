@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ec80685720004c638d61",
   "position": {
     "x": 332.64358452138492,
@@ -409,7 +409,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "69f21065014c8c7eab78",
+        "name": "edc851ccc2315882178d",
         "field": {
           "Column": {
             "Expression": {
@@ -424,7 +424,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "f1bbc4f975dac1eee9a4",
+        "name": "8656ce6a345e89c71268",
         "field": {
           "Column": {
             "Expression": {
@@ -439,7 +439,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "d23bb9dba3097e7489bb",
+        "name": "d90f19e42d7e720deba1",
         "field": {
           "Column": {
             "Expression": {
@@ -455,7 +455,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "fdaf11814022dc289a30",
+        "name": "3bf3335f69710e2485bc",
         "field": {
           "Column": {
             "Expression": {
@@ -470,7 +470,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "12fcdb7d100be4d39341",
+        "name": "66352cd00aa93ed44b6d",
         "field": {
           "Column": {
             "Expression": {
@@ -485,7 +485,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "ef46e865d4230320e20d",
+        "name": "1204da74bca43248ac1a",
         "field": {
           "Column": {
             "Expression": {
@@ -501,7 +501,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "abbe61c38e0832050610",
+        "name": "5240dbc4ceeb7e7b616a",
         "field": {
           "Column": {
             "Expression": {
@@ -517,7 +517,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "f8f21e406029d2c97311",
+        "name": "f18a2a38727e84c24095",
         "field": {
           "Column": {
             "Expression": {
@@ -533,7 +533,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "063ae58b76a07e2009e1",
+        "name": "93f189b877330862a81a",
         "field": {
           "Column": {
             "Expression": {
@@ -548,7 +548,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "62952196e1ee005c97bd",
+        "name": "4cd5572e85cf1c643d11",
         "field": {
           "Column": {
             "Expression": {

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSection39490380d1d99a070249",
   "displayName": "Detailed Info",
   "displayOption": "FitToPage",
@@ -19,6 +19,7 @@
             "Property": "Segment"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true,
         "isLockedInViewMode": true
@@ -35,6 +36,7 @@
             "Property": "Month"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true,
         "isLockedInViewMode": true
@@ -51,6 +53,7 @@
             "Property": "isVanArsdel"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true,
         "isLockedInViewMode": true
@@ -67,6 +70,7 @@
             "Property": "Manufacturer"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -81,6 +85,7 @@
             "Property": "Product"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -95,6 +100,7 @@
             "Property": "Category"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -150,6 +156,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -189,6 +196,7 @@
             }
           ]
         },
+        "howCreated": "Drillthrough",
         "objects": {
           "general": [
             {
@@ -203,12 +211,10 @@
               }
             }
           ]
-        },
-        "howCreated": "Drillthrough"
+        }
       }
     ]
   },
-  "visibility": "HiddenInViewMode",
   "pageBinding": {
     "name": "Pod3",
     "type": "Drillthrough",
@@ -273,5 +279,6 @@
         }
       }
     ]
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

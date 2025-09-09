@@ -282,11 +282,9 @@ table Sales
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ReportingPeriodID = [MonthID]&"01"
-		dataType: string
 		isHidden
 		lineageTag: f96c3082-dfd8-4e0c-842b-563a8fd46899
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
