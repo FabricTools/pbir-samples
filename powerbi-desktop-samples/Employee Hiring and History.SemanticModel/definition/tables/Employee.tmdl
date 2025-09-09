@@ -193,11 +193,9 @@ table Employee
 		annotation SummarizationSetBy = Automatic
 
 	column isNewHire = IF(YEAR([date]) = YEAR([HireDate]) && MONTH([date])=MONTH([HireDate]), 1)
-		dataType: int64
 		isHidden
 		lineageTag: ba9f7d94-e997-4d30-9273-714e4c123732
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
@@ -245,11 +243,9 @@ table Employee
 		annotation SummarizationSetBy = Automatic
 
 	column AgeGroupID = IF([Age]<30, 1, IF([Age]<50, 2, 3))
-		dataType: int64
 		isHidden
 		lineageTag: 7a1ddc46-6870-4a4f-9e17-8eb3f7cf59d1
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
@@ -266,11 +262,9 @@ table Employee
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column TenureMonths = CEILING([TenureDays]/30, 1) -1
-		dataType: int64
 		isHidden
 		lineageTag: 43a317e1-28a2-4655-846d-5ae946edbf7b
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSection4273058cc927075449cb",
   "displayName": "Tooltip",
   "displayOption": "FitToPage",
@@ -24,5 +24,6 @@
         }
       }
     ]
-  }
+  },
+  "type": "Tooltip"
 }

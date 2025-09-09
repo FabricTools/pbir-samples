@@ -1,7 +1,22 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark22d80e0a08bd2c67433c",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "New Hires 2 ON",
+  "name": "Bookmark22d80e0a08bd2c67433c",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "0050295fba9e732cbe2c",
+      "3bab7b205a6c8061879b",
+      "7e86d02f97872c8c0a36",
+      "530bf103f5c89928e23c",
+      "VisualContainer1",
+      "adee999ddc5fd7f1cda4",
+      "070d2550d4be191b19b2",
+      "VisualContainer2"
+    ],
+    "suppressActiveSection": true,
+    "suppressData": true
+  },
   "explorationState": {
     "version": "1.3",
     "activeSection": "ReportSection2",
@@ -205,6 +220,55 @@
         },
         "visualContainers": {
           "VisualContainer1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2e91a1dc0cb64d7ffbda",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3a9ae909cf13992644ee",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FP"
+                        }
+                      },
+                      "Property": "FPDesc"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3491674fe2af5660d846",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "New Hires"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "lineChart",
               "objects": {},
@@ -228,6 +292,70 @@
             }
           },
           "VisualContainer2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "dec53ac6403f162aadc2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d7a7dfa07e0054d9a08a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "New Hires"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "95c403729f9fc6c32b25",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "New Hires SPLY"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a5252aca3d634c62ae96",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "Actives YoY % Change"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "lineClusteredColumnComboChart",
               "objects": {},
@@ -248,6 +376,55 @@
             }
           },
           "VisualContainer4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1573d04fe535c57706c8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "AgeGroup"
+                        }
+                      },
+                      "Property": "AgeGroup"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "488beb55b45fc14c1e7f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "New Hires"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "efcae20ffdaba9b1c6fb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Gender"
+                        }
+                      },
+                      "Property": "Gender"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "clusteredColumnChart",
               "objects": {},
@@ -283,6 +460,85 @@
             }
           },
           "VisualContainer6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1a5cc62cf43637737774",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BU"
+                        }
+                      },
+                      "Property": "Region"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4c85143d923ac4a6871e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BU"
+                        }
+                      },
+                      "Property": "VP"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3ae259bbc0c5edd2f471",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ethnicity"
+                        }
+                      },
+                      "Property": "Ethnicity"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3abdc9a54e14331a6659",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "New Hires"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b5341f991ec2622edb40",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Employee"
+                        }
+                      },
+                      "Property": "Actives"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "pivotTable",
               "objects": {},
@@ -553,20 +809,5 @@
         ]
       }
     }
-  },
-  "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "0050295fba9e732cbe2c",
-      "3bab7b205a6c8061879b",
-      "7e86d02f97872c8c0a36",
-      "530bf103f5c89928e23c",
-      "VisualContainer1",
-      "adee999ddc5fd7f1cda4",
-      "070d2550d4be191b19b2",
-      "VisualContainer2"
-    ],
-    "suppressActiveSection": true,
-    "suppressData": true
   }
 }

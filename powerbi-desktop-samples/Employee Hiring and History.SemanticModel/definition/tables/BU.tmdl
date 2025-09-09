@@ -31,10 +31,8 @@ table BU
 		annotation SummarizationSetBy = Automatic
 
 	column Region = mid([RegionSeq], 3,15)
-		dataType: string
 		lineageTag: efdd656d-19d2-47a1-81b1-d7c47ef78b7f
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: RegionSeq
 
 		annotation SummarizationSetBy = Automatic
