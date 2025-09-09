@@ -1,0 +1,134 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 564.09560975609759
+          },
+          "nodeIndex": "Customer",
+          "nodeLineageTag": "3fcd3eb1-d934-48bc-962f-3a428e23a8d2",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 775.1,
+            "y": 268.7
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "e4013b6a-9ae4-4c1a-8791-5e74d37e0355",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 484.58487804878047,
+            "y": 5
+          },
+          "nodeIndex": "Product",
+          "size": {
+            "height": 251,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 2.3243902439024424,
+            "y": 5
+          },
+          "nodeIndex": "Sales Order",
+          "nodeLineageTag": "5aeda109-c86e-4856-baec-6873133306c5",
+          "size": {
+            "height": 217,
+            "width": 237
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 588.75853658536585,
+            "y": 751
+          },
+          "nodeIndex": "Sales Territory",
+          "nodeLineageTag": "6e336a9d-e53c-4232-9abd-3f789457b2cb",
+          "size": {
+            "height": 175,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 290.00292682926829,
+            "y": 296
+          },
+          "nodeIndex": "Sales",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 270.15463414634149
+          },
+          "nodeIndex": "Reseller",
+          "size": {
+            "height": 232,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 793.1,
+            "y": 12.5
+          },
+          "nodeIndex": "Currency Rate",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1077.1,
+            "y": 315.5
+          },
+          "nodeIndex": "Currency",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
