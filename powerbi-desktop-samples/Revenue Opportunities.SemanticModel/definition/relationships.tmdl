@@ -1,0 +1,40 @@
+relationship e375b616-f257-445d-849d-2816fea8a9c2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact A'.EstimatedCloseDate
+	toColumn: LocalDateTable_ad3f2c0b-480c-4140-9904-73219d446034.Date
+
+relationship 2579f52c-554f-4c13-9358-126ec4638b92
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact B'.EstimatedCloseDate
+	toColumn: LocalDateTable_c32bf3a5-df11-4d77-ad29-82d5ac852ceb.Date
+
+relationship 937ae6cc-bd19-4ead-b604-812a3de03590
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact.EstimatedCloseDate
+	toColumn: LocalDateTable_f924a660-aa7d-462e-82a7-7d743c9506a2.Date
+
+relationship 83263297-0ea8-4640-856a-ff7621b5a7ef
+	fromColumn: Fact.'Account ID'
+	toColumn: Account.'Account ID'
+
+relationship 84787da3-95b1-457b-9959-ce35fd5e0c9e
+	fromColumn: Fact.'Opportunity ID'
+	toColumn: Opportunity.'Opportunity ID'
+
+relationship 12e52b57-6662-46af-b5ac-22512b8920a2
+	fromColumn: Fact.'Sales Stage ID'
+	toColumn: SalesStage.'Sales Stage ID'
+
+relationship 1cc728c9-ecd5-4ce0-b6af-697dae236b73
+	fromColumn: Fact.'Partner ID'
+	toColumn: Partner.'Partner ID'
+
+relationship d9cd3f40-b159-4cc6-926e-bdad1ed0757d
+	fromColumn: Fact.'Product ID'
+	toColumn: Product.'Product ID'
+
+relationship 341a33cb-e805-4319-829c-b108e7b8af05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact.Date
+	toColumn: LocalDateTable_bc09b291-d8af-4cf9-8bcf-958f7918b4df.Date
+

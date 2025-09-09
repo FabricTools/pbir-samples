@@ -1,0 +1,39 @@
+table Partner
+	lineageTag: 589bfd73-e114-4a1c-81e8-0fe686d0e188
+
+	column Partner
+		dataType: string
+		lineageTag: a82cdf5b-e209-477f-b5ac-aeca7e8c434a
+		summarizeBy: none
+		sourceColumn: Partner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Partner ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3455101a-6f1f-4480-bacb-f0e2ae40dbc2
+		summarizeBy: none
+		sourceColumn: Partner ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Partner Driven'
+		dataType: string
+		lineageTag: 29ec311d-6016-4804-8459-f0e65a28d165
+		summarizeBy: none
+		sourceColumn: Partner Driven
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Partner-eaf67aaa-5792-4f9d-a14a-528eec627878 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("XZbdUtswEIXfJdf1DEkc/1y2zYRSCrSFMgWGi42tJAJbch2Zhjx9d6U4Pc4FzHAUVvvtnl3l6Wk0p8qVamfN6MNozD8Pajt6/vA0erSmtWZPDWsT0L/aZUV14T8/Bf0nmdeosDVLMcg3jWr9Z2cgrmirnDWKpQTkL/SuHf+dgnZrjaOQXQbyZzIq5JaDOqe6Ih92fAbyRaGilTal6Ih4sY2cKjbGVnb9LofIuWiVilSlCsf562Ir58j7o7OCIXI8SMFITJGRuKnULtrYqtRm7UMh982bajd67f9pwO50vSVTdTs5Qfx5q5ut419ygBXYdnXZ6qqSpmEJllQfCj7BCsx1y4CiCvq19eI5p6kMh1fKHyH1n84KnhYdsa9UuSJJczIb1IjKvfWemCDwK5moDDLy7q3poSbZSRinfHRkvdZ16e+cnp18eMsdpUJopwNaZZx9sUvRsdX3oh+MM0VamQ1nO9/OKeL+MsSV4F7KARJfWvPqPNkUge+o3ti/og762x29PUXeK3KbVpWeeIrE96SptGH2YoT+RPWa2+V1JF5qG7KJkfeu1TakEw8mWJWd0cFtcTwoqY0aqY/YIUbcR+sKaqVucTKQbW+3OD2pTuh7jLwXpvdUPJhmvvYwSzOE/WIdbyBRx6eqv3I2GebulPYLaDi9vaVmSPqdx5TNs9L+BElr+3boyAxJNa+WKsjpII5Ua2M7vyBmCPt7F7mWjCyBGdIutAnbM0HWR6K62YQ9kyDurSOzIuFKEPdjoXojJAMny1IYbrMEwZd6XflZShD6Xr/RcQ8kyM2d3Nt9GL8EyRdcjUMkpBbLaT+RCUI/dnWtykOTUwSf225ZqePlKbI7rgnXUC5JEZ7RmtCMFNnZGf0Qp8h8YUr9Su8h2xS5v9K78w5LkVnMEaYpPXmh+pKniPygqO0dkCL0OZkXKqwfmwyZb6U5630YnAyJL/kV8AllyDv/v4wzBOYnOtQ6Q9yF3jVVJ53PkHXRmSLMTYaw0se99lci7ENEfY2zwYNkDe+OsHMzhOX2auodnCMtr5vjUskH1uate2x8jsDf+BWj4PocgSWMf5nkAJk/6fWh0DkysyM4J0+RI7Q4Qjv5KpAj9BXP/v+EEHvdEq+Fw4ObIzcbvuFCGb9JxmcILvULkzM+O3I//wM=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Partner = _t, #"Partner ID" = _t, #"Partner Driven" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Partner", type text}, {"Partner ID", Int64.Type}, {"Partner Driven", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "e1128ed43c7e67602223",
+  "position": {
+    "x": 49.6048632218845,
+    "y": 92.401215805471125,
+    "z": 15000,
+    "height": 91.428571428571431,
+    "width": 457.14285714285717,
+    "tabOrder": 7000
+  },
+  "visualGroup": {
+    "displayName": "Opportunity Cards",
+    "groupMode": "ScaleMode"
+  }
+}

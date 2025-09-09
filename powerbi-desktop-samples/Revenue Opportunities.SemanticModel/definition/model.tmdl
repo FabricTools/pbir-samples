@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Account","Fact A","Fact B","Opportunity","Partner","Product","SalesStage","Fact"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Account
+ref table DateTableTemplate_14c69260-1f33-480c-8bcb-55fc0d841ef6
+ref table 'Fact A'
+ref table LocalDateTable_ad3f2c0b-480c-4140-9904-73219d446034
+ref table 'Fact B'
+ref table LocalDateTable_c32bf3a5-df11-4d77-ad29-82d5ac852ceb
+ref table Opportunity
+ref table Partner
+ref table Product
+ref table SalesStage
+ref table Fact
+ref table LocalDateTable_f924a660-aa7d-462e-82a7-7d743c9506a2
+ref table LocalDateTable_bc09b291-d8af-4cf9-8bcf-958f7918b4df
+
+ref cultureInfo en-US
+
