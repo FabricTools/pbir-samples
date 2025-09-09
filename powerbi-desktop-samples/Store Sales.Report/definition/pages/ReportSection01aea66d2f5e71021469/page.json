@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSection01aea66d2f5e71021469",
   "displayName": "Info Page",
   "displayOption": "FitToPage",
@@ -19,11 +19,11 @@
             "Property": "TotalSales"
           }
         },
+        "type": "Categorical",
         "howCreated": "Drillthrough"
       }
     ]
   },
-  "visibility": "HiddenInViewMode",
   "pageBinding": {
     "name": "Pod3",
     "type": "Drillthrough",
@@ -79,5 +79,6 @@
         }
       }
     ]
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSection8ef90f03d68d67c9d9ee",
   "displayName": "New Stores",
   "displayOption": "FitToPage",
@@ -19,6 +19,7 @@
             "Property": "Store Type"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -67,6 +68,7 @@
             "Property": "Open Month"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -81,6 +83,7 @@
             "Property": "Chain"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -95,6 +98,7 @@
             "Property": "City"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -109,6 +113,7 @@
             "Property": "Name"
           }
         },
+        "type": "Categorical",
         "howCreated": "User"
       },
       {
@@ -123,6 +128,8 @@
             "Property": "PostalCode"
           }
         },
+        "type": "Categorical",
+        "howCreated": "Drillthrough",
         "objects": {
           "general": [
             {
@@ -137,8 +144,7 @@
               }
             }
           ]
-        },
-        "howCreated": "Drillthrough"
+        }
       }
     ]
   },

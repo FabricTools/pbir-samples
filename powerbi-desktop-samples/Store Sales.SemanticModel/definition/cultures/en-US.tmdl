@@ -173,9 +173,7 @@ cultureInfo en-US
 			        {
 			          "territory": {}
 			        },
-			        {
-			          "state": {}
-			        }
+			        {}
 			      ]
 			    },
 			    "store.postal_code": {

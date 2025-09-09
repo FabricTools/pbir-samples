@@ -4,11 +4,9 @@ table 'ClusterMappingTable 2'
 	lineageTag: 46a25990-6d48-4040-9a0e-da60d1a611ce
 
 	column Category
-		dataType: string
 		lineageTag: 17a11305-dec7-413e-862d-215c878abb66
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Category]
 
 		annotation SummarizationSetBy = Automatic
@@ -16,12 +14,10 @@ table 'ClusterMappingTable 2'
 		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
 
 	column ClusterId
-		dataType: int64
 		formatString: 0
 		lineageTag: 74f79be5-7072-4245-aae1-212e88cb70f8
 		summarizeBy: count
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [ClusterId]
 
 		annotation SummarizationSetBy = Automatic

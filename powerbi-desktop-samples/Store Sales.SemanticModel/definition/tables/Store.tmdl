@@ -132,11 +132,9 @@ table Store
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column City = [City Name] & ", "&[Territory]
-		dataType: string
 		lineageTag: 9916b52e-c253-4676-ad00-2ce73b864c3b
 		dataCategory: City
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
@@ -172,40 +170,32 @@ table Store
 		sourceColumn: DistrictID
 
 	column 'Open Year' = YEAR([OpenDate])
-		dataType: int64
 		lineageTag: b9328ca3-4eff-4bbe-b55b-1665de13ea35
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Store Type' = IF([Open Year]=2014, "New Store", "Same Store")
-		dataType: string
 		lineageTag: 307f2a8b-8a05-4ccb-846f-5c417b528f57
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Item","TableItemName":"Category (clusters) 2","ObjectType":4},"LinkType":"UsedInGroup"}]
 
 	column 'Open Month No' = MONTH([OpenDate])
-		dataType: int64
 		lineageTag: 448890ad-ad5e-46aa-ac6b-3c5f11017dad
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Open Month' = FORMAT([OpenDate], "MMM")
-		dataType: string
 		lineageTag: ec6705ae-e510-4e4f-adc3-385e3b2667c0
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: 'Open Month No'
 
 		annotation SummarizationSetBy = Automatic

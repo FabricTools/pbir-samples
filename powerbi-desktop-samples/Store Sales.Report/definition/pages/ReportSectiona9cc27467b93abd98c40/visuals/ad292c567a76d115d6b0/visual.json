@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ad292c567a76d115d6b0",
   "position": {
     "x": 30.227066303360584,
     "y": 183.68755676657585,
     "z": 1000,
-    "width": 231.35331516802907,
-    "height": 53.478655767484106
+    "height": 53.478655767484106,
+    "width": 231.35331516802907
   },
   "visual": {
     "visualType": "multiRowCard",

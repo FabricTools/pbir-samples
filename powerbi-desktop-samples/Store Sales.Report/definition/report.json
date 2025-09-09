@@ -1,7 +1,6 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
   "themeCollection": {},
-  "layoutOptimization": "None",
   "objects": {
     "outspacePane": [
       {
@@ -19,27 +18,23 @@
   },
   "resourcePackages": [
     {
-      "id": 20757524,
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
         {
           "name": "bar06114330545101687.png",
           "path": "bar06114330545101687.png",
-          "type": "Image",
-          "id": 84239182
+          "type": "Image"
         },
         {
           "name": "line-chart769759383509198.png",
           "path": "line-chart769759383509198.png",
-          "type": "Image",
-          "id": 84239183
+          "type": "Image"
         }
       ]
     }
   ],
   "settings": {
-    "exportDataMode": "AllowSummarizedAndUnderlying",
     "useStylableVisualContainerHeader": true,
     "useEnhancedTooltips": true
   },
