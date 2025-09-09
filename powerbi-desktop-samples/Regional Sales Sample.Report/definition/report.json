@@ -1,18 +1,25 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY21SU04",
-      "reportVersionAtImport": "5.20",
+      "reportVersionAtImport": {
+        "visual": "1.8.56",
+        "report": "2.0.56",
+        "page": "1.3.56"
+      },
       "type": "SharedResources"
     },
     "customTheme": {
       "name": "Fidex8576514545124847.json",
-      "reportVersionAtImport": "5.22",
+      "reportVersionAtImport": {
+        "visual": "1.8.58",
+        "report": "2.0.58",
+        "page": "1.3.58"
+      },
       "type": "RegisteredResources"
     }
   },
-  "layoutOptimization": "None",
   "objects": {
     "section": [
       {
@@ -95,6 +102,7 @@
   ],
   "settings": {
     "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true

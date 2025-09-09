@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "b760cae156950d9429f5",
   "position": {
     "x": 331.49075081610442,
     "y": 118.38955386289445,
     "z": 15000,
     "height": 582.19804134929268,
-    "width": 931.79542981501629,
-    "tabOrder": 0
+    "width": 931.79542981501629
   },
   "visual": {
     "visualType": "keyDriversVisual",
@@ -463,7 +462,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0b058be5951770ad4017",
+        "name": "fdf7ba82815fddafb08b",
         "field": {
           "Column": {
             "Expression": {
@@ -478,7 +477,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "2f679746c6543090e20e",
+        "name": "435be16337f944478eee",
         "field": {
           "Column": {
             "Expression": {
@@ -493,7 +492,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "72e65212cc6b5ce37e53",
+        "name": "c75c4f62c820016faa4c",
         "field": {
           "Column": {
             "Expression": {
@@ -508,7 +507,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "f576bc356527a8981045",
+        "name": "244a48a636b8caed167d",
         "field": {
           "Column": {
             "Expression": {
@@ -524,7 +523,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "5303e105e9839d94600e",
+        "name": "1269119f64182dfcb756",
         "field": {
           "Column": {
             "Expression": {
@@ -539,7 +538,7 @@
         "isHiddenInViewMode": true
       },
       {
-        "name": "c3d570bda5ec96547652",
+        "name": "5f66571b7312e9808b50",
         "field": {
           "Column": {
             "Expression": {

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "Overview - By Manager",
   "name": "Bookmark253a7ebe9cfdcfae49ac",
   "options": {
@@ -268,6 +268,25 @@
             }
           },
           "f4ef9aeaa37645adde86": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1330f367182506c24fb5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunity Forecast Adjustment"
+                        }
+                      },
+                      "Property": "Forecast Adjustment"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "slicer",
               "objects": {
@@ -346,6 +365,45 @@
             }
           },
           "9977560f84a487275f20": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c78f421fa9fdaedcd6a3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunity Forecast Adjustment"
+                        }
+                      },
+                      "Property": "Forecast Adjustment"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "be151bdad79b8188a701",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Opportunity Forecast Adjustment"
+                            }
+                          },
+                          "Property": "Blank"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "columnChart",
               "objects": {},
@@ -812,6 +870,40 @@
             }
           },
           "18ee1fa1b11e72e1895a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "896507a05e4437e63d9f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Won"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fbe4595c960ca77d8064",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Blank"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "kpi",
               "objects": {}
@@ -824,6 +916,40 @@
             }
           },
           "9076cf822e52a295ac32": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "83f2919e1f0bd485378b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Owners"
+                        }
+                      },
+                      "Property": "Rev Goal"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3b98a7b8247704c00f1c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Blank"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "kpi",
               "objects": {}
@@ -836,6 +962,40 @@
             }
           },
           "c5c8a883a7a48a40a5eb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e7bd4e8624ce329078f9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue In Pipeline"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e1bb4f3fbdef51dd41b1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Blank"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "kpi",
               "objects": {}
@@ -848,6 +1008,40 @@
             }
           },
           "8a0ce2360f3fa1944ab8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f864b296b6444930f771",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Forecast %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e553b9e54a94369a0e45",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Blank"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "kpi",
               "objects": {},
@@ -869,12 +1063,210 @@
             }
           },
           "db4e5eed33a1f6bec037": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "46605e5f346c54e6a738",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Accounts"
+                            }
+                          },
+                          "Hierarchy": "Street Hierarchy"
+                        }
+                      },
+                      "Level": "State or Province"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9d71725221d6334f2dbb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "HierarchyLevel": {
+                          "Expression": {
+                            "Hierarchy": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Accounts"
+                                }
+                              },
+                              "Hierarchy": "Street Hierarchy"
+                            }
+                          },
+                          "Level": "City"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "76b064ece5bca3b303ef",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "HierarchyLevel": {
+                          "Expression": {
+                            "Hierarchy": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Accounts"
+                                }
+                              },
+                              "Hierarchy": "Street Hierarchy"
+                            }
+                          },
+                          "Level": "State or Province"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "649b0695f64ec305cf05",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Owners"
+                        }
+                      },
+                      "Property": "Rev Goal"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "99c2b7992df9629a8544",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Won"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "96c47a0391e001c04388",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue In Pipeline"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "shapeMap",
               "objects": {}
             }
           },
           "e9ee7b2d33b6ec76638d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e0fdd26332b0f3d72a69",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue In Pipeline"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7e2965ed8bae4e6caa61",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Forecast %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d748d0e88eb0545654de",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Territories"
+                        }
+                      },
+                      "Property": "Territory"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "73b5613b04102260f1e7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Accounts"
+                        }
+                      },
+                      "Property": "State or Province"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "538baca138b72b9631f1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Won"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "pivotTable",
               "objects": {},
@@ -947,6 +1339,85 @@
             }
           },
           "9f70be51c71a0fb66724": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e218d9c38e3e60247cc7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Won"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "173e9660bdbc356f2a85",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue In Pipeline"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a0b328e38589137752ea",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Forecast %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b36491e23aab229179ea",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Products"
+                        }
+                      },
+                      "Property": "Product Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "628e1baaee03249b2b67",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Products"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "pivotTable",
               "objects": {},
@@ -1045,6 +1516,66 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "9624932af0934f72b71c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Won"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0317b01ff5bce9de5e99",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue In Pipeline"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7910ed9427adf843463c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Owners"
+                        }
+                      },
+                      "Property": "Owner"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9ef7c1ee4e5dc96bb5f4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Owners"
+                        }
+                      },
+                      "Property": "Manager"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1133,6 +1664,66 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "e440f0711f07dff0904c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Products"
+                        }
+                      },
+                      "Property": "Product Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f18c26b4c27f232b3f81",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Won"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ae015fe18a530ab64db0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue In Pipeline"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ca7e1fb5001e631a0661",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Products"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1226,6 +1817,36 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "6960dc626f12cca0ca99",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Sales Stage"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f234c2c30a04bc302a0d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Opportunities"
+                        }
+                      },
+                      "Property": "Revenue Open"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
