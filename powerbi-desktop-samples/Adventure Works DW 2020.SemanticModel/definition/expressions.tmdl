@@ -1,4 +1,4 @@
-expression SqlServerInstance = "." meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression SqlServerInstance = "jterhsql.database.windows.net" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: c89b5611-ac42-4399-8ce0-d7bf74a70e8f
 
 	annotation PBI_NavigationStepName = Navigation

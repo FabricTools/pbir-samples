@@ -50,3 +50,12 @@ relationship 290237c5-c261-400f-a435-e66531b43cb3
 	fromColumn: Sales.CurrencyKey
 	toColumn: Currency.CurrencyKey
 
+relationship e815bd97-e65d-df1f-8184-50e4689760a9
+	fromColumn: 'Sales Reason Bridge'.SalesReasonKey
+	toColumn: 'Sales Reason'.SalesReasonKey
+
+relationship e3e210f3-79ae-9b50-ef1f-1d14e9751dd9
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Sales Reason Bridge'.SalesOrderLineKey
+	toColumn: 'Sales Order'.SalesOrderLineKey
+

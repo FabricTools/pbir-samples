@@ -1,0 +1,44 @@
+table 'Sales Reason'
+	lineageTag: fefb66ab-f36a-4346-b508-46380325d2b5
+
+	column SalesReasonKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2450fb89-584c-42ed-9d38-244b24e2afa9
+		summarizeBy: none
+		sourceColumn: SalesReasonKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Reason'
+		dataType: string
+		lineageTag: 601e6ca9-17c9-45e9-b8e4-8e2c7e8b77b6
+		summarizeBy: none
+		sourceColumn: Sales Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reason Type'
+		dataType: string
+		lineageTag: 3e39ff18-c37a-409f-b302-9fed9d138e06
+		summarizeBy: none
+		sourceColumn: Reason Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Reason' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(SqlServerInstance, SqlServerDatabase),
+				    dbo_vSalesReason = Source{[Schema="dbo",Item="vSalesReason"]}[Data]
+				in
+				    dbo_vSalesReason
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

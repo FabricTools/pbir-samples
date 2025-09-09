@@ -66,3 +66,5 @@ table 'Sales Order'
 
 	annotation PBI_ResultType = Table
 
+	annotation PBI_NavigationStepName = Navigation
+

@@ -57,12 +57,12 @@ table Date
 		isHidden
 		formatString: 0
 		lineageTag: a368e179-917e-445b-8b9f-034b84b4bbcc
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: MonthKey
 
 		changedProperty = IsHidden
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column 'Full Date'
 		dataType: string

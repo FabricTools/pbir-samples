@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 564.09560975609759
+            "x": 832.22614644073553,
+            "y": 1154.2942662085468
           },
           "nodeIndex": "Customer",
           "nodeLineageTag": "3fcd3eb1-d934-48bc-962f-3a428e23a8d2",
@@ -19,12 +19,12 @@
             "height": 232,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 775.1,
-            "y": 268.7
+            "x": 675.78900400468547,
+            "y": 457.68223263137867
           },
           "nodeIndex": "Date",
           "nodeLineageTag": "e4013b6a-9ae4-4c1a-8791-5e74d37e0355",
@@ -32,24 +32,25 @@
             "height": 232,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 11
         },
         {
           "location": {
-            "x": 484.58487804878047,
-            "y": 5
+            "x": 1519.4054563199575,
+            "y": 313.15542782575614
           },
           "nodeIndex": "Product",
+          "nodeLineageTag": "b2307e18-a530-4cca-8c47-be8c50163d35",
           "size": {
             "height": 251,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 2.3243902439024424,
-            "y": 5
+            "x": 1913.8119939733558,
+            "y": 844.46990991589144
           },
           "nodeIndex": "Sales Order",
           "nodeLineageTag": "5aeda109-c86e-4856-baec-6873133306c5",
@@ -57,12 +58,12 @@
             "height": 217,
             "width": 237
           },
-          "zIndex": 4
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 588.75853658536585,
-            "y": 751
+            "x": 1130.996574719783,
+            "y": 1148.5353242215392
           },
           "nodeIndex": "Sales Territory",
           "nodeLineageTag": "6e336a9d-e53c-4232-9abd-3f789457b2cb",
@@ -70,59 +71,89 @@
             "height": 175,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 290.00292682926829,
-            "y": 296
+            "x": 1144.077492388973,
+            "y": 614.08652742528761
           },
           "nodeIndex": "Sales",
+          "nodeLineageTag": "a8c377ce-4d50-438f-8719-83999a5c58af",
           "size": {
             "height": 337,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 500.52741981638508,
+            "y": 1148.3551789852029
+          },
+          "nodeIndex": "Reseller",
+          "nodeLineageTag": "c0ecb6bb-6f56-418b-8685-0fb488680d2a",
+          "size": {
+            "height": 232,
             "width": 234
           },
           "zIndex": 9
         },
         {
           "location": {
-            "x": 0,
-            "y": 270.15463414634149
-          },
-          "nodeIndex": "Reseller",
-          "size": {
-            "height": 232,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 793.1,
-            "y": 12.5
+            "x": 1122.8125067044441,
+            "y": 18.75
           },
           "nodeIndex": "Currency Rate",
+          "nodeLineageTag": "7fc38d3f-e3f8-4bb3-90f7-8a5f796c3b3c",
           "size": {
             "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 1077.1,
-            "y": 315.5
+            "x": 1132.7141577573759,
+            "y": 309.83268048056226
           },
           "nodeIndex": "Currency",
+          "nodeLineageTag": "7acb6371-354b-478a-93f2-74ad196772ac",
           "size": {
             "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1932.5919820688202,
+            "y": 1396.3126036941219
+          },
+          "nodeIndex": "Sales Reason",
+          "nodeLineageTag": "fefb66ab-f36a-4346-b508-46380325d2b5",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1924.6471023891952,
+            "y": 1171.7604431654063
+          },
+          "nodeIndex": "Sales Reason Bridge",
+          "nodeLineageTag": "9ac875c9-1406-48a2-a213-b222b3fc63fd",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 56.850753615397565,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

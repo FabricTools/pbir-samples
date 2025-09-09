@@ -8,11 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
+annotation PBI_QueryOrder = ["SqlServerInstance","SqlServerDatabase","Culture","Customer","Date","Product","Reseller","Sales","Sales Order","Sales Territory","Currency Rate","Currency","Sales Reason","Sales Reason Bridge"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
+
 annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
-
-annotation PBI_QueryOrder = ["SqlServerInstance","SqlServerDatabase","Culture","Customer","Date","Product","Reseller","Sales","Sales Order","Sales Territory","Currency Rate","Currency"]
-
-annotation PBI_ProTooling = ["DevMode"]
 
 ref table Customer
 ref table Date
@@ -23,6 +23,8 @@ ref table Sales
 ref table Reseller
 ref table 'Currency Rate'
 ref table Currency
+ref table 'Sales Reason'
+ref table 'Sales Reason Bridge'
 
 ref cultureInfo en-US
 
