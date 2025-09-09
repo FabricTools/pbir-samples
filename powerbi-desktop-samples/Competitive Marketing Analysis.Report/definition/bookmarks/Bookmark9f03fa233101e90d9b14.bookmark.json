@@ -1,7 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark9f03fa233101e90d9b14",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "YTD Category",
+  "name": "Bookmark9f03fa233101e90d9b14",
+  "options": {
+    "targetVisualNames": []
+  },
   "explorationState": {
     "version": "1.0",
     "activeSection": "ReportSection4bbd5a92ca9937498cc4",
@@ -77,6 +80,40 @@
         },
         "visualContainers": {
           "VisualContainer1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7e37314084ac29a001fb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Geo"
+                        }
+                      },
+                      "Property": "State"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a50b473fa926894aa467",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "filledMap",
               "objects": {},
@@ -109,7 +146,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterb7fd67e9-2f2e-45de-a96e-c0ffd469f907",
+                  "name": "f639f710981dc32c1878",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -225,6 +262,36 @@
                         }
                       },
                       "Property": "Manufacturer"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4fe583c2ee209245bc98",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "14c23d943437410e85c6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units YTD Var %"
                     }
                   },
                   "howCreated": 0
@@ -254,7 +321,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter72d80770-749f-4b88-953f-136c1cb58d13",
+                  "name": "8c1363ba09ff2102c2a1",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -373,6 +440,36 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "39653da8eeb33f160ac9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "90713f6bfcb9393a5cdd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -398,8 +495,5 @@
         }
       }
     }
-  },
-  "options": {
-    "targetVisualNames": []
   }
 }

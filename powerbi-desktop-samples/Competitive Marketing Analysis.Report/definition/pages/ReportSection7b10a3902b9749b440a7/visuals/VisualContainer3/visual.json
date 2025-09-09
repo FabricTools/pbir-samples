@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "VisualContainer3",
   "position": {
     "x": 53.178038379530918,
     "y": 428.15138592750532,
     "z": 26000,
-    "width": 1175.3710021321961,
-    "height": 257.70895522388059
+    "height": 257.70895522388059,
+    "width": 1175.3710021321961
   },
   "visual": {
     "visualType": "lineChart",
@@ -452,7 +452,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5459ce1d-8156-4d0f-a810-e4f597251ffd",
+        "name": "414a0c84abf102169573",
         "field": {
           "Column": {
             "Expression": {
@@ -463,6 +463,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

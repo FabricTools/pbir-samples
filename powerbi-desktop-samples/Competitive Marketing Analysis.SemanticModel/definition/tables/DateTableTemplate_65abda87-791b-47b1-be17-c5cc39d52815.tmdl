@@ -4,48 +4,40 @@ table DateTableTemplate_65abda87-791b-47b1-be17-c5cc39d52815
 	lineageTag: 46274476-de61-4e0b-8c42-a6d13e464cbc
 
 	column Date
-		dataType: dateTime
 		isHidden
 		lineageTag: 4f56f3e0-9acd-4142-839f-fc8787043d04
 		dataCategory: PaddedDateTableDates
 		summarizeBy: none
 		isNameInferred
-		isDataTypeInferred
 		sourceColumn: [Date]
 
 		annotation SummarizationSetBy = User
 
 	column Year = YEAR([Date])
-		dataType: int64
 		isHidden
 		lineageTag: 8c7bfa76-1bc5-4046-80ee-7479254612c6
 		dataCategory: Years
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = User
 
 		annotation TemplateId = Year
 
 	column MonthNo = MONTH([Date])
-		dataType: int64
 		isHidden
 		lineageTag: d6fb709e-dd59-410f-95b7-ffb4cabcebd3
 		dataCategory: MonthOfYear
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = User
 
 		annotation TemplateId = MonthNumber
 
 	column Month = FORMAT([Date], "MMMM")
-		dataType: string
 		isHidden
 		lineageTag: 3fdc6365-591b-4506-b90f-1ca4ef98d16c
 		dataCategory: Months
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: MonthNo
 
 		annotation SummarizationSetBy = User
@@ -53,24 +45,20 @@ table DateTableTemplate_65abda87-791b-47b1-be17-c5cc39d52815
 		annotation TemplateId = Month
 
 	column QuarterNo = INT(([MonthNo] + 2) / 3)
-		dataType: int64
 		isHidden
 		lineageTag: c96d3649-d3e6-4f87-bfc9-bb317aa2d2c0
 		dataCategory: QuarterOfYear
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = User
 
 		annotation TemplateId = QuarterNumber
 
 	column Quarter = "Qtr " & [QuarterNo]
-		dataType: string
 		isHidden
 		lineageTag: 07380774-0ca5-4402-8032-281345477702
 		dataCategory: Quarters
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: QuarterNo
 
 		annotation SummarizationSetBy = User
@@ -78,12 +66,10 @@ table DateTableTemplate_65abda87-791b-47b1-be17-c5cc39d52815
 		annotation TemplateId = Quarter
 
 	column Day = DAY([Date])
-		dataType: int64
 		isHidden
 		lineageTag: 7aaae1ae-413c-47dc-b2b4-4e521a146b78
 		dataCategory: DayOfMonth
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = User
 

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "4531ea25872d416503e9",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
-    "width": 325,
-    "height": 325.10301109350235
+    "height": 325.10301109350235,
+    "width": 325
   },
   "visual": {
     "visualType": "barChart",
@@ -1244,7 +1244,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "113f5020-84be-46e7-b1e5-17de386bb95a",
+        "name": "7c38da66132b91fb1e39",
         "field": {
           "Column": {
             "Expression": {
@@ -1255,6 +1255,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
@@ -1289,11 +1290,10 @@
             }
           ]
         },
-        "type": "Advanced",
         "howCreated": "User"
       },
       {
-        "name": "a5264ced-5607-4a8c-8f99-7882a4271914",
+        "name": "3f1d5891eeca82ef8c0d",
         "field": {
           "Column": {
             "Expression": {
@@ -1304,6 +1304,7 @@
             "Property": "Product"
           }
         },
+        "type": "Categorical",
         "howCreated": "User",
         "isHiddenInViewMode": true
       },
@@ -1319,6 +1320,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -1396,7 +1398,7 @@
         }
       },
       {
-        "name": "97997237-d1d1-44fc-9114-a3758d47ca02",
+        "name": "b8dda73a95d2ea9b7463",
         "field": {
           "Column": {
             "Expression": {
@@ -1407,6 +1409,7 @@
             "Property": "State"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

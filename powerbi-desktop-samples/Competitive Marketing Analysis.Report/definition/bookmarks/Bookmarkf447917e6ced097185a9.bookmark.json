@@ -1,7 +1,21 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmarkf447917e6ced097185a9",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "option 2 ON",
+  "name": "Bookmarkf447917e6ced097185a9",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "23fa8e33dc31980075b0",
+      "0818ec3e5e003e0ab26a",
+      "bc8f9715c16b65788dca",
+      "fab057397e094841cd17",
+      "9a24501c9c266d604827",
+      "cde7790b16991e00cd05",
+      "VisualContainer3",
+      "VisualContainer6",
+      "VisualContainer1"
+    ]
+  },
   "explorationState": {
     "version": "1.0",
     "activeSection": "ReportSection6c5009e62b3a957627c0",
@@ -61,7 +75,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter85bedd0c-b908-42f0-8cac-f3dfebb0c843",
+                  "name": "a301373732a07df710bd",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -132,6 +146,114 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "40611bd4aac790843cdd",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "isVanArsdel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "00c7397cd3a1fbf88293",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a550f1abf39368105d4b",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6d4f29ac644141fa7f20",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7861e1aada51161b00c2",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -193,7 +315,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filtera464d6e8-0ffc-4ff9-a485-1a5d58457f38",
+                  "name": "2ab6eef419d211383327",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -245,6 +367,140 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "4003cf1dbd431b178e97",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share R12M"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bc3bbf39758016b677f1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "073e1fc249ff04b2c0b3",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "57e70c2ad28b0eb32887",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Quarter"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "71e87fef4bc6eff9b96d",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3757bbc6b8b018a8723d",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -282,7 +538,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterf46cc90a-506f-41fd-8880-ac062ca4ddf2",
+                  "name": "a2ad23fe2c87fb01418d",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -331,7 +587,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter8f0b1822-26a0-4d63-8375-302dce73f018",
+                  "name": "acbd96ef710f6918e100",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -402,6 +658,51 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "264d5f313214cd4e8695",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4eaea882e17ecd43f827",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Category"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "48597927297187801c2d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "Product"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -452,7 +753,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter7f608935-6bef-426e-9612-41eb2ef57929",
+                  "name": "06ca9336d2eb3d5fe10e",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -499,6 +800,114 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "522f06cfd8c46fff514c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Geo"
+                        }
+                      },
+                      "Property": "Region"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "83ccdd3631950537f0f1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Unit Market Share YOY Change"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "87f451ad273a566bd32d",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d30ba1760786aeaf79fa",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ff40a309cd082b118a51",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -667,19 +1076,5 @@
         }
       }
     }
-  },
-  "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "23fa8e33dc31980075b0",
-      "0818ec3e5e003e0ab26a",
-      "bc8f9715c16b65788dca",
-      "fab057397e094841cd17",
-      "9a24501c9c266d604827",
-      "cde7790b16991e00cd05",
-      "VisualContainer3",
-      "VisualContainer6",
-      "VisualContainer1"
-    ]
   }
 }

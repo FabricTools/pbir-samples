@@ -84,28 +84,22 @@ table Date
 		annotation SummarizationSetBy = Automatic
 
 	column 'Running Year' = IF(CEILING([RunningMonths]/12, 1)>0, CEILING([RunningMonths]/12, 1), BLANK())
-		dataType: int64
 		lineageTag: e25698eb-6018-4049-9d41-1d22b4d140a1
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Running Months' = IF([Running Year]=1, "Running 12 Months", IF([Running Year]=2, "Running 13-24 Months", IF([Running Year]=3, "Running 25-36 Months", Blank())))
-		dataType: string
 		lineageTag: 83522d6d-62fa-483d-adb2-75b2443b92f9
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Rolling Period' = IF([RunningMonths]<37&&[RunningMonths]>0,  "P-"&(RIGHT("0"&([RunningMonths]-([Running Year]-1)*12-1), 2)))
-		dataType: string
 		lineageTag: 6e8094e2-3750-46dc-be80-1b673c5d64e6
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: 'Rolling Period Sort'
 
 		annotation SummarizationSetBy = Automatic
@@ -120,20 +114,16 @@ table Date
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column MonthIndex = CALCULATE(DISTINCTCOUNT([Month]), FILTER(ALL('Date'), [Date]<=EARLIER([Date])))
-		dataType: int64
 		lineageTag: 466842a6-1876-46ee-80b7-06a4d54c83cc
 		summarizeBy: sum
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Months = LEFT('Date'[MonthName],3)
-		dataType: string
 		lineageTag: 90386875-fb88-47cc-8e36-a38a60bd9486
 		summarizeBy: none
-		isDataTypeInferred
 		sortByColumn: MonthNo
 
 		annotation SummarizationSetBy = Automatic

@@ -48,10 +48,8 @@ table Product
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column isVanArsdel = IF([Manufacturer]="VanArsdel", "Yes", "No")
-		dataType: string
 		lineageTag: 49fa80ad-8522-4bf1-b928-52965bb3622f
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 
@@ -72,10 +70,8 @@ table Product
 		sourceColumn: ManufacturerID
 
 	column IsCompete = IF([IsCompeteHide]="N", "No", "Yes")
-		dataType: string
 		lineageTag: 861bff67-cbf8-42e1-baf3-af7ec10ab3ed
 		summarizeBy: none
-		isDataTypeInferred
 
 		annotation SummarizationSetBy = Automatic
 

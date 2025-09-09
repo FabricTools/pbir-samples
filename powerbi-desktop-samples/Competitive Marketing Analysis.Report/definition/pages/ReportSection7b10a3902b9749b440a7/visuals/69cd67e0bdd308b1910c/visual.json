@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "69cd67e0bdd308b1910c",
   "position": {
     "x": 30.20345140781108,
     "y": 146.37057220708445,
     "z": 34000,
-    "width": 230.0108991825613,
-    "height": 26.718437783832879
+    "height": 26.718437783832879,
+    "width": 230.0108991825613
   },
   "visual": {
     "visualType": "multiRowCard",
@@ -254,7 +254,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "89be9427-1ba3-4d52-8498-cb813f44a840",
+        "name": "f1040120eb52f548ebaa",
         "field": {
           "Column": {
             "Expression": {
@@ -265,6 +265,7 @@
             "Property": "KPI"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -319,6 +320,7 @@
             "Property": "Segment"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -393,6 +395,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

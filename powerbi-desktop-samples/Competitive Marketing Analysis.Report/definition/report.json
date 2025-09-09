@@ -1,7 +1,6 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
   "themeCollection": {},
-  "layoutOptimization": "None",
   "filterConfig": {
     "filters": [
       {
@@ -16,6 +15,7 @@
             "Property": "Date"
           }
         },
+        "type": "RelativeDate",
         "filter": {
           "Version": 2,
           "From": [
@@ -84,7 +84,6 @@
             }
           ]
         },
-        "type": "RelativeDate",
         "howCreated": "User"
       }
     ]
@@ -106,21 +105,18 @@
   },
   "resourcePackages": [
     {
-      "id": 20798759,
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
         {
           "name": "Filter_Shadow_-_306958709583135358.png",
           "path": "Filter_Shadow_-_306958709583135358.png",
-          "type": "Image",
-          "id": 84526153
+          "type": "Image"
         }
       ]
     }
   ],
   "settings": {
-    "exportDataMode": "AllowSummarizedAndUnderlying",
     "hideVisualContainerHeader": true,
     "useStylableVisualContainerHeader": true,
     "useEnhancedTooltips": true

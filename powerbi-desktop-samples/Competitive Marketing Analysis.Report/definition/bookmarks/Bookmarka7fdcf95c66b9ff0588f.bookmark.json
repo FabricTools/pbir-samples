@@ -1,7 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmarka7fdcf95c66b9ff0588f",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "Market",
+  "name": "Bookmarka7fdcf95c66b9ff0588f",
+  "options": {
+    "targetVisualNames": []
+  },
   "explorationState": {
     "version": "1.0",
     "activeSection": "ReportSection90859ccbadbcdab33479",
@@ -61,7 +64,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter8f2f63a8-b561-48f4-bdeb-d987894ce4af",
+                  "name": "2c213a2620af88f50ba8",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -132,6 +135,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "34c0649fc401e6aa6bfa",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4d40d0a0a5b0cea84747",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product"
+                        }
+                      },
+                      "Property": "isVanArsdel"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e29b100d50e9f4994418",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Units"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -158,7 +206,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter6c1f809a-0d85-43b3-8d3a-e8d9f40274ea",
+                  "name": "77fe824b725ea10398e7",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -210,6 +258,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "3bdb40317fec94b43796",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a52bdb8eb11fdbbc7f87",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share R12M"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "87cb3ee8a68fd57b80ac",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Units Market Share"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -236,7 +329,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterc99451ed-6dce-40c8-8f8e-e093c3029af0",
+                  "name": "ce8d78d0bab9501e31bf",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -285,7 +378,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filterb43d9676-a322-4037-8dd4-b69f70089bdc",
+                  "name": "144d5c29ee40c8191e90",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -356,6 +449,21 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "1fecea51ed3b8694a1f0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Total Category Volume"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -391,7 +499,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filter2f187c5f-4b88-41ad-867f-8128f3b084d0",
+                  "name": "691dca43accfbe195808",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -438,6 +546,51 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "7af8c731dfd9ded0dd0e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Rolling Period"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4cbe30fcc28dbbd12fa1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Geo"
+                        }
+                      },
+                      "Property": "Region"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "199d5bf5f1284312c97f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "% Unit Market Share YOY Change"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -562,8 +715,5 @@
         }
       }
     }
-  },
-  "options": {
-    "targetVisualNames": []
   }
 }

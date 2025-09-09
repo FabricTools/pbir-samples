@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "0818ec3e5e003e0ab26a",
   "position": {
     "x": 27.424951267056532,
     "y": 321.61988304093569,
     "z": 22000,
-    "width": 172.02923976608187,
-    "height": 61.83076878597862
+    "height": 61.83076878597862,
+    "width": 172.02923976608187
   },
   "visual": {
     "visualType": "actionButton",

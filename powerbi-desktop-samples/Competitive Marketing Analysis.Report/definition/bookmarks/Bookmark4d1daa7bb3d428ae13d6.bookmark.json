@@ -1,7 +1,18 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark4d1daa7bb3d428ae13d6",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "VISUAL 5 ON",
+  "name": "Bookmark4d1daa7bb3d428ae13d6",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "8d47d7e1cb06719b0cd4",
+      "b5d9e1112d657480a00e",
+      "2a55cf6611860b944190",
+      "9b3e6cc651b7c70ac089",
+      "830cff6b50bc0ee1ea9a",
+      "95774400204c40d416a3"
+    ]
+  },
   "explorationState": {
     "version": "1.0",
     "activeSection": "ReportSection1c45b5dc6513ae89b4e3",
@@ -21,7 +32,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filtera433bcab-31ac-4f51-8d06-5351faf05529",
+                  "name": "bb1a8b00458b98061c1b",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -94,7 +105,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "Filter541831ff-0414-4fe6-9efd-e80ca80e9468",
+                  "name": "002943419ab75fe40555",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -141,6 +152,125 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "b9d50146bb5ccf822d0f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesFact"
+                        }
+                      },
+                      "Property": "Sentiment"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "61f48d9cce3a254b5858",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5afc2f87203361ba8840",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Quarter"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "03eaf9c44bcfa39b97e3",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a5854ee9dc1d61c67e3f",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Date"
+                                }
+                              },
+                              "Name": "Variation",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Date Hierarchy"
+                        }
+                      },
+                      "Level": "Day"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -177,16 +307,5 @@
         }
       }
     }
-  },
-  "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "8d47d7e1cb06719b0cd4",
-      "b5d9e1112d657480a00e",
-      "2a55cf6611860b944190",
-      "9b3e6cc651b7c70ac089",
-      "830cff6b50bc0ee1ea9a",
-      "95774400204c40d416a3"
-    ]
   }
 }

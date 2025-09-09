@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "VisualContainer4",
   "position": {
     "x": 522.75204359673023,
     "y": 187.02906448683015,
     "z": 34000,
-    "width": 724.88283378746587,
-    "height": 235.81925522252496
+    "height": 235.81925522252496,
+    "width": 724.88283378746587
   },
   "visual": {
     "visualType": "barChart",
@@ -746,6 +746,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

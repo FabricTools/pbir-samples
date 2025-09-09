@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "63c060122930163c4bea",
   "position": {
     "x": 319.13152804642164,
     "y": 394.58510638297878,
     "z": 32000,
-    "width": 456.43230174081236,
-    "height": 311.70986460348161
+    "height": 311.70986460348161,
+    "width": 456.43230174081236
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -436,7 +436,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "301969ea-77c6-4f94-8b59-2a791c3d0c9a",
+        "name": "d3969585a259acbbfebc",
         "field": {
           "Column": {
             "Expression": {
@@ -447,6 +447,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
@@ -481,7 +482,6 @@
             }
           ]
         },
-        "type": "Advanced",
         "howCreated": "User"
       },
       {
@@ -496,6 +496,7 @@
             "Property": "Channel"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [

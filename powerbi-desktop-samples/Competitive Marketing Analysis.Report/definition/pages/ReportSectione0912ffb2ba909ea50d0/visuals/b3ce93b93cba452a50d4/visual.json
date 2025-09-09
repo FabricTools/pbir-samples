@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "b3ce93b93cba452a50d4",
   "position": {
     "x": 29.864974619289342,
     "y": 186.98071065989848,
     "z": 33000,
-    "width": 478,
-    "height": 236.32284263959392
+    "height": 236.32284263959392,
+    "width": 478
   },
   "visual": {
     "visualType": "donutChart",
@@ -242,7 +242,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "7c5f27b0-4acd-495a-b2b7-0abe68bcd3fc",
+        "name": "ca7f4623c6d754625fa1",
         "field": {
           "Column": {
             "Expression": {
@@ -253,6 +253,7 @@
             "Property": "Running Year"
           }
         },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
@@ -287,7 +288,6 @@
             }
           ]
         },
-        "type": "Advanced",
         "howCreated": "User"
       }
     ]
