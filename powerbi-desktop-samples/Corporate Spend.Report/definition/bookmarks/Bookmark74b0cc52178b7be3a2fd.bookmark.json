@@ -1,7 +1,20 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
-  "name": "Bookmark74b0cc52178b7be3a2fd",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
   "displayName": "VarPlan% ON",
+  "name": "Bookmark74b0cc52178b7be3a2fd",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "VisualContainer10",
+      "700e0446dfb61cce2790",
+      "dba787bcac749b14409a",
+      "f54c6f4c5aab2cdba1fc",
+      "VisualContainer11",
+      "014b43e7f56cff622798"
+    ],
+    "suppressActiveSection": true,
+    "suppressData": true
+  },
   "explorationState": {
     "version": "1.3",
     "activeSection": "ReportSection32e53fe7c4f4cd87dd85",
@@ -107,6 +120,25 @@
         },
         "visualContainers": {
           "VisualContainer1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "eac05299a216924ffae8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var Plan %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "card",
               "objects": {},
@@ -128,6 +160,25 @@
             }
           },
           "VisualContainer2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "76ddf2c68fa749fd7ec8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var LE1 %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "card",
               "objects": {},
@@ -149,6 +200,25 @@
             }
           },
           "VisualContainer3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "61ad5a6ba18a37620466",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var LE2 %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "card",
               "objects": {},
@@ -170,6 +240,25 @@
             }
           },
           "VisualContainer4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5cd33d522d669a0623e4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var LE3 %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "card",
               "objects": {},
@@ -194,7 +283,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "Filterb9176949-8c8e-46b8-88e2-265b3d9d06df",
+                  "name": "7e47686e86383b2e0ca8",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -245,6 +334,36 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "aca0dffea13da3891554",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Country Region"
+                        }
+                      },
+                      "Property": "Country/Region"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b6013afef6f42298e978",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var Plan"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -283,6 +402,55 @@
             }
           },
           "VisualContainer9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "02e007b32e3c5ce59da4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b76e9747ec7cfad1d17a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Business Area"
+                        }
+                      },
+                      "Property": "Business Area"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1f620d5fc3ff4bfabc8b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var Plan %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "pivotTable",
               "objects": {},
@@ -315,6 +483,40 @@
             }
           },
           "VisualContainer10": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9efdcc4e36a5059b97ed",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Business Area"
+                        }
+                      },
+                      "Property": "Business Area"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "71e1faff27e529648d2d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var Plan %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "barChart",
               "objects": {},
@@ -350,6 +552,40 @@
             }
           },
           "VisualContainer11": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "025b0e8ef97f36b73bfe",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Business Area"
+                        }
+                      },
+                      "Property": "Business Area"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f1f944c92eb3bb89aa03",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "Var Plan"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
               "visualType": "clusteredBarChart",
               "objects": {},
@@ -425,18 +661,5 @@
         ]
       }
     }
-  },
-  "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "VisualContainer10",
-      "700e0446dfb61cce2790",
-      "dba787bcac749b14409a",
-      "f54c6f4c5aab2cdba1fc",
-      "VisualContainer11",
-      "014b43e7f56cff622798"
-    ],
-    "suppressActiveSection": true,
-    "suppressData": true
   }
 }

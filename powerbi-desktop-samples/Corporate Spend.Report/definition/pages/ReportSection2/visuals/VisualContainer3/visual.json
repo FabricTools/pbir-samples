@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "VisualContainer3",
   "position": {
     "x": 14.945054945054945,
     "y": 88.791208791208788,
     "z": 5000,
-    "width": 599.56043956043959,
     "height": 255.82417582417582,
+    "width": 599.56043956043959,
     "tabOrder": 4000
   },
   "visual": {
@@ -392,13 +392,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'longDash'"
-                }
-              }
-            },
-            "shadeArea": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             },

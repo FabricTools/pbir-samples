@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "VisualContainer8",
   "position": {
     "x": 6.1538461538461542,
     "y": 328.79120879120882,
     "z": 9000,
-    "width": 414.06593406593407,
     "height": 370.1098901098901,
+    "width": 414.06593406593407,
     "tabOrder": 5000
   },
   "visual": {
@@ -360,7 +360,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "30dfcf47-f3e1-4524-86ec-7fe5ba0ed1bf",
+        "name": "bad1cac59dab53655b97",
         "field": {
           "Column": {
             "Expression": {
@@ -371,6 +371,7 @@
             "Property": "Sales Region"
           }
         },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
